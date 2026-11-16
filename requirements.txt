@@ -1,0 +1,7 @@
+PyYAML>=6.0
+Jinja2>=3.1
+requests>=2.31
+# opcionais
+matplotlib>=3.7
+jsonschema>=4.0
+pytest>=7

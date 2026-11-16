@@ -1,0 +1,10 @@
+# QNetLab bootstrap (console serial) — {{ r.name }}
+# Objetivo: IP de gerenciamento (NAT do GNS3) + REST (www) + FTP + senha do admin. Idempotente.
+/ip dhcp-client remove [find]
+{% if r.mgmt %}
+/ip address remove [find where comment="mgmt-bootstrap"]
+/ip address add address={{ r.mgmt.ip }}/{{ r.mgmt.prefix }} interface={{ r.mgmt.if }} comment=mgmt-bootstrap
+{% endif %}
+/ip service set www disabled=no address={{ r.mgmt_net }}
+/ip service set ftp disabled=no address={{ r.mgmt_net }}
+/user set [find where name="{{ r.admin_user }}"] password="{{ r.admin_password }}"

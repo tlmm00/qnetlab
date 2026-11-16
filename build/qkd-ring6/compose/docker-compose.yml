@@ -1,0 +1,85 @@
+# Gerado por QNetLab — teste rápido SEM GNS3: só os KMEs, numa rede plana (sem roteadores).
+# Contém as seeds dos KMEs: não versionar.
+name: qkd-ring6
+services:
+  kme-sim-1:
+    image: qnetlab/qkd-ring6-kme1:latest
+    container_name: qkd-ring6-kme-sim-1
+    hostname: kme-sim-1
+    environment:
+      KME_CONFIG: "/etc/qnetlab/kme_config.yaml"
+      KME_ID: "kme-sim-1"
+      NODE_NAME: "KME1"
+      ROLE: "kme"
+      SKIP_NET: "1"
+    volumes:
+      - ./kme_config.kme-sim-1.yaml:/etc/qnetlab/kme_config.yaml:ro
+    networks: [lab]
+  kme-sim-2:
+    image: qnetlab/qkd-ring6-kme2:latest
+    container_name: qkd-ring6-kme-sim-2
+    hostname: kme-sim-2
+    environment:
+      KME_CONFIG: "/etc/qnetlab/kme_config.yaml"
+      KME_ID: "kme-sim-2"
+      NODE_NAME: "KME2"
+      ROLE: "kme"
+      SKIP_NET: "1"
+    volumes:
+      - ./kme_config.kme-sim-2.yaml:/etc/qnetlab/kme_config.yaml:ro
+    networks: [lab]
+  kme-sim-3:
+    image: qnetlab/qkd-ring6-kme3:latest
+    container_name: qkd-ring6-kme-sim-3
+    hostname: kme-sim-3
+    environment:
+      KME_CONFIG: "/etc/qnetlab/kme_config.yaml"
+      KME_ID: "kme-sim-3"
+      NODE_NAME: "KME3"
+      ROLE: "kme"
+      SKIP_NET: "1"
+    volumes:
+      - ./kme_config.kme-sim-3.yaml:/etc/qnetlab/kme_config.yaml:ro
+    networks: [lab]
+  kme-sim-4:
+    image: qnetlab/qkd-ring6-kme4:latest
+    container_name: qkd-ring6-kme-sim-4
+    hostname: kme-sim-4
+    environment:
+      KME_CONFIG: "/etc/qnetlab/kme_config.yaml"
+      KME_ID: "kme-sim-4"
+      NODE_NAME: "KME4"
+      ROLE: "kme"
+      SKIP_NET: "1"
+    volumes:
+      - ./kme_config.kme-sim-4.yaml:/etc/qnetlab/kme_config.yaml:ro
+    networks: [lab]
+  kme-sim-5:
+    image: qnetlab/qkd-ring6-kme5:latest
+    container_name: qkd-ring6-kme-sim-5
+    hostname: kme-sim-5
+    environment:
+      KME_CONFIG: "/etc/qnetlab/kme_config.yaml"
+      KME_ID: "kme-sim-5"
+      NODE_NAME: "KME5"
+      ROLE: "kme"
+      SKIP_NET: "1"
+    volumes:
+      - ./kme_config.kme-sim-5.yaml:/etc/qnetlab/kme_config.yaml:ro
+    networks: [lab]
+  kme-sim-6:
+    image: qnetlab/qkd-ring6-kme6:latest
+    container_name: qkd-ring6-kme-sim-6
+    hostname: kme-sim-6
+    environment:
+      KME_CONFIG: "/etc/qnetlab/kme_config.yaml"
+      KME_ID: "kme-sim-6"
+      NODE_NAME: "KME6"
+      ROLE: "kme"
+      SKIP_NET: "1"
+    volumes:
+      - ./kme_config.kme-sim-6.yaml:/etc/qnetlab/kme_config.yaml:ro
+    networks: [lab]
+networks:
+  lab:
+    driver: bridge

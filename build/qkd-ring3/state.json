@@ -1,0 +1,124 @@
+{
+  "nodes": {
+    "KME1": {
+      "console": 5006,
+      "console_host": "0.0.0.0",
+      "id": "3f8c5d0b-d4e2-4046-8787-e5b93c6759f6",
+      "type": "docker"
+    },
+    "KME2": {
+      "console": 5016,
+      "console_host": "0.0.0.0",
+      "id": "76b94e96-fa80-4d1c-950c-936359f12cc1",
+      "type": "docker"
+    },
+    "KME3": {
+      "console": 5026,
+      "console_host": "0.0.0.0",
+      "id": "2546477c-3af0-4889-96f2-975b2e2e67f5",
+      "type": "docker"
+    },
+    "MKT11": {
+      "console": 5000,
+      "console_host": "0.0.0.0",
+      "id": "8fa6d7f5-e929-4737-b2d6-2c3967feac5e",
+      "type": "qemu"
+    },
+    "MKT12": {
+      "console": 5003,
+      "console_host": "0.0.0.0",
+      "id": "ed9c6d7c-1e89-40a7-b08b-fb997b3a70f6",
+      "type": "qemu"
+    },
+    "MKT21": {
+      "console": 5010,
+      "console_host": "0.0.0.0",
+      "id": "f129ad6c-653f-4fbb-a02f-23f008fe1bfb",
+      "type": "qemu"
+    },
+    "MKT22": {
+      "console": 5013,
+      "console_host": "0.0.0.0",
+      "id": "bbb5a35d-ae8a-498b-8f1e-d8407f4a2006",
+      "type": "qemu"
+    },
+    "MKT31": {
+      "console": 5020,
+      "console_host": "0.0.0.0",
+      "id": "8b4c33de-61b9-4776-970a-f295de77d653",
+      "type": "qemu"
+    },
+    "MKT32": {
+      "console": 5023,
+      "console_host": "0.0.0.0",
+      "id": "8fabfe95-580e-4361-a532-0a3adbdde7fb",
+      "type": "qemu"
+    },
+    "NAT1": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "0060e826-409e-4d65-bb55-31ce7d746a1e",
+      "type": "nat"
+    },
+    "NAT2": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "3945b36f-a97b-43fc-9959-242d1b9456e0",
+      "type": "nat"
+    },
+    "NAT3": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "425e57f1-543c-48f7-8f28-642abd77e6fc",
+      "type": "nat"
+    },
+    "NAT4": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "4b992ef6-9b38-4513-a096-754620c20c51",
+      "type": "nat"
+    },
+    "NAT5": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "574751b5-973a-4a80-9b3b-5a21c65d73ea",
+      "type": "nat"
+    },
+    "NAT6": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "a122da44-9737-45af-be46-6d9887fde41a",
+      "type": "nat"
+    },
+    "NODE1": {
+      "console": 5008,
+      "console_host": "0.0.0.0",
+      "id": "2eaf4f1b-0fd5-4d01-b014-6addf1375abb",
+      "type": "docker"
+    },
+    "NODE2": {
+      "console": 5018,
+      "console_host": "0.0.0.0",
+      "id": "3f671d7f-699c-48ce-897d-39f43ffcdf5b",
+      "type": "docker"
+    },
+    "NODE3": {
+      "console": 5028,
+      "console_host": "0.0.0.0",
+      "id": "1a295e36-c409-4c1a-8621-f8f69395f043",
+      "type": "docker"
+    }
+  },
+  "project_id": "da84a049-9e87-449e-adb6-1794d0bf3cad",
+  "secrets": {
+    "ike_psk:MKT12-MKT21": "847186da67474394bce269376ce202af0d9dfb21dfb9b593d2328fee11755a06",
+    "ike_psk:MKT22-MKT31": "07a4df929e5e12a166eb5992ee591379595281a5f6b56a3e2f7d9c0e23dcc72c",
+    "ike_psk:MKT32-MKT11": "68222ce0f7c30f1ffe5a2f22d447f78c235252ce64ca1e4fcafca26451c61816",
+    "kma_seed:kme-sim-1-kme-sim-2": "2fa37c0277bdc464fcf5c80acd3241760970e0b8ff2fbf7be32fe832714e3123",
+    "kma_seed:kme-sim-1-kme-sim-3": "f71736f0d5f027b1708c839ce7b2377a0863bdd1797eecdff92c68fd89f88358",
+    "kma_seed:kme-sim-2-kme-sim-3": "7948e6198c37e9464be912a54615a01c7694f73237c4e7123fb8f5df7f6f4237",
+    "static_ppk:MKT12-MKT21": "10a783dba632a0c725e34594ecbd77fb290c18b01fe7d81a50459b0d6999b831",
+    "static_ppk:MKT22-MKT31": "5b4d121d80a3712bc41c161dae7df852660730269e92839f40712f174a0b72d6",
+    "static_ppk:MKT32-MKT11": "93309e29f58abe7469ad1332965f8a3cb22a9b508beacd4780ae1d74bf599418"
+  }
+}

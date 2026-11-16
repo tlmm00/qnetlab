@@ -1,0 +1,39 @@
+
+# --- 30 IPsec IKEv2 quantum-safe ----------------------------------------------
+# PPK (RFC 8784/9867): modo "{{ ipsec.ppk_mode }}" | autenticação IKE: "{{ ipsec.auth_method }}"
+# (profile/proposal/peer/identity não aceitam "comment" no RouterOS 7.22: a limpeza é por nome/peer, como no laboratório)
+/ip ipsec policy remove [find where comment~"^qnetlab-"]
+/ip ipsec identity remove [find where peer~"^to-"]
+/ip ipsec peer remove [find where name~"^to-"]
+/ip ipsec proposal remove [find where name="qkd-prop"]
+/ip ipsec profile remove [find where name="qkd-prof"]
+
+{% if tunnel %}
+{% if qkd %}
+# Gerenciador de chaves QKD (objeto único por roteador: um peer-sae-id).
+# O CN de "certificate" é o SAE ID perante o KME; "kme-id" é validado contra o certificado do KME.
+/ip ipsec key qkd set enabled=yes address={{ qkd.address }} certificate={{ qkd.certificate }} kme-id={{ qkd.kme_id }} peer-sae-id={{ qkd.peer_sae_id }} key-size={{ qkd.key_size }} cache-size={{ qkd.cache_size }}
+{% endif %}
+/ip ipsec profile add name=qkd-prof dh-group={{ ipsec.dh_group }} enc-algorithm={{ ipsec.enc_algorithm }} hash-algorithm={{ ipsec.hash_algorithm }} lifetime={{ ipsec.lifetime }}{% if ipsec.ppk_mode == "qkd" %} ppk=qkd{% elif ipsec.ppk_mode == "static" %} ppk=required{% endif %}
+
+/ip ipsec proposal add name=qkd-prop auth-algorithms={{ ipsec.proposal_auth }} enc-algorithms={{ ipsec.proposal_enc }} pfs-group={{ ipsec.pfs_group }} lifetime={{ ipsec.proposal_lifetime }}
+
+# Bypass (action=none) ANTES da política de túnel: tráfego originado/destinado ao próprio roteador
+# dentro do pool NODE não é encapsulado.
+{% for b in bypass %}
+/ip ipsec policy add src-address={{ b.src }} dst-address={{ b.dst }} action=none comment="qnetlab-bypass {{ b.name }}"
+{% endfor %}
+
+# Túnel {{ r.name }} <-> {{ tunnel.peer_router }} (SA {{ tunnel.local_addr }} <-> {{ tunnel.remote_addr }}), protege {{ tunnel.src }} <-> {{ tunnel.dst }}
+/ip ipsec peer add name={{ tunnel.name }} address={{ tunnel.remote_addr }}/32 local-address={{ tunnel.local_addr }} exchange-mode=ike2 profile=qkd-prof
+{% if ipsec.auth_method == "cert" %}
+/ip ipsec identity add peer={{ tunnel.name }} auth-method=digital-signature certificate={{ own_cert }} remote-certificate={{ tunnel.peer_sae }} match-by=certificate
+{% elif ipsec.ppk_mode == "static" %}
+# VERIFY: propriedades de PPK estático no identity não foram validadas contra a documentação;
+# confirme com `/ip ipsec identity add ?` na sua versão do RouterOS.
+/ip ipsec identity add peer={{ tunnel.name }} auth-method=pre-shared-key secret="{{ tunnel.psk }}" ppk=required ppk-id={{ tunnel.ppk_id }} ppk-secret="{{ tunnel.ppk_secret }}"
+{% else %}
+/ip ipsec identity add peer={{ tunnel.name }} auth-method=pre-shared-key secret="{{ tunnel.psk }}"
+{% endif %}
+/ip ipsec policy add peer={{ tunnel.name }} tunnel=yes src-address={{ tunnel.src }} dst-address={{ tunnel.dst }} proposal=qkd-prop action=encrypt level=require comment="qnetlab-policy"
+{% endif %}

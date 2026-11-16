@@ -1,0 +1,13 @@
+# =============================================================================
+# QNetLab — configuração de {{ r.name }} (laboratório {{ lab }})
+# Arquivo GERADO: não edite à mão; altere a topologia e rode `qnetlab configure`.
+# Reaplicável: cada seção remove antes o que foi criado antes (itens com comment=qnetlab*).
+# =============================================================================
+{% include 'mikrotik/00_base.rsc.j2' %}
+{% include 'mikrotik/10_ospf.rsc.j2' %}
+{% if ipsec.enabled %}
+{% include 'mikrotik/20_pki.rsc.j2' %}
+{% include 'mikrotik/30_ipsec.rsc.j2' %}
+{% include 'mikrotik/40_firewall.rsc.j2' %}
+{% endif %}
+{% include 'mikrotik/50_logging.rsc.j2' %}

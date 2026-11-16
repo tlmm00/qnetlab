@@ -1,0 +1,50 @@
+# Gerado por QNetLab para {{ kme.id }} — esquema do KME de KMS-sim (src/main.py).
+# Não edite à mão: altere a topologia e rode `qnetlab images`.
+listen: "0.0.0.0:{{ kme.port }}"
+local_kme_id: "{{ kme.id }}"
+use_mTLS: true
+
+tls:
+  server_cert_path: "/certs/{{ kme.id }}.crt.pem"
+  server_key_path: "/certs/{{ kme.id }}.key.pem"
+  client_ca_cert_path: "/certs/ca.crt.pem"
+
+storage:
+  type: "sqlite"
+  params:
+    path: "/opt/kme/data/{{ kme.id | lower }}.db"
+
+peer_sync:
+  type: "http_mtls"
+  sync_interval_s: {{ sync.sync_interval_s }}
+  generation_delay_s: {{ sync.generation_delay_s }}
+  sync_threshold: {{ sync.sync_threshold }}
+  request_timeout_ms: {{ sync.request_timeout_ms }}
+  max_retries: {{ sync.max_retries }}
+{% if peers %}
+  peers:
+{% for p in peers %}
+    {{ p.id }}:
+      base_url: "https://{{ p.host }}:{{ kme.port }}"
+      seed: "{{ p.seed }}"
+      client_cert_path: "/certs/{{ kme.id }}.crt.pem"
+      client_key_path: "/certs/{{ kme.id }}.key.pem"
+      server_ca_cert_path: "/certs/ca.crt.pem"
+{% endfor %}
+{% else %}
+  peers: {}
+{% endif %}
+
+# SAEs conectados a cada KME (os de KMEs remotos viram rotas de chave via o enlace KMA correspondente).
+kme_topology:
+{% for k in topology %}
+  {{ k.id }}:
+    connected_saes:
+{% for s in k.saes %}
+      - "{{ s }}"
+{% endfor %}
+{% endfor %}
+
+logging:
+  level: "{{ sync.log_level }}"
+  file_path: "/var/log/kme.log"

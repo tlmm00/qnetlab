@@ -1,0 +1,5 @@
+
+# --- 50 logging: depuração IPsec em memória (extraída pelo coletor) -------------
+/system logging remove [find where comment~"^qnetlab-"]
+/system logging action set memory memory-lines=10000
+/system logging add topics=ipsec,debug action=memory comment=qnetlab-ipsec-debug

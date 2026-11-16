@@ -1,0 +1,90 @@
+name: qkd-ring4
+description: Anel de 4 sites (2 CHR + KME + NODE por site), IPsec IKEv2 + PPK (QKD), OSPFv2 e NAT por CHR
+
+ring:
+  size: 4
+
+gns3:
+  url: http://127.0.0.1:3080
+  api_version: 2
+  user: ${GNS3_USER:-}
+  password: ${GNS3_PASSWORD:-}
+  compute_id: local
+
+addressing:
+  kme_access_pool: 10.0.0.0/24 # KME<->CHR  (ether1)
+  ring_pool: 10.0.1.0/24 # CHR<->CHR entre sites (ether2)
+  sibling_pool: 10.0.2.0/24 # CHR<->CHR no site (ether3)
+  node_pool: 10.0.3.0/24 # CHR<->NODE (ether7)
+  kma_pool: 172.16.100.0/24 # KME<->KME (anel KMA)
+  router_id_pool: 10.255.0.0/24
+  mgmt_subnet: 192.168.122.0/24 # nó NAT do GNS3 (virbr0); o host precisa alcançar esta rede
+  mgmt_gateway: 192.168.122.1
+  mgmt_attach: nat # um nó NAT por CHR, ligado em ether8
+  mgmt_start: 10 # MKT11=.10, MKT12=.20, MKT21=.30 ...
+  mgmt_step: 10
+
+router:
+  gns3_template: "MikroTik CHR" # template Qemu já existente no GNS3 (RouterOS v7)
+  admin_user: admin
+  admin_password: ${QNETLAB_ADMIN_PASSWORD:-qnetlab-lab}
+  min_version: "7.22.1" # RouterOS mínimo (QKD/PPK); "" desliga a checagem
+  auto_update: true # se < min_version, o CHR se atualiza sozinho (Internet via NAT) no configure
+  update_method: host # host: o host baixa o .npk e envia por FTP (recomendado) | device: o CHR baixa (precisa de DNS)
+  update_channel: stable # stable | long-term | testing
+  update_version: "7.22.1" # versão EXATA instalada nos CHRs mais antigos; vazio = a mais nova do canal
+  update_dns: "" # DNS só durante a atualização (vazio = gateway do NAT,1.1.1.1,8.8.8.8); aceita lista "a,b"
+  update_timeout: 900 # s por roteador (download + reinício)
+
+containers:
+  base_image: qnetlab/node:base
+  kme_api_port: 8443
+  key_size_bits: 256 # o KME do KMS-sim só entrega chaves de 256 bits
+  # kme_source_dir: ~/Codes/KMS-sim/src   # usa o main.py do seu checkout em vez da cópia vendorizada
+  # app_source_dir: ~/Codes/DFL           # constrói a imagem dos NODEs a partir do seu código (cliente DFL)
+
+kme: # peer_sync do KMS-sim (seus experimentos: 10 / 120 / 1000)
+  sync_interval_s: 5
+  generation_delay_s: 0.5
+  sync_threshold: 100
+  request_timeout_ms: 5000
+  max_retries: 3
+  log_level: INFO
+
+ospf:
+  instance: ospf-v2
+  area: backbone
+  area_id: 0.0.0.0
+  ring_cost: 10
+  sibling_cost: 10
+
+ipsec:
+  enabled: true
+  dh_group: ecp384
+  pfs_group: modp2048
+  hash_algorithm: sha256
+  enc_algorithm: aes-256
+  proposal_auth: sha256
+  proposal_enc: aes-256-cbc
+  lifetime: 1h # IKE SA (profile)
+  proposal_lifetime: 1m # Child/ESP SA (proposal): rekey a cada 1 minuto
+  auth_method: psk # psk | cert
+  psk: "" # vazio -> segredo aleatório por túnel (build/<lab>/state.json)
+  ppk_mode: qkd # qkd | static | none
+  qkd_key_size: 256
+  qkd_cache_size: 10
+  enforce_encryption: true # descarta NODE<->NODE sem IPsec em ether2
+  unprotected_links: [] # ex.: [2, 4] deixa os enlaces do anel 2 e 4 em claro (grupo de controle)
+
+pki:
+  key_type: rsa-3072
+  validity_days: 825
+  organization: QNetLab
+  country: BR
+
+load:
+  warmup_s: 10
+  duration_s: 60
+  probe_interval_ms: 100
+  probe_size_bytes: 64
+  peers: adjacent # NODEs sondam os NODEs dos sites vizinhos (através dos túneis)

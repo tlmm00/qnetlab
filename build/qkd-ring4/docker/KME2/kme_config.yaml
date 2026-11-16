@@ -1,0 +1,59 @@
+# Gerado por QNetLab para kme-sim-2 — esquema do KME de KMS-sim (src/main.py).
+# Não edite à mão: altere a topologia e rode `qnetlab images`.
+listen: "0.0.0.0:8443"
+local_kme_id: "kme-sim-2"
+use_mTLS: true
+
+tls:
+  server_cert_path: "/certs/kme-sim-2.crt.pem"
+  server_key_path: "/certs/kme-sim-2.key.pem"
+  client_ca_cert_path: "/certs/ca.crt.pem"
+
+storage:
+  type: "sqlite"
+  params:
+    path: "/opt/kme/data/kme-sim-2.db"
+
+peer_sync:
+  type: "http_mtls"
+  sync_interval_s: 5
+  generation_delay_s: 0.5
+  sync_threshold: 100
+  request_timeout_ms: 5000
+  max_retries: 3
+  peers:
+    kme-sim-1:
+      base_url: "https://172.16.100.1:8443"
+      seed: "40066adba0485b6cd68c25164fcb0e1e183ff724ff763e4e5249e435b8a01d6c"
+      client_cert_path: "/certs/kme-sim-2.crt.pem"
+      client_key_path: "/certs/kme-sim-2.key.pem"
+      server_ca_cert_path: "/certs/ca.crt.pem"
+    kme-sim-3:
+      base_url: "https://172.16.100.6:8443"
+      seed: "83a2aced8b576a1c3007b1bf3c6d48e1b39f660dd7c8a5f1d17fbfa702b1149a"
+      client_cert_path: "/certs/kme-sim-2.crt.pem"
+      client_key_path: "/certs/kme-sim-2.key.pem"
+      server_ca_cert_path: "/certs/ca.crt.pem"
+
+# SAEs conectados a cada KME (os de KMEs remotos viram rotas de chave via o enlace KMA correspondente).
+kme_topology:
+  kme-sim-1:
+    connected_saes:
+      - "sae-chr11"
+      - "sae-chr12"
+  kme-sim-2:
+    connected_saes:
+      - "sae-chr21"
+      - "sae-chr22"
+  kme-sim-3:
+    connected_saes:
+      - "sae-chr31"
+      - "sae-chr32"
+  kme-sim-4:
+    connected_saes:
+      - "sae-chr41"
+      - "sae-chr42"
+
+logging:
+  level: "INFO"
+  file_path: "/var/log/kme.log"

@@ -1,0 +1,21 @@
+# Gerado por QNetLab — camada específica do nó sobre a imagem-base.
+FROM {{ base_image }}
+{% if has_certs %}
+COPY certs/ /certs/
+{% endif %}
+{% if is_kme %}
+# Configuração deste KME (esquema do KMS-sim), gerada a partir do plano da topologia
+COPY kme_config.yaml /etc/qnetlab/kme_config.yaml
+RUN mkdir -p /opt/kme/data && chmod 600 /etc/qnetlab/kme_config.yaml
+{% endif %}
+{% if custom_kme %}
+# main.py do KME vindo de containers.kme_source_dir (substitui o vendorizado)
+COPY kme_src/ /opt/qnetlab/kme/
+{% endif %}
+{% if custom_app %}
+# Agente/código do NODE vindo de containers.app_source_dir (deve conter src/main.py)
+COPY app_src/ /opt/qnetlab/sae/
+{% endif %}
+{% if has_certs %}
+RUN chmod 700 /certs && chmod 600 /certs/*.key.pem
+{% endif %}

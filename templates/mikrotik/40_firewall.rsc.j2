@@ -1,0 +1,16 @@
+
+# --- 40 firewall/NAT: IKE/ESP em {{ r.ring_if }}, isenção de NAT e bloqueio de tráfego NODE em claro ----
+/ip firewall filter remove [find where comment~"^qnetlab-"]
+/ip firewall nat remove [find where comment~"^qnetlab-"]
+{% if tunnel %}
+/ip firewall filter add chain=output out-interface={{ r.ring_if }} protocol=udp dst-port=500,4500 action=accept comment=qnetlab-ike-out
+/ip firewall filter add chain=output out-interface={{ r.ring_if }} protocol=ipsec-esp action=accept comment=qnetlab-esp-out
+/ip firewall filter add chain=input in-interface={{ r.ring_if }} protocol=udp dst-port=500,4500 action=accept comment=qnetlab-ike-in
+/ip firewall filter add chain=input in-interface={{ r.ring_if }} protocol=ipsec-esp action=accept comment=qnetlab-esp-in
+{% if ipsec.enforce_encryption %}
+# Nada do pool NODE trafega em claro pelo enlace entre sites
+/ip firewall filter add chain=forward out-interface={{ r.ring_if }} src-address={{ r.node_pool }} dst-address={{ r.node_pool }} ipsec-policy=out,none action=drop comment=qnetlab-drop-clear-out
+/ip firewall filter add chain=forward in-interface={{ r.ring_if }} src-address={{ r.node_pool }} dst-address={{ r.node_pool }} ipsec-policy=in,none action=drop comment=qnetlab-drop-clear-in
+{% endif %}
+/ip firewall nat add chain=srcnat action=accept src-address={{ tunnel.src }} dst-address={{ tunnel.dst }} comment="qnetlab-nat-bypass {{ r.name }}-{{ tunnel.peer_router }}"
+{% endif %}

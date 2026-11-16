@@ -1,0 +1,12 @@
+
+# --- 00 base: identidade, endereços das interfaces e rotas estáticas ----------
+# (o IP de gerenciamento em {{ r.mgmt.if if r.mgmt else 'ether8' }} é configurado no bootstrap e não é tocado aqui)
+/system identity set name={{ r.name }}
+/ip address remove [find where comment~"^qnetlab-"]
+{% for i in r.interfaces %}
+/ip address add address={{ i.ip }}/{{ i.prefix }} interface={{ i.name }} comment="qnetlab-{{ i.role }} {{ i.peer }}"
+{% endfor %}
+/ip route remove [find where comment~"^qnetlab-"]
+{% for sr in static_routes %}
+/ip route add dst-address={{ sr.dst }} gateway={{ sr.gateway }} comment="qnetlab-static {{ sr.comment }}"
+{% endfor %}

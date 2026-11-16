@@ -1,0 +1,13 @@
+{
+  "kme_id": "kme-sim-1",
+  "pools": {
+    "kme-sim-2": {
+      "synchronized": 100,
+      "used": 11
+    },
+    "kme-sim-4": {
+      "synchronized": 100,
+      "used": 11
+    }
+  }
+}

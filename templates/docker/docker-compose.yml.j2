@@ -1,0 +1,20 @@
+# Gerado por QNetLab — teste rápido SEM GNS3: só os KMEs, numa rede plana (sem roteadores).
+# Contém as seeds dos KMEs: não versionar.
+name: {{ lab }}
+services:
+{% for n in nodes %}
+  {{ n.name }}:
+    image: {{ n.image }}
+    container_name: {{ lab }}-{{ n.name }}
+    hostname: {{ n.name }}
+    environment:
+{% for k, v in n.env | dictsort %}
+      {{ k }}: "{{ v }}"
+{% endfor %}
+    volumes:
+      - ./{{ n.config }}:/etc/qnetlab/kme_config.yaml:ro
+    networks: [lab]
+{% endfor %}
+networks:
+  lab:
+    driver: bridge

@@ -1,0 +1,160 @@
+2026-11-12 13:21:21,152 INFO [MainThread] Loaded configuration from /etc/qnetlab/kme_config.yaml
+2026-11-12 13:21:21,203 INFO [MainThread] Database initialised at /opt/kme/data/kme-sim-1.db
+2026-11-12 13:21:21,203 INFO [MainThread] KMA link seeded for peer kme-sim-2 at https://172.16.100.2:8443
+2026-11-12 13:21:21,203 INFO [MainThread] KMA link seeded for peer kme-sim-3 at https://172.16.100.9:8443
+2026-11-12 13:21:21,203 INFO [MainThread] SAE route seeded: sae-chr21 -> kme-sim-2
+2026-11-12 13:21:21,204 INFO [MainThread] SAE route seeded: sae-chr22 -> kme-sim-2
+2026-11-12 13:21:21,204 INFO [MainThread] SAE route seeded: sae-chr31 -> kme-sim-3
+2026-11-12 13:21:21,204 INFO [MainThread] SAE route seeded: sae-chr32 -> kme-sim-3
+2026-11-12 13:21:21,218 INFO [KMASync] KMA Sync background task started. Thread ID: 140412583810752
+2026-11-12 13:21:21,218 INFO [MainThread] KMA Sync thread started (ID: 140412583810752)
+2026-11-12 13:21:21,219 INFO [MainThread] KME server starting — KME_ID=kme-sim-1  DB=/opt/kme/data/kme-sim-1.db  0.0.0.0:8443
+2026-11-12 13:21:21,243 INFO [MainThread] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8443
+ * Running on https://127.0.0.1:8443
+2026-11-12 13:21:21,244 INFO [MainThread] [33mPress CTRL+C to quit[0m
+2026-11-12 13:21:26,234 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 0, threshold: 100)
+2026-11-12 13:21:32,553 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:21:32,554 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 0, threshold: 100)
+2026-11-12 13:21:37,556 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:21:42,557 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 10, threshold: 100)
+2026-11-12 13:21:47,609 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:21:47,610 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 10, threshold: 100)
+2026-11-12 13:21:53,033 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:21:58,035 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 20, threshold: 100)
+2026-11-12 13:22:03,212 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:22:03,213 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 20, threshold: 100)
+2026-11-12 13:22:08,378 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:22:13,380 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 30, threshold: 100)
+2026-11-12 13:22:18,910 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:18,911 INFO [MainThread]   key delivered to master: ba31b959-6acd-4473-a7eb-d9fdbc25f5a7
+2026-11-12 13:22:18,911 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:18] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:19,292 INFO [MainThread] dec_keys: slave=sae-chr12 master=sae-chr21 count=1
+2026-11-12 13:22:19,293 INFO [MainThread]   key delivered to slave:  ba31b959-6acd-4473-a7eb-d9fdbc25f5a7
+2026-11-12 13:22:19,293 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:19] "POST /api/v1/keys/sae-chr21/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:22:19,661 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:19,661 INFO [MainThread]   key delivered to master: dc818a24-aa79-4acb-b9fe-a38d114eabbf
+2026-11-12 13:22:19,662 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:19] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:19,895 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:19,895 INFO [MainThread]   key delivered to master: e8b5fce0-05d6-41a3-9a6a-78e5bc8f85c1
+2026-11-12 13:22:19,896 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:19] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:20,146 INFO [MainThread] dec_keys: slave=sae-chr11 master=sae-chr32 count=1
+2026-11-12 13:22:20,146 INFO [MainThread]   key delivered to slave:  dc818a24-aa79-4acb-b9fe-a38d114eabbf
+2026-11-12 13:22:20,147 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:20] "POST /api/v1/keys/sae-chr32/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:22:20,392 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:20,392 INFO [MainThread]   key delivered to master: bef71e5f-c1c1-4742-8dcb-6e6bcfc0e919
+2026-11-12 13:22:20,393 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:20] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:20,659 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:20,659 INFO [MainThread]   key delivered to master: f1bfc5f8-5e9f-4d43-be70-db558e18c74e
+2026-11-12 13:22:20,660 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:20] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:20,893 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:20,893 INFO [MainThread]   key delivered to master: 04ff7cda-05ed-4267-9a9c-b8d6b21236ce
+2026-11-12 13:22:20,894 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:20] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:21,141 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:21,141 INFO [MainThread]   key delivered to master: 241b8f65-9e06-42e3-a00c-e13ec3ff7f17
+2026-11-12 13:22:21,142 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:21] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:21,376 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:21,376 INFO [MainThread]   key delivered to master: 25986888-572e-44c0-ab63-a918a1cd9330
+2026-11-12 13:22:21,377 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:21] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:21,602 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:21,603 INFO [MainThread]   key delivered to master: 72e2d0a3-c23a-4d3b-8b65-705da4d2e5f5
+2026-11-12 13:22:21,603 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:21] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:21,825 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:21,825 INFO [MainThread]   key delivered to master: 7443dcde-9391-42ad-98d8-b738d66bc308
+2026-11-12 13:22:21,826 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:21] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:22,054 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:22,054 INFO [MainThread]   key delivered to master: ebd45301-b3b4-480d-93f7-f6015ed7a6e4
+2026-11-12 13:22:22,055 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:22] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:22,132 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:22:22,133 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 25, threshold: 100)
+2026-11-12 13:22:22,295 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:22,296 INFO [MainThread]   key delivered to master: cf7590e7-3c03-4207-a5ba-94fd003852be
+2026-11-12 13:22:22,296 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:22] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:22,533 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:22,533 INFO [MainThread]   key delivered to master: 9f55dbcc-9059-4d2e-a718-92ace11722fb
+2026-11-12 13:22:22,533 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:22] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:22,774 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:22,775 INFO [MainThread]   key delivered to master: 02d37c65-6cfa-4cd7-8f40-b00a2d14b887
+2026-11-12 13:22:22,775 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:22] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:22,992 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:22,992 INFO [MainThread]   key delivered to master: feb1afe9-8260-413b-9857-dcb447a6d6cb
+2026-11-12 13:22:22,992 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:22] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:23,228 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:23,228 INFO [MainThread]   key delivered to master: dab83199-52e5-425f-82ec-53535b406837
+2026-11-12 13:22:23,229 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:23] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:23,467 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:23,467 INFO [MainThread]   key delivered to master: d8b57f98-7817-4d35-ae46-4d0b6ba3df0c
+2026-11-12 13:22:23,467 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:23] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:23,701 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:23,701 INFO [MainThread]   key delivered to master: 82208502-d0ef-49fb-b884-96ad0afad80e
+2026-11-12 13:22:23,702 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:23] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:23,929 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:23,929 INFO [MainThread]   key delivered to master: 7c7884b5-1020-48c6-9894-881c7da6287b
+2026-11-12 13:22:23,930 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:23] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:24,168 INFO [MainThread] enc_keys: master=sae-chr12 slave=sae-chr21 peer_kme=kme-sim-2 count=1
+2026-11-12 13:22:24,168 INFO [MainThread]   key delivered to master: e42c67d1-d534-4816-9718-acb6aa9f0b7b
+2026-11-12 13:22:24,169 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:22:24] "POST /api/v1/keys/sae-chr21/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:24,410 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:24,411 INFO [MainThread]   key delivered to master: 7ee05462-f735-4a53-8c6e-d7824b6170dc
+2026-11-12 13:22:24,411 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:24] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:24,735 INFO [MainThread] enc_keys: master=sae-chr11 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-12 13:22:24,735 INFO [MainThread]   key delivered to master: a97b6070-cf77-4ec8-a12f-2527c67c1682
+2026-11-12 13:22:24,735 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:22:24] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-12 13:22:28,176 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:22:33,178 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 29, threshold: 100)
+2026-11-12 13:22:38,171 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:22:38,171 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 29, threshold: 100)
+2026-11-12 13:22:43,146 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:22:48,147 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 39, threshold: 100)
+2026-11-12 13:22:54,328 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:22:54,329 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 39, threshold: 100)
+2026-11-12 13:22:59,735 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:23:04,736 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 49, threshold: 100)
+2026-11-12 13:23:09,901 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:23:09,901 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 49, threshold: 100)
+2026-11-12 13:23:14,918 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:23:18,109 INFO [MainThread] dec_keys: slave=sae-chr12 master=sae-chr21 count=1
+2026-11-12 13:23:18,109 INFO [MainThread]   key delivered to slave:  e8b5fce0-05d6-41a3-9a6a-78e5bc8f85c1
+2026-11-12 13:23:18,109 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:23:18] "POST /api/v1/keys/sae-chr21/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:23:18,802 INFO [MainThread] dec_keys: slave=sae-chr11 master=sae-chr32 count=1
+2026-11-12 13:23:18,802 INFO [MainThread]   key delivered to slave:  f1bfc5f8-5e9f-4d43-be70-db558e18c74e
+2026-11-12 13:23:18,802 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:23:18] "POST /api/v1/keys/sae-chr32/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:23:19,919 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 59, threshold: 100)
+2026-11-12 13:23:25,077 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:23:25,078 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 59, threshold: 100)
+2026-11-12 13:23:30,072 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:23:35,074 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 69, threshold: 100)
+2026-11-12 13:23:40,093 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:23:40,095 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 69, threshold: 100)
+2026-11-12 13:23:45,113 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:23:50,115 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 79, threshold: 100)
+2026-11-12 13:23:55,141 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:23:55,142 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 79, threshold: 100)
+2026-11-12 13:24:00,138 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:24:05,139 INFO [KMASync] Generating 10 keys for peer kme-sim-2 (current: 89, threshold: 100)
+2026-11-12 13:24:10,163 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-2
+2026-11-12 13:24:10,165 INFO [KMASync] Generating 10 keys for peer kme-sim-3 (current: 89, threshold: 100)
+2026-11-12 13:24:15,185 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-3
+2026-11-12 13:24:17,741 INFO [MainThread] dec_keys: slave=sae-chr12 master=sae-chr21 count=1
+2026-11-12 13:24:17,741 INFO [MainThread]   key delivered to slave:  bef71e5f-c1c1-4742-8dcb-6e6bcfc0e919
+2026-11-12 13:24:17,741 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:24:17] "POST /api/v1/keys/sae-chr21/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:24:18,432 INFO [MainThread] dec_keys: slave=sae-chr11 master=sae-chr32 count=1
+2026-11-12 13:24:18,432 INFO [MainThread]   key delivered to slave:  241b8f65-9e06-42e3-a00c-e13ec3ff7f17
+2026-11-12 13:24:18,433 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:24:18] "POST /api/v1/keys/sae-chr32/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:24:20,187 INFO [KMASync] Generating 1 keys for peer kme-sim-2 (current: 99, threshold: 100)
+2026-11-12 13:24:20,234 INFO [KMASync] Successfully synced 1/1 keys with kme-sim-2
+2026-11-12 13:24:20,235 INFO [KMASync] Generating 1 keys for peer kme-sim-3 (current: 99, threshold: 100)
+2026-11-12 13:24:20,287 INFO [KMASync] Successfully synced 1/1 keys with kme-sim-3
+2026-11-12 13:25:17,391 INFO [MainThread] dec_keys: slave=sae-chr12 master=sae-chr21 count=1
+2026-11-12 13:25:17,392 INFO [MainThread]   key delivered to slave:  04ff7cda-05ed-4267-9a9c-b8d6b21236ce
+2026-11-12 13:25:17,392 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:25:17] "POST /api/v1/keys/sae-chr21/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:25:18,082 INFO [MainThread] dec_keys: slave=sae-chr11 master=sae-chr32 count=1
+2026-11-12 13:25:18,083 INFO [MainThread]   key delivered to slave:  72e2d0a3-c23a-4d3b-8b65-705da4d2e5f5
+2026-11-12 13:25:18,084 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:25:18] "POST /api/v1/keys/sae-chr32/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:26:17,019 INFO [MainThread] dec_keys: slave=sae-chr12 master=sae-chr21 count=1
+2026-11-12 13:26:17,019 INFO [MainThread]   key delivered to slave:  25986888-572e-44c0-ab63-a918a1cd9330
+2026-11-12 13:26:17,020 INFO [MainThread] 10.0.0.6 - - [12/Nov/2026 13:26:17] "POST /api/v1/keys/sae-chr21/dec_keys HTTP/1.1" 200 -
+2026-11-12 13:26:17,670 INFO [MainThread] dec_keys: slave=sae-chr11 master=sae-chr32 count=1
+2026-11-12 13:26:17,671 INFO [MainThread]   key delivered to slave:  ebd45301-b3b4-480d-93f7-f6015ed7a6e4
+2026-11-12 13:26:17,671 INFO [MainThread] 10.0.0.2 - - [12/Nov/2026 13:26:17] "POST /api/v1/keys/sae-chr32/dec_keys HTTP/1.1" 200 -

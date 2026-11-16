@@ -1,0 +1,398 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QNetLab topology",
+  "type": "object",
+  "required": [
+    "name",
+    "ring"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "ring": {
+      "type": "object",
+      "required": [
+        "size"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "size": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 24
+        }
+      }
+    },
+    "gns3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "api_version": {
+          "enum": [
+            2
+          ]
+        },
+        "user": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "project_name": {
+          "type": "string"
+        },
+        "compute_id": {
+          "type": "string"
+        },
+        "verify_tls": {
+          "type": "boolean"
+        },
+        "timeout": {
+          "type": "number"
+        },
+        "start_timeout": {
+          "type": "number"
+        }
+      }
+    },
+    "addressing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kme_access_pool": {
+          "type": "string"
+        },
+        "ring_pool": {
+          "type": "string"
+        },
+        "sibling_pool": {
+          "type": "string"
+        },
+        "node_pool": {
+          "type": "string"
+        },
+        "kma_pool": {
+          "type": "string"
+        },
+        "router_id_pool": {
+          "type": "string"
+        },
+        "mgmt_subnet": {
+          "type": "string"
+        },
+        "mgmt_gateway": {
+          "type": "string"
+        },
+        "mgmt_attach": {
+          "enum": [
+            "nat",
+            "none"
+          ]
+        },
+        "mgmt_start": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 250
+        },
+        "mgmt_step": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 250
+        }
+      }
+    },
+    "router": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gns3_template": {
+          "type": "string"
+        },
+        "admin_user": {
+          "type": "string"
+        },
+        "admin_password": {
+          "type": "string"
+        },
+        "boot_timeout": {
+          "type": "number"
+        },
+        "if_kme": {
+          "type": "string"
+        },
+        "if_ring": {
+          "type": "string"
+        },
+        "if_sibling": {
+          "type": "string"
+        },
+        "if_node": {
+          "type": "string"
+        },
+        "if_mgmt": {
+          "type": "string"
+        },
+        "min_version": {
+          "type": "string",
+          "pattern": "^(\\d+\\.\\d+(\\.\\d+)?)?$"
+        },
+        "auto_update": {
+          "type": "boolean"
+        },
+        "update_channel": {
+          "enum": [
+            "stable",
+            "long-term",
+            "testing"
+          ]
+        },
+        "update_dns": {
+          "type": "string"
+        },
+        "update_timeout": {
+          "type": "number",
+          "minimum": 60
+        },
+        "update_method": {
+          "enum": [
+            "host",
+            "device"
+          ]
+        },
+        "update_version": {
+          "type": "string",
+          "pattern": "^(\\d+\\.\\d+(\\.\\d+)?)?$"
+        }
+      }
+    },
+    "containers": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base_image": {
+          "type": "string"
+        },
+        "kme_source_dir": {
+          "type": "string"
+        },
+        "app_source_dir": {
+          "type": "string"
+        },
+        "kme_api_port": {
+          "type": "integer"
+        },
+        "metrics_port": {
+          "type": "integer"
+        },
+        "probe_port": {
+          "type": "integer"
+        },
+        "key_size_bits": {
+          "type": "integer",
+          "minimum": 64,
+          "maximum": 1024,
+          "multipleOf": 8
+        }
+      }
+    },
+    "kme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sync_interval_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "generation_delay_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sync_threshold": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "request_timeout_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_retries": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "log_level": {
+          "enum": [
+            "DEBUG",
+            "INFO",
+            "WARNING",
+            "ERROR"
+          ]
+        }
+      }
+    },
+    "ospf": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "instance": {
+          "type": "string"
+        },
+        "area": {
+          "type": "string"
+        },
+        "area_id": {
+          "type": "string"
+        },
+        "ring_cost": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sibling_cost": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "ipsec": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "dh_group": {
+          "type": "string"
+        },
+        "pfs_group": {
+          "type": "string"
+        },
+        "hash_algorithm": {
+          "type": "string"
+        },
+        "enc_algorithm": {
+          "type": "string"
+        },
+        "proposal_auth": {
+          "type": "string"
+        },
+        "proposal_enc": {
+          "type": "string"
+        },
+        "lifetime": {
+          "type": "string"
+        },
+        "auth_method": {
+          "enum": [
+            "psk",
+            "cert"
+          ]
+        },
+        "ppk_mode": {
+          "enum": [
+            "qkd",
+            "static",
+            "none"
+          ]
+        },
+        "qkd_key_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "qkd_cache_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "psk": {
+          "type": "string"
+        },
+        "enforce_encryption": {
+          "type": "boolean"
+        },
+        "unprotected_links": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 24
+          },
+          "uniqueItems": true
+        },
+        "proposal_lifetime": {
+          "type": "string",
+          "pattern": "^(\\d+[smhdw]|\\d{2}:\\d{2}:\\d{2})$"
+        }
+      }
+    },
+    "pki": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "key_type": {
+          "enum": [
+            "rsa-2048",
+            "rsa-3072",
+            "rsa-4096",
+            "ec-p256",
+            "ec-p384"
+          ]
+        },
+        "validity_days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "ca_validity_days": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "organization": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        }
+      }
+    },
+    "load": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "duration_s": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "warmup_s": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "probe_interval_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "probe_size_bytes": {
+          "type": "integer",
+          "minimum": 16
+        },
+        "key_interval_s": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "peers": {
+          "enum": [
+            "adjacent",
+            "none"
+          ]
+        }
+      }
+    }
+  }
+}

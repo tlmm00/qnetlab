@@ -1,0 +1,1455 @@
+2026-11-10 19:06:42 ipsec,debug => (size 0x30)
+2026-11-10 19:06:42 ipsec,debug 00000030 0000002c 01010004 0300000c 0100000c 800e0100 03000008 02000005
+2026-11-10 19:06:42 ipsec,debug 03000008 0300000c 00000008 04000014
+2026-11-10 19:06:42 ipsec,debug => (size 0x68)
+2026-11-10 19:06:42 ipsec,debug 00000068 00140000 f9a6100c f3c4dd37 df4926cc dd8fafa6 def74f9f 70407ce6
+2026-11-10 19:06:42 ipsec,debug d2a18bad 84d450a7 fdf74e62 17633107 a58ffc3a 11c9ec35 1e9a2619 fb4c4bb8
+2026-11-10 19:06:42 ipsec,debug ea78c6c5 deadd756 f3dbfaa7 02851029 0013833a 6cb2ab84 a765a05a 5b7c6f2a
+2026-11-10 19:06:42 ipsec,debug 03301795 b982c86d
+2026-11-10 19:06:42 ipsec,debug => (size 0x1c)
+2026-11-10 19:06:42 ipsec,debug 0000001c e7c12448 e338c927 e59c6813 f2017c2a bf929224 185049e7
+2026-11-10 19:06:42 ipsec,debug => (size 0x1c)
+2026-11-10 19:06:42 ipsec,debug 0000001c 00004004 325ffe81 fe5d42bb 64a14ebd 63d5199e 65adf3cf
+2026-11-10 19:06:42 ipsec,debug => (size 0x1c)
+2026-11-10 19:06:42 ipsec,debug 0000001c 00004005 4d15475e bba81823 f1563c26 e20d5577 7ab7173c
+2026-11-10 19:06:42 ipsec,debug => (size 0x8)
+2026-11-10 19:06:42 ipsec,debug 00000008 0000402e
+2026-11-10 19:06:42 ipsec,debug => (size 0x8)
+2026-11-10 19:06:42 ipsec,debug 00000008 00004036
+2026-11-10 19:06:42 ipsec,debug => (size 0x8)
+2026-11-10 19:06:42 ipsec,debug 00000008 0000403d
+2026-11-10 19:06:42 ipsec,debug ===== sending 288 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:42 ipsec,debug 1 times of 292 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:42 ipsec,debug,packet 087fc0e2 20da6a56 00000000 00000000 21202208 00000000 00000120 22000030
+2026-11-10 19:06:42 ipsec,debug,packet 0000002c 01010004 0300000c 0100000c 800e0100 03000008 02000005 03000008
+2026-11-10 19:06:42 ipsec,debug,packet 0300000c 00000008 04000014 28000068 00140000 f9a6100c f3c4dd37 df4926cc
+2026-11-10 19:06:42 ipsec,debug,packet dd8fafa6 def74f9f 70407ce6 d2a18bad 84d450a7 fdf74e62 17633107 a58ffc3a
+2026-11-10 19:06:42 ipsec,debug,packet 11c9ec35 1e9a2619 fb4c4bb8 ea78c6c5 deadd756 f3dbfaa7 02851029 0013833a
+2026-11-10 19:06:42 ipsec,debug,packet 6cb2ab84 a765a05a 5b7c6f2a 03301795 b982c86d 2900001c e7c12448 e338c927
+2026-11-10 19:06:42 ipsec,debug,packet e59c6813 f2017c2a bf929224 185049e7 2900001c 00004004 325ffe81 fe5d42bb
+2026-11-10 19:06:42 ipsec,debug,packet 64a14ebd 63d5199e 65adf3cf 2900001c 00004005 4d15475e bba81823 f1563c26
+2026-11-10 19:06:42 ipsec,debug,packet e20d5577 7ab7173c 29000008 0000402e 29000008 00004036 00000008 0000403d
+2026-11-10 19:06:42 ipsec,debug ===== received 288 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:42 ipsec,debug,packet 7566e1bd 3d48c169 00000000 00000000 21202208 00000000 00000120 22000030
+2026-11-10 19:06:42 ipsec,debug,packet 0000002c 01010004 0300000c 0100000c 800e0100 03000008 02000005 03000008
+2026-11-10 19:06:42 ipsec,debug,packet 0300000c 00000008 04000014 28000068 00140000 43838277 bef149b1 4ff32dfc
+2026-11-10 19:06:42 ipsec,debug,packet 644500f3 fe3873fe 8f8d19c0 b6595211 de7b527e 4da25162 d1ff4ca7 5fd5a2b1
+2026-11-10 19:06:42 ipsec,debug,packet 186f0491 160f77c6 f1e6f3ef c5a5ee87 d3db207b 3616cebe e86af67e b379b4a2
+2026-11-10 19:06:42 ipsec,debug,packet 413ce23f 8978d39c c4132e2d 2966f513 363ca07c 2900001c f430f283 f27c3818
+2026-11-10 19:06:42 ipsec,debug,packet e4d48006 6745f914 67cfb7ce 62f7b4d2 2900001c 00004004 2ed12cfe e95c1faf
+2026-11-10 19:06:42 ipsec,debug,packet 9b4abfeb b7c825e0 78275c6e 2900001c 00004005 dd09c01b 94343ab7 39290c90
+2026-11-10 19:06:42 ipsec,debug,packet 26ecc221 797d9fde 29000008 0000402e 29000008 00004036 00000008 0000403d
+2026-11-10 19:06:42 ipsec,debug ===== received 293 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:42 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 21202220 00000000 00000125 22000030
+2026-11-10 19:06:42 ipsec,debug,packet 0000002c 01010004 0300000c 0100000c 800e0100 03000008 02000005 03000008
+2026-11-10 19:06:42 ipsec,debug,packet 0300000c 00000008 04000014 28000068 00140000 a2c14dfe b08d21ee e7732422
+2026-11-10 19:06:42 ipsec,debug,packet 2fe34005 e3ee69d5 6bb915b7 a7b8cfc3 3cc63e76 a80e7354 820206a3 01a04aa1
+2026-11-10 19:06:42 ipsec,debug,packet e1f26391 b93962dd 27a748e8 f8c31904 d7c50449 cf4aba5b 707bda6a 4acab974
+2026-11-10 19:06:42 ipsec,debug,packet 7f06c599 9d8ccf00 b66766e4 cb861fd2 ad6dc111 2900001c 88fb5536 6bc14d6e
+2026-11-10 19:06:42 ipsec,debug,packet c674b52a e4df11eb 39ad84ee 225920d0 2900001c 00004004 ee267ec5 24f74023
+2026-11-10 19:06:42 ipsec,debug,packet 1e20f66c caaee966 02ec2699 2900001c 00004005 6b7eefb4 ab4476f5 1291dbaa
+2026-11-10 19:06:42 ipsec,debug,packet b0b48c1a a2f7e8e7 26000008 0000402e 29000005 04290000 08000040 36000000
+2026-11-10 19:06:42 ipsec,debug,packet 08000040 3d
+2026-11-10 19:06:42 ipsec,debug => shared secret (size 0x30)
+2026-11-10 19:06:42 ipsec,debug 24680f27 f222cf67 301e00a4 517354e5 7dc9d89e 03f77470 338cfee7 7e281d79
+2026-11-10 19:06:42 ipsec,debug d22947a5 89a14134 f666fd61 26f4680e
+2026-11-10 19:06:42 ipsec,debug => (size 0x30)
+2026-11-10 19:06:42 ipsec,debug 00000030 0000002c 01010004 0300000c 0100000c 800e0100 03000008 02000005
+2026-11-10 19:06:42 ipsec,debug 03000008 0300000c 00000008 04000014
+2026-11-10 19:06:42 ipsec,debug => (size 0x68)
+2026-11-10 19:06:42 ipsec,debug 00000068 00140000 c587a0d2 e0092849 75bb2c70 a901a000 9693e695 9e6b6112
+2026-11-10 19:06:42 ipsec,debug 6706c493 a54c08e0 06d96d85 d4915c0b 20d89d0d aaa97dd7 4b3b6cf0 864890bb
+2026-11-10 19:06:42 ipsec,debug 23577d66 c7fdb917 2858485e ac24dd04 d1aa2d60 7421a6a7 eb94c663 e42dbfaa
+2026-11-10 19:06:42 ipsec,debug ed7cb723 63ad7751
+2026-11-10 19:06:42 ipsec,debug => (size 0x1c)
+2026-11-10 19:06:42 ipsec,debug 0000001c 34d62102 4fc5ba06 5a49f1ad fab18a38 7133d12a 6d8a6202
+2026-11-10 19:06:42 ipsec,debug => (size 0x1c)
+2026-11-10 19:06:42 ipsec,debug 0000001c 00004004 39da3195 ad151e69 25eb6e3c 0eb28d30 3c82cc20
+2026-11-10 19:06:42 ipsec,debug => (size 0x1c)
+2026-11-10 19:06:42 ipsec,debug 0000001c 00004005 cf137d4d 66a47738 a7600fe5 5480001d 3bbf8a43
+2026-11-10 19:06:42 ipsec,debug => (size 0x8)
+2026-11-10 19:06:42 ipsec,debug 00000008 0000402e
+2026-11-10 19:06:42 ipsec,debug => (size 0x5)
+2026-11-10 19:06:42 ipsec,debug 00000005 04
+2026-11-10 19:06:42 ipsec,debug => (size 0x8)
+2026-11-10 19:06:42 ipsec,debug 00000008 00004036
+2026-11-10 19:06:42 ipsec,debug => (size 0x8)
+2026-11-10 19:06:42 ipsec,debug 00000008 0000403d
+2026-11-10 19:06:42 ipsec,debug ===== sending 293 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:42 ipsec,debug 1 times of 297 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:42 ipsec,debug,packet 7566e1bd 3d48c169 415ce624 f4db43f5 21202220 00000000 00000125 22000030
+2026-11-10 19:06:42 ipsec,debug,packet 0000002c 01010004 0300000c 0100000c 800e0100 03000008 02000005 03000008
+2026-11-10 19:06:42 ipsec,debug,packet 0300000c 00000008 04000014 28000068 00140000 c587a0d2 e0092849 75bb2c70
+2026-11-10 19:06:42 ipsec,debug,packet a901a000 9693e695 9e6b6112 6706c493 a54c08e0 06d96d85 d4915c0b 20d89d0d
+2026-11-10 19:06:42 ipsec,debug,packet aaa97dd7 4b3b6cf0 864890bb 23577d66 c7fdb917 2858485e ac24dd04 d1aa2d60
+2026-11-10 19:06:42 ipsec,debug,packet 7421a6a7 eb94c663 e42dbfaa ed7cb723 63ad7751 2900001c 34d62102 4fc5ba06
+2026-11-10 19:06:42 ipsec,debug,packet 5a49f1ad fab18a38 7133d12a 6d8a6202 2900001c 00004004 39da3195 ad151e69
+2026-11-10 19:06:42 ipsec,debug,packet 25eb6e3c 0eb28d30 3c82cc20 2900001c 00004005 cf137d4d 66a47738 a7600fe5
+2026-11-10 19:06:42 ipsec,debug,packet 5480001d 3bbf8a43 26000008 0000402e 29000005 04290000 08000040 36000000
+2026-11-10 19:06:42 ipsec,debug,packet 08000040 3d
+2026-11-10 19:06:42 ipsec,debug => skeyseed (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 0d6e8c23 1180ca1c 196b5d54 97b79076 50d68c50 5e34a440 e24e81ac d1af8c43
+2026-11-10 19:06:42 ipsec,debug => keymat (size 0x20)
+2026-11-10 19:06:42 ipsec,debug d4d8247d 150b489a 6cd60807 ad905ecc bdaa3725 a4650c9c 094fecdc b7b51c5c
+2026-11-10 19:06:42 ipsec,debug => SK_ai (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 8e812a30 e5376d14 b81575fa 12ae2d1d dcd586fe ac78c545 c6d5d8ac a9a88e04
+2026-11-10 19:06:42 ipsec,debug => SK_ar (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 1d66bb86 cf9f72d5 c394331f 1e7ae1a5 b1fa087d d643da44 2d82cb13 0be4d87e
+2026-11-10 19:06:42 ipsec,debug => SK_ei (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 966cd511 edaf48cc 657c1335 51841cbe a05dc072 9cada48e a5ba20ed c7808dec
+2026-11-10 19:06:42 ipsec,debug => SK_er (size 0x20)
+2026-11-10 19:06:42 ipsec,debug aa310efd 608d0233 6ba95dca bbffc7f3 e6029dbe d360b819 e789e953 ea01156d
+2026-11-10 19:06:42 ipsec,debug => SK_pi (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 493f2fe0 1015d828 93c1d838 3fdae5ae 8c1f5a73 4d8a956d d4fabd07 06e6a519
+2026-11-10 19:06:42 ipsec,debug => SK_pr (size 0x20)
+2026-11-10 19:06:42 ipsec,debug c192da4c e1c3098f 148b75e5 ae9597e5 7a910c2c 124e278b 2c6549f2 d135b94d
+2026-11-10 19:06:42 ipsec,info new ike2 SA (R): to-MKT32 10.0.1.13[4500]-10.0.1.14[4500] 7566e1bd3d48c169:415ce624f4db43f5
+2026-11-10 19:06:42 ipsec,debug => shared secret (size 0x30)
+2026-11-10 19:06:42 ipsec,debug af5128ae fdb17b97 d584ffb4 f0a34acc 6ed53477 8eb880f8 9c97cba8 bb265005
+2026-11-10 19:06:42 ipsec,debug 7cc8d511 64dcbec2 1e5918ff dd744bbc
+2026-11-10 19:06:42 ipsec,debug => skeyseed (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 89b94efc f98b322a 6682d847 7663ff34 364e4565 999da26a 7c715ea9 be526e30
+2026-11-10 19:06:42 ipsec,debug => keymat (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 02163808 b5132fff 94e1d630 94d1bded a299aa5d 2a32dbe5 405398b3 2bb5da8f
+2026-11-10 19:06:42 ipsec,debug => SK_ai (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 14d3fede b5db670e 6346a2e9 1a6c1fe6 bb9e602f 78ce0248 232f8ee2 626f3cef
+2026-11-10 19:06:42 ipsec,debug => SK_ar (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 31f81de1 b38dd156 0b83f64e e1434cf8 56453888 625564db ac608783 e6a70519
+2026-11-10 19:06:42 ipsec,debug => SK_ei (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 322e7d8d 6e2f3dae 264510e7 7844a85e d1e9b888 d9486c9c f3910838 472ba617
+2026-11-10 19:06:42 ipsec,debug => SK_er (size 0x20)
+2026-11-10 19:06:42 ipsec,debug e0a6b4e9 13cfcaa2 5ba391f1 403d088a 5e141026 909e0815 d13a0e2f e19ef116
+2026-11-10 19:06:42 ipsec,debug => SK_pi (size 0x20)
+2026-11-10 19:06:42 ipsec,debug 13c5c71c 3377f8d9 b3bd7fb4 6cb86f65 7b436e91 bd401505 4aaa54d4 370ff6b6
+2026-11-10 19:06:42 ipsec,debug => SK_pr (size 0x20)
+2026-11-10 19:06:42 ipsec,debug afd04e9a cb09f118 b295b18f 712dc9b9 cbd951ac ca3945d6 0b2239cd f75f8116
+2026-11-10 19:06:42 ipsec,info new ike2 SA (I): to-MKT32 10.0.1.14[4500]-10.0.1.13[4500] 087fc0e220da6a56:b271f00d056907f0
+2026-11-10 19:06:42 ipsec,debug ppk: requesting qkd key
+2026-11-10 19:06:42 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:42 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:42 ipsec,debug,packet \r\n
+2026-11-10 19:06:42 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:42 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:42 GMT\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:42 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:42 ipsec,debug,packet \r\n
+2026-11-10 19:06:42 ipsec,debug,packet {"keys":[{"key":"3MiANZQghf0FIt9mEaHDctE+ngFI56EWwkKCW9kvAiA=","key_ID":"336fdab6-82c6-4902-8a30-5ba
+2026-11-10 19:06:42 ipsec,debug,packet aa9bac1ff"}]}\n
+2026-11-10 19:06:42 ipsec,debug qkd: received key: 336fdab6-82c6-4902-8a30-5baaa9bac1ff
+2026-11-10 19:06:42 ipsec,debug qkd: using key: 336fdab6-82c6-4902-8a30-5baaa9bac1ff
+2026-11-10 19:06:42 ipsec,debug,packet qkd key 0xdcc88035942085fd0522df6611a1c372d13e9e0148e7a116c242825bd92f0220
+2026-11-10 19:06:42 ipsec,debug ppk confirm: cce2db66daa1e774
+2026-11-10 19:06:42 ipsec,debug => (size 0x35)
+2026-11-10 19:06:42 ipsec,debug 00000035 0000403e 02333336 66646162 362d3832 63362d34 3930322d 38613330
+2026-11-10 19:06:42 ipsec,debug 2d356261 61613962 61633166 66cce2db 66daa1e7 74
+2026-11-10 19:06:42 ipsec,debug,packet => outgoing plain packet (size 0x51)
+2026-11-10 19:06:42 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 29202b08 00000001 00000051 00000035
+2026-11-10 19:06:42 ipsec,debug,packet 0000403e 02333336 66646162 362d3832 63362d34 3930322d 38613330 2d356261
+2026-11-10 19:06:42 ipsec,debug,packet 61613962 61633166 66cce2db 66daa1e7 74
+2026-11-10 19:06:42 ipsec,debug => (size 0xc4)
+2026-11-10 19:06:42 ipsec,debug 290000c4 06c59630 07922f88 6aacde81 129561ff 26c70b30 a93e709f f829d354
+2026-11-10 19:06:42 ipsec,debug 78c908e5 7334944d aa20b9a9 3c79d51d ab53e2bf 32647ce4 ec4d87aa 344a39a7
+2026-11-10 19:06:42 ipsec,debug 35733aea 094f553c 5ea2e864 d0e3ccc0 8de2f7b7 d5ee01c3 36297d33 18ef6c44
+2026-11-10 19:06:42 ipsec,debug e4d482f4 12b702d3 2288cae3 a18f6481 30e6ff81 477dd1ab 0613efed 2fa6f0fc
+2026-11-10 19:06:42 ipsec,debug 9ac1f92b 7291075f 4ee48e3f 86fdb7ee 341e522a dc4746fc 2f7a88c9 dc95f042
+2026-11-10 19:06:42 ipsec,debug 537863c1 7014da2f ae6ed821 90e753ef 5021b250 00000000 00000000 00000000
+2026-11-10 19:06:42 ipsec,debug 00000000
+2026-11-10 19:06:42 ipsec,debug ===== sending 224 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:42 ipsec,debug 1 times of 228 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:42 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202b08 00000001 000000e0 290000c4
+2026-11-10 19:06:42 ipsec,debug,packet 06c59630 07922f88 6aacde81 129561ff 26c70b30 a93e709f f829d354 78c908e5
+2026-11-10 19:06:42 ipsec,debug,packet 7334944d aa20b9a9 3c79d51d ab53e2bf 32647ce4 ec4d87aa 344a39a7 35733aea
+2026-11-10 19:06:42 ipsec,debug,packet 094f553c 5ea2e864 d0e3ccc0 8de2f7b7 d5ee01c3 36297d33 18ef6c44 e4d482f4
+2026-11-10 19:06:42 ipsec,debug,packet 12b702d3 2288cae3 a18f6481 30e6ff81 477dd1ab 0613efed 2fa6f0fc 9ac1f92b
+2026-11-10 19:06:42 ipsec,debug,packet 7291075f 4ee48e3f 86fdb7ee 341e522a dc4746fc 2f7a88c9 dc95f042 537863c1
+2026-11-10 19:06:42 ipsec,debug,packet 7014da2f ae6ed821 90e753ef 5021b250 712e64fd c2b08189 c04636c2 23522225
+2026-11-10 19:06:42 ipsec,debug ===== received 224 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:42 ipsec,debug,packet 7566e1bd 3d48c169 415ce624 f4db43f5 2e202b08 00000001 000000e0 290000c4
+2026-11-10 19:06:42 ipsec,debug,packet de04c8f0 33b1c6d1 e36588ce 630157ce a5b2ccbc 47aaef6f d64422ac 87d60377
+2026-11-10 19:06:42 ipsec,debug,packet 181f41d3 e70d39b1 d7b0eaef 7126789c a95a756d 9fdafd98 71047044 23a9ee07
+2026-11-10 19:06:42 ipsec,debug,packet f8989dec 1c0317c9 b9f5734a 501230af 75d765ed 3854bc76 62261fe3 2c23030f
+2026-11-10 19:06:42 ipsec,debug,packet f82ece85 52c4b007 df3516ea a409014c 50889ba0 aae848e2 43e41310 33bc9916
+2026-11-10 19:06:42 ipsec,debug,packet 8c804d1d bb4fd1da d94c181f 4395345e 5c6409c4 648e17bc 9b76a348 c10c3de1
+2026-11-10 19:06:42 ipsec,debug,packet e4a596ed c5cca710 6256170c b3a7ddf2 eb99b76d 502f86e2 32438211 2f4c3483
+2026-11-10 19:06:42 ipsec,debug => iv (size 0x10)
+2026-11-10 19:06:42 ipsec,debug de04c8f0 33b1c6d1 e36588ce 630157ce
+2026-11-10 19:06:42 ipsec,debug decrypted packet
+2026-11-10 19:06:42 ipsec,debug,packet => decrypted packet (size 0x51)
+2026-11-10 19:06:42 ipsec,debug,packet 7566e1bd 3d48c169 415ce624 f4db43f5 29202b08 00000001 00000051 00000035
+2026-11-10 19:06:42 ipsec,debug,packet 0000403e 02333336 66646162 362d3832 63362d34 3930322d 38613330 2d356261
+2026-11-10 19:06:42 ipsec,debug,packet 61613962 61633166 663019b7 ec5d417b d0
+2026-11-10 19:06:42 ipsec,debug 0233333666646162362d383263362d343930322d386133302d3562616161396261633166663019b7ec5d417bd0
+2026-11-10 19:06:43 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:43 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:43 ipsec,debug,packet \r\n
+2026-11-10 19:06:43 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:43 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:43 GMT\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:43 ipsec,debug,packet \r\n
+2026-11-10 19:06:43 ipsec,debug,packet {"keys":[{"key":"KzqyUo16jJmhQwo2TDz0tgb5TGMyGa4hnAggw+U2WvA=","key_ID":"c5a77c80-1726-4e20-8c7e-7b3
+2026-11-10 19:06:43 ipsec,debug,packet 8ac5d4d59"}]}\n
+2026-11-10 19:06:43 ipsec,debug qkd: received key: c5a77c80-1726-4e20-8c7e-7b38ac5d4d59
+2026-11-10 19:06:43 ipsec,debug ===== received 304 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202b20 00000001 00000130 29000114
+2026-11-10 19:06:43 ipsec,debug,packet 50712e64 fdc2b081 89c04636 c2235222 5aee61d0 235d4c5e d015bffe 1d9f6020
+2026-11-10 19:06:43 ipsec,debug,packet 7d6833b4 f45dcbb8 b4537035 d1721188 5485b1ef f59b559a 8cdfd4cb 5a501ff8
+2026-11-10 19:06:43 ipsec,debug,packet 8674592e eb388546 3f61d045 dea07925 39cdddde ac8135a8 4b7d054f 57d50701
+2026-11-10 19:06:43 ipsec,debug,packet 101db51b 6a5e8c95 070dbef7 6e6c3ae1 87617fa8 fdb822fb a3fec3e9 594d69dc
+2026-11-10 19:06:43 ipsec,debug,packet bf5f2f4c 70c12107 9dc92b3d e959cd8c 2bd3a826 9c59b60b e04f8c0a 9a5e615b
+2026-11-10 19:06:43 ipsec,debug,packet 2ada17c2 faa74aa1 06f1debc 66ac48b5 2af254ab 9730e7f7 499eeff0 36644b71
+2026-11-10 19:06:43 ipsec,debug,packet 0c1c756c 6aac3038 5e69d910 602f7e8a 6ef56e1d 13c08b4f 19452a4b 53300acd
+2026-11-10 19:06:43 ipsec,debug,packet 688f78e6 0e3eacf3 e38a6e02 c4b32c1e 961f9e1c f8aaca7a 8c516a6a 38c32d54
+2026-11-10 19:06:43 ipsec,debug,packet 2a03b944 58e6459d 49bb6e4a d8a1241e
+2026-11-10 19:06:43 ipsec,debug => iv (size 0x10)
+2026-11-10 19:06:43 ipsec,debug 50712e64 fdc2b081 89c04636 c2235222
+2026-11-10 19:06:43 ipsec,debug decrypted packet
+2026-11-10 19:06:43 ipsec,debug,packet => decrypted packet (size 0x49)
+2026-11-10 19:06:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 29202b20 00000001 00000049 0000002d
+2026-11-10 19:06:43 ipsec,debug,packet 00004034 02333336 66646162 362d3832 63362d34 3930322d 38613330 2d356261
+2026-11-10 19:06:43 ipsec,debug,packet 61613962 61633166 66
+2026-11-10 19:06:43 ipsec,debug 0233333666646162362d383263362d343930322d386133302d356261616139626163316666
+2026-11-10 19:06:43 ipsec,debug => skeyseed' (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 7f441edc f198a1a7 ead71bb6 21d6024b f1bc4cfe 0285b319 3bf70f5a c7942822
+2026-11-10 19:06:43 ipsec,debug => keymat (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 6a382945 ab46dcbb 16be887f 27b19ff0 e18e98aa fef3bf00 4561dddb 54df9699
+2026-11-10 19:06:43 ipsec,debug => SK_ai (size 0x20)
+2026-11-10 19:06:43 ipsec,debug b4f4b185 c794e1f0 674df258 aea242a4 d0be92c4 4863cfa9 a2f4a8a6 e7a10f03
+2026-11-10 19:06:43 ipsec,debug => SK_ar (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 8adfbaf3 ec4fa438 d22bebb5 f1c4ec1f 00a60ff1 675cb236 52134407 abb28b48
+2026-11-10 19:06:43 ipsec,debug => SK_ei (size 0x20)
+2026-11-10 19:06:43 ipsec,debug c6a8e60e 45f53836 35a96953 64a0a0a9 6afc4eaa 34dacff6 74b5f99a 8f4d8cdd
+2026-11-10 19:06:43 ipsec,debug => SK_er (size 0x20)
+2026-11-10 19:06:43 ipsec,debug fa66d8da 96d9ed50 13e74160 5178fa07 e43ef71a e441692d 00e1c316 9feedce6
+2026-11-10 19:06:43 ipsec,debug => SK_pi (size 0x20)
+2026-11-10 19:06:43 ipsec,debug b2238829 91527e46 0f1da252 20141ba5 e3f52628 2e81bf3e b3d9090d 3a5d06a7
+2026-11-10 19:06:43 ipsec,debug => SK_pr (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 64cfec69 3077e546 5c6579da 0e5839d4 2df12223 792124a9 4d8468fd 508bea96
+2026-11-10 19:06:43 ipsec,debug => (size 0xc)
+2026-11-10 19:06:43 ipsec,debug 0000000c 01000000 0a00010e
+2026-11-10 19:06:43 ipsec,debug => auth nonce (size 0x18)
+2026-11-10 19:06:43 ipsec,debug 88fb5536 6bc14d6e c674b52a e4df11eb 39ad84ee 225920d0
+2026-11-10 19:06:43 ipsec,debug => idhash (size 0x20)
+2026-11-10 19:06:43 ipsec,debug aa0de078 8a8836ff 0d58f887 ec1a15c9 afded59c 4c6c8970 e6457233 f3aa83d1
+2026-11-10 19:06:43 ipsec,debug => my auth (size 0x20)
+2026-11-10 19:06:43 ipsec,debug d5727366 dbc52542 115a94f6 81c9ed39 ccfcfd04 1d6f3043 db845094 dadf2d6d
+2026-11-10 19:06:43 ipsec,debug => (size 0x28)
+2026-11-10 19:06:43 ipsec,debug 00000028 02000000 d5727366 dbc52542 115a94f6 81c9ed39 ccfcfd04 1d6f3043
+2026-11-10 19:06:43 ipsec,debug db845094 dadf2d6d
+2026-11-10 19:06:43 ipsec,debug => (size 0x8)
+2026-11-10 19:06:43 ipsec,debug 00000008 00004000
+2026-11-10 19:06:43 ipsec,debug => (size 0x2c)
+2026-11-10 19:06:43 ipsec,debug 0000002c 00000028 01030403 06836871 0300000c 0100000c 800e0100 03000008
+2026-11-10 19:06:43 ipsec,debug 0300000c 00000008 05000000
+2026-11-10 19:06:43 ipsec,debug => (size 0x18)
+2026-11-10 19:06:43 ipsec,debug 00000018 01000000 07000010 0000ffff 0a000318 0a00031b
+2026-11-10 19:06:43 ipsec,debug => (size 0x18)
+2026-11-10 19:06:43 ipsec,debug 00000018 01000000 07000010 0000ffff 0a000314 0a000317
+2026-11-10 19:06:43 ipsec,debug,packet => outgoing plain packet (size 0xb4)
+2026-11-10 19:06:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 23202308 00000002 000000b4 2700000c
+2026-11-10 19:06:43 ipsec,debug,packet 01000000 0a00010e 29000028 02000000 d5727366 dbc52542 115a94f6 81c9ed39
+2026-11-10 19:06:43 ipsec,debug,packet ccfcfd04 1d6f3043 db845094 dadf2d6d 21000008 00004000 2c00002c 00000028
+2026-11-10 19:06:43 ipsec,debug,packet 01030403 06836871 0300000c 0100000c 800e0100 03000008 0300000c 00000008
+2026-11-10 19:06:43 ipsec,debug,packet 05000000 2d000018 01000000 07000010 0000ffff 0a000318 0a00031b 00000018
+2026-11-10 19:06:43 ipsec,debug,packet 01000000 07000010 0000ffff 0a000314 0a000317
+2026-11-10 19:06:43 ipsec,debug => (size 0xc4)
+2026-11-10 19:06:43 ipsec,debug 230000c4 542a03b9 4458e645 9d49bb6e 4ad8a124 fe71d056 5465a7d8 6a6314d3
+2026-11-10 19:06:43 ipsec,debug ba2cd541 a43cd36f 9c566205 212f179f c2475eeb 40facecf 419f3962 9bb7e61e
+2026-11-10 19:06:43 ipsec,debug d3ca1acb 9b437257 693c7ffc 2fe7c201 86d9a7f6 e73b2e92 8f5636f3 4b898427
+2026-11-10 19:06:43 ipsec,debug 7c1a2be9 b6401715 f64d561a 5ce5429a aa536f7e 44725199 7c6c46d8 4b353cc9
+2026-11-10 19:06:43 ipsec,debug 1ab1083e 332e1782 38e12491 883b43a9 56114438 f08995ac dfd8f203 40391a91
+2026-11-10 19:06:43 ipsec,debug 834cd8b1 e2c01b5c c66b3353 6d792636 def50b2f 00000000 00000000 00000000
+2026-11-10 19:06:43 ipsec,debug 00000000
+2026-11-10 19:06:43 ipsec,debug ===== sending 224 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:43 ipsec,debug 1 times of 228 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202308 00000002 000000e0 230000c4
+2026-11-10 19:06:43 ipsec,debug,packet 542a03b9 4458e645 9d49bb6e 4ad8a124 fe71d056 5465a7d8 6a6314d3 ba2cd541
+2026-11-10 19:06:43 ipsec,debug,packet a43cd36f 9c566205 212f179f c2475eeb 40facecf 419f3962 9bb7e61e d3ca1acb
+2026-11-10 19:06:43 ipsec,debug,packet 9b437257 693c7ffc 2fe7c201 86d9a7f6 e73b2e92 8f5636f3 4b898427 7c1a2be9
+2026-11-10 19:06:43 ipsec,debug,packet b6401715 f64d561a 5ce5429a aa536f7e 44725199 7c6c46d8 4b353cc9 1ab1083e
+2026-11-10 19:06:43 ipsec,debug,packet 332e1782 38e12491 883b43a9 56114438 f08995ac dfd8f203 40391a91 834cd8b1
+2026-11-10 19:06:43 ipsec,debug,packet e2c01b5c c66b3353 6d792636 def50b2f 54104292 742f8eb7 7eb6cb0f 0eb7c329
+2026-11-10 19:06:43 ipsec,debug ===== received 272 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202320 00000002 00000110 240000f4
+2026-11-10 19:06:43 ipsec,debug,packet 2f541042 92742f8e b77eb6cb 0f0eb7c3 fe67db14 180718fb fff2e658 bf797c58
+2026-11-10 19:06:43 ipsec,debug,packet 57653ebd a46ef417 dd450289 3733af84 e2fcf3a5 4634b30c d5ea3310 4b6d18b1
+2026-11-10 19:06:43 ipsec,debug,packet 9b45aa81 30757a20 a3f8e908 fdac1bf3 5c7bba62 4548a99d 02766f6f 9db9d5c0
+2026-11-10 19:06:43 ipsec,debug,packet 11aa3d61 780cf899 eca5379c 4544f38a 3c50d724 2fa1311a 8cd688b4 aaa5107e
+2026-11-10 19:06:43 ipsec,debug,packet c31cdb54 05059e87 9d375284 2b22198b e5b5d604 0a0dd04a 2f38095b bd8d153b
+2026-11-10 19:06:43 ipsec,debug,packet cc746a09 41e097dc a7aa86e9 f8116bce 80096405 4ede33fb 9e68b510 5b051f35
+2026-11-10 19:06:43 ipsec,debug,packet 48735888 ccaf7dd3 ad98f2f9 798a2a41 a5b56e22 f438fd89 3cf5c4df cf87a118
+2026-11-10 19:06:43 ipsec,debug,packet 77a0d514 e02d8223 94dbe733 81688c22
+2026-11-10 19:06:43 ipsec,debug => iv (size 0x10)
+2026-11-10 19:06:43 ipsec,debug 2f541042 92742f8e b77eb6cb 0f0eb7c3
+2026-11-10 19:06:43 ipsec,debug decrypted packet
+2026-11-10 19:06:43 ipsec,debug,packet => decrypted packet (size 0xb4)
+2026-11-10 19:06:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 24202320 00000002 000000b4 2700000c
+2026-11-10 19:06:43 ipsec,debug,packet 01000000 0a00010d 29000028 02000000 58a7989d 96b3f5a4 f7efc2bd e9d5471a
+2026-11-10 19:06:43 ipsec,debug,packet 5fd89886 d0a96567 7efc3813 ad4ca832 2c000008 00004000 2d000018 01000000
+2026-11-10 19:06:43 ipsec,debug,packet 07000010 0000ffff 0a000318 0a00031b 21000018 01000000 07000010 0000ffff
+2026-11-10 19:06:43 ipsec,debug,packet 0a000314 0a000317 0000002c 00000028 01030403 0b7ccd83 0300000c 0100000c
+2026-11-10 19:06:43 ipsec,debug,packet 800e0100 03000008 0300000c 00000008 05000000
+2026-11-10 19:06:43 ipsec,debug => peer's auth (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 58a7989d 96b3f5a4 f7efc2bd e9d5471a 5fd89886 d0a96567 7efc3813 ad4ca832
+2026-11-10 19:06:43 ipsec,debug => auth nonce (size 0x18)
+2026-11-10 19:06:43 ipsec,debug e7c12448 e338c927 e59c6813 f2017c2a bf929224 185049e7
+2026-11-10 19:06:43 ipsec,debug => idhash (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 61573344 e251a43f d5ca703e bacd8b28 f5fe163c 2b9d2e4e 9fcc64d2 52103b23
+2026-11-10 19:06:43 ipsec,debug => calculated peer's AUTH (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 58a7989d 96b3f5a4 f7efc2bd e9d5471a 5fd89886 d0a96567 7efc3813 ad4ca832
+2026-11-10 19:06:43 ipsec,info,account peer authorized: to-MKT32 10.0.1.14[4500]-10.0.1.13[4500] 087fc0e220da6a56:b271f00d056907f0
+2026-11-10 19:06:43 ipsec,debug => child keymat (size 0x80)
+2026-11-10 19:06:43 ipsec,debug e1ab2b5c db505261 72981c27 b1749469 52497f4f ebea6ebc b1f820ed 681d6f9b
+2026-11-10 19:06:43 ipsec,debug 0c685013 aa21fe08 36685f44 40d0f5a7 a4bfdd24 1adee020 a75d9472 9b0a0622
+2026-11-10 19:06:43 ipsec,debug 6a3d249b 665643b3 7aa80d75 0971a414 4e47ecfc f37c6986 c143e6c5 cce9f749
+2026-11-10 19:06:43 ipsec,debug 3ff378d0 ecd0f579 8373eb99 64e08a8a 4bb4e33a bf211bd3 785f5d1d 392710bd
+2026-11-10 19:06:43 ipsec,debug,packet POST /api/v1/keys/sae-chr32/dec_keys HTTP/1.1\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Length: 63\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:43 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:43 ipsec,debug,packet \r\n
+2026-11-10 19:06:43 ipsec,debug,packet {"key_IDs":[{"key_ID":"336fdab6-82c6-4902-8a30-5baaa9bac1ff"}]}
+2026-11-10 19:06:43 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:43 GMT\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:43 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:43 ipsec,debug,packet \r\n
+2026-11-10 19:06:43 ipsec,debug,packet {"keys":[{"key":"3MiANZQghf0FIt9mEaHDctE+ngFI56EWwkKCW9kvAiA=","key_ID":"336fdab6-82c6-4902-8a30-5ba
+2026-11-10 19:06:43 ipsec,debug,packet aa9bac1ff"}]}\n
+2026-11-10 19:06:43 ipsec,debug qkd: received key: 336fdab6-82c6-4902-8a30-5baaa9bac1ff
+2026-11-10 19:06:43 ipsec,debug,packet qkd key 0xdcc88035942085fd0522df6611a1c372d13e9e0148e7a116c242825bd92f0220
+2026-11-10 19:06:43 ipsec,debug => (size 0x2d)
+2026-11-10 19:06:43 ipsec,debug 0000002d 00004034 02333336 66646162 362d3832 63362d34 3930322d 38613330
+2026-11-10 19:06:43 ipsec,debug 2d356261 61613962 61633166 66
+2026-11-10 19:06:43 ipsec,debug,packet => outgoing plain packet (size 0x49)
+2026-11-10 19:06:43 ipsec,debug,packet 7566e1bd 3d48c169 415ce624 f4db43f5 29202b20 00000001 00000049 0000002d
+2026-11-10 19:06:43 ipsec,debug,packet 00004034 02333336 66646162 362d3832 63362d34 3930322d 38613330 2d356261
+2026-11-10 19:06:43 ipsec,debug,packet 61613962 61633166 66
+2026-11-10 19:06:43 ipsec,debug => (first 0x100 of 0x144)
+2026-11-10 19:06:43 ipsec,debug 29000144 f2eb99b7 6d502f86 e2324382 112f4c34 0b9151d1 4f094fa7 67ee21ca
+2026-11-10 19:06:43 ipsec,debug b3d30179 4567103d abd34f0f c8bf29a5 466a88f6 948901a3 5f97e80a 9af16bfd
+2026-11-10 19:06:43 ipsec,debug 82deb4a1 8c30bbd3 b03c5c4c eee3df5d 6a48f676 16e38bb3 ba8f04e2 090663ae
+2026-11-10 19:06:43 ipsec,debug 81a5fb83 30708846 591ff639 1b4e7f31 8db34ea1 664da84e 459a4fed 2ebd515b
+2026-11-10 19:06:43 ipsec,debug 64529825 f93eb005 54ade556 10649bf1 6747491a e8533ff7 e446de0c b637b77c
+2026-11-10 19:06:43 ipsec,debug 085c6222 79d9f696 4a7d783f 19cfc338 4383c952 93b3c4a4 8cdb54a2 f754c432
+2026-11-10 19:06:43 ipsec,debug 3504069c eeba4f79 44e5edd2 d82b4165 a98faf38 6a1d93fe 7d79771f 6cea1eb8
+2026-11-10 19:06:43 ipsec,debug 64219485 0954527e bf73bcf6 78bd1a57 e0d0a387 88851c8b 73e37047 39935c22
+2026-11-10 19:06:43 ipsec,debug ===== sending 352 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:43 ipsec,debug 1 times of 356 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:43 ipsec,debug,packet 7566e1bd 3d48c169 415ce624 f4db43f5 2e202b20 00000001 00000160 29000144
+2026-11-10 19:06:43 ipsec,debug,packet f2eb99b7 6d502f86 e2324382 112f4c34 0b9151d1 4f094fa7 67ee21ca b3d30179
+2026-11-10 19:06:43 ipsec,debug,packet 4567103d abd34f0f c8bf29a5 466a88f6 948901a3 5f97e80a 9af16bfd 82deb4a1
+2026-11-10 19:06:43 ipsec,debug,packet 8c30bbd3 b03c5c4c eee3df5d 6a48f676 16e38bb3 ba8f04e2 090663ae 81a5fb83
+2026-11-10 19:06:43 ipsec,debug,packet 30708846 591ff639 1b4e7f31 8db34ea1 664da84e 459a4fed 2ebd515b 64529825
+2026-11-10 19:06:43 ipsec,debug,packet f93eb005 54ade556 10649bf1 6747491a e8533ff7 e446de0c b637b77c 085c6222
+2026-11-10 19:06:43 ipsec,debug,packet 79d9f696 4a7d783f 19cfc338 4383c952 93b3c4a4 8cdb54a2 f754c432 3504069c
+2026-11-10 19:06:43 ipsec,debug,packet eeba4f79 44e5edd2 d82b4165 a98faf38 6a1d93fe 7d79771f 6cea1eb8 64219485
+2026-11-10 19:06:43 ipsec,debug,packet 0954527e bf73bcf6 78bd1a57 e0d0a387 88851c8b 73e37047 39935c22 5c729a07
+2026-11-10 19:06:43 ipsec,debug,packet 8347356f d72926ea 6232544c 594d0991 5dbff00a 4c9fc4fc b7402283 b46d7c00
+2026-11-10 19:06:43 ipsec,debug,packet a9d89874 84f69a30 d3e2c427 0b8d701c c0e749c3 0d462535 92ffbf7e ab30282d
+2026-11-10 19:06:43 ipsec,debug => skeyseed' (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 8ed89533 14b8fb6d 7c76c6b0 3a311260 64e6e189 f78ae840 53fba9f3 458ebfc9
+2026-11-10 19:06:43 ipsec,debug => keymat (size 0x20)
+2026-11-10 19:06:43 ipsec,debug dc8d2956 0517a81d 6f7b6fa8 1442ffd5 3ad6b870 50621b8d 09d60ce5 d490c6d1
+2026-11-10 19:06:43 ipsec,debug => SK_ai (size 0x20)
+2026-11-10 19:06:43 ipsec,debug cf106831 5e0a7e20 38c42d39 7b42729d ec9bb78c e565d3b5 f489500f 101d0964
+2026-11-10 19:06:43 ipsec,debug => SK_ar (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 60a7bb31 7cff2daf 2b9b6a4e d5a6fef7 6c08be29 92d858e8 4dfbc7a8 31d7dd7f
+2026-11-10 19:06:43 ipsec,debug => SK_ei (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 9d260e88 e9aa7f0d af78a8f1 cc6dc3c5 7c81578e 92cbbe90 3506f2e3 07cc5e8c
+2026-11-10 19:06:43 ipsec,debug => SK_er (size 0x20)
+2026-11-10 19:06:43 ipsec,debug 689b355d 5c264b32 a5089300 04fcf9b9 d3223103 edeb1cb2 425edf5b 907c6d37
+2026-11-10 19:06:43 ipsec,debug => SK_pi (size 0x20)
+2026-11-10 19:06:43 ipsec,debug e7126e1c a7e0a8ec db1322ea c78f3ee5 efb1e375 fe550478 9d78ffbb 7edf181a
+2026-11-10 19:06:43 ipsec,debug => SK_pr (size 0x20)
+2026-11-10 19:06:43 ipsec,debug dfd1981b 29bc61f5 90455c8d 2f53dc5e cf7ea9cc 111e91b3 50d4df55 bb29cc37
+2026-11-10 19:06:44 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:44 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:44 ipsec,debug,packet \r\n
+2026-11-10 19:06:44 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:44 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:44 GMT\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:44 ipsec,debug,packet \r\n
+2026-11-10 19:06:44 ipsec,debug,packet {"keys":[{"key":"VqtJytVODOZFIpQHIn7ILpVHU9Hx+IcZhU8xQpQvlx4=","key_ID":"17d91fe1-4f15-4684-8c1e-924
+2026-11-10 19:06:44 ipsec,debug,packet d750af3d3"}]}\n
+2026-11-10 19:06:44 ipsec,debug qkd: received key: 17d91fe1-4f15-4684-8c1e-924d750af3d3
+2026-11-10 19:06:44 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:44 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:44 ipsec,debug,packet \r\n
+2026-11-10 19:06:44 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:44 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:44 GMT\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:44 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:44 ipsec,debug,packet \r\n
+2026-11-10 19:06:44 ipsec,debug,packet {"keys":[{"key":"p/CI3hRmKTnBB1OOB05v0lU9qXbJuey6tRMbYpS8yFY=","key_ID":"5555fe76-e0f8-4c93-b03a-996
+2026-11-10 19:06:44 ipsec,debug,packet 32c49e5ce"}]}\n
+2026-11-10 19:06:44 ipsec,debug qkd: received key: 5555fe76-e0f8-4c93-b03a-99632c49e5ce
+2026-11-10 19:06:45 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:45 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:45 ipsec,debug,packet \r\n
+2026-11-10 19:06:45 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:45 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:45 GMT\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:45 ipsec,debug,packet \r\n
+2026-11-10 19:06:45 ipsec,debug,packet {"keys":[{"key":"KmpPmpUJkIlk0trSPcMviI3GTtwR8cIwlgCMwL5lfKw=","key_ID":"2a1d15a1-15a5-4ed9-8665-0d1
+2026-11-10 19:06:45 ipsec,debug,packet 1a50a7a22"}]}\n
+2026-11-10 19:06:45 ipsec,debug qkd: received key: 2a1d15a1-15a5-4ed9-8665-0d11a50a7a22
+2026-11-10 19:06:45 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:45 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:45 ipsec,debug,packet \r\n
+2026-11-10 19:06:45 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:45 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:45 GMT\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:45 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:45 ipsec,debug,packet \r\n
+2026-11-10 19:06:45 ipsec,debug,packet {"keys":[{"key":"bBmBecmioy9lahQoBq47qkMyA4Vq7ge0hJqh85dqEJ0=","key_ID":"48ef7d83-454f-4b67-9c11-3ab
+2026-11-10 19:06:45 ipsec,debug,packet fddca1063"}]}\n
+2026-11-10 19:06:45 ipsec,debug qkd: received key: 48ef7d83-454f-4b67-9c11-3abfddca1063
+2026-11-10 19:06:46 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:46 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:46 ipsec,debug,packet \r\n
+2026-11-10 19:06:46 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:46 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:46 GMT\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:46 ipsec,debug,packet \r\n
+2026-11-10 19:06:46 ipsec,debug,packet {"keys":[{"key":"VDxYeEvzWRF5YN8G2VsxDbX+GiZZW4WeXoKP09dpsjQ=","key_ID":"ab35ea9a-3f56-4e84-ade3-a1c
+2026-11-10 19:06:46 ipsec,debug,packet 34fbd2941"}]}\n
+2026-11-10 19:06:46 ipsec,debug qkd: received key: ab35ea9a-3f56-4e84-ade3-a1c34fbd2941
+2026-11-10 19:06:46 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:46 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:46 ipsec,debug,packet \r\n
+2026-11-10 19:06:46 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:46 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:46 GMT\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:46 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:46 ipsec,debug,packet \r\n
+2026-11-10 19:06:46 ipsec,debug,packet {"keys":[{"key":"yWZwecmiAU2p2a+FnAH6bvNYBjnvk8qcZIFTWAdRJ54=","key_ID":"850f864a-cd70-4c1e-8962-d18
+2026-11-10 19:06:46 ipsec,debug,packet d4200de96"}]}\n
+2026-11-10 19:06:46 ipsec,debug qkd: received key: 850f864a-cd70-4c1e-8962-d18d4200de96
+2026-11-10 19:06:47 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:47 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:47 ipsec,debug,packet \r\n
+2026-11-10 19:06:47 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:47 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:47 GMT\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:47 ipsec,debug,packet \r\n
+2026-11-10 19:06:47 ipsec,debug,packet {"keys":[{"key":"rKFP7+h6MdQsKOf0j6F81HwmHYMT8AHVEFeOA5eXnoM=","key_ID":"9fdd8cb0-9e02-4885-a443-029
+2026-11-10 19:06:47 ipsec,debug,packet 5b7fb0a32"}]}\n
+2026-11-10 19:06:47 ipsec,debug qkd: received key: 9fdd8cb0-9e02-4885-a443-0295b7fb0a32
+2026-11-10 19:06:47 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:47 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:47 ipsec,debug,packet \r\n
+2026-11-10 19:06:47 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:47 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:47 GMT\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:47 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:47 ipsec,debug,packet \r\n
+2026-11-10 19:06:47 ipsec,debug,packet {"keys":[{"key":"J/gFqU8LEeyATjaIYbtdqxf7c6nUSXyaL3rURZl2pU0=","key_ID":"1e4087b2-40b7-4cdd-8cfa-6ba
+2026-11-10 19:06:47 ipsec,debug,packet 31fd60a86"}]}\n
+2026-11-10 19:06:47 ipsec,debug qkd: received key: 1e4087b2-40b7-4cdd-8cfa-6ba31fd60a86
+2026-11-10 19:06:48 ipsec,debug,packet POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Accept-Encoding: deflate, gzip\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Content-Length: 23\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Host: 10.0.0.25:8443\r\n
+2026-11-10 19:06:48 ipsec,debug,packet User-Agent: RouterOS 7.22.1\r\n
+2026-11-10 19:06:48 ipsec,debug,packet \r\n
+2026-11-10 19:06:48 ipsec,debug,packet {"number":1,"size":256}
+2026-11-10 19:06:48 ipsec,debug,packet HTTP/1.0 200 OK\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Server: Werkzeug/3.1.9 Python/3.12.16\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Date: Tue, 10 Nov 2026 19:06:48 GMT\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Content-Type: application/json\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Content-Length: 114\r\n
+2026-11-10 19:06:48 ipsec,debug,packet Connection: close\r\n
+2026-11-10 19:06:48 ipsec,debug,packet \r\n
+2026-11-10 19:06:48 ipsec,debug,packet {"keys":[{"key":"zhwr8NbWEHxPSyDOReGnfhCoDwMl2LoMYlUjkP04vRI=","key_ID":"8f3710e5-bc5b-4e40-93ea-11a
+2026-11-10 19:06:48 ipsec,debug,packet 13510ab49"}]}\n
+2026-11-10 19:06:48 ipsec,debug qkd: received key: 8f3710e5-bc5b-4e40-93ea-11a13510ab49
+2026-11-10 19:06:51 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000003 0000001c
+2026-11-10 19:06:51 ipsec,debug => (size 0x64)
+2026-11-10 19:06:51 ipsec,debug 00000064 1877a0d5 14e02d82 2394dbe7 3381688c 04743ba3 ccb74e9c c43d501c
+2026-11-10 19:06:51 ipsec,debug 0f819602 837509ec 0134f6ad 6274cfc5 bfbd0dc6 06cdca66 e6ff9bac 9d0323b3
+2026-11-10 19:06:51 ipsec,debug 94b8896b 34852d6d 82cebdac 81407e78 1e36f35b 00000000 00000000 00000000
+2026-11-10 19:06:51 ipsec,debug 00000000
+2026-11-10 19:06:51 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:51 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000003 00000080 00000064
+2026-11-10 19:06:51 ipsec,debug,packet 1877a0d5 14e02d82 2394dbe7 3381688c 04743ba3 ccb74e9c c43d501c 0f819602
+2026-11-10 19:06:51 ipsec,debug,packet 837509ec 0134f6ad 6274cfc5 bfbd0dc6 06cdca66 e6ff9bac 9d0323b3 94b8896b
+2026-11-10 19:06:51 ipsec,debug,packet 34852d6d 82cebdac 81407e78 1e36f35b a350604a bada424e 609f8033 478020ca
+2026-11-10 19:06:51 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000000 00000080 00000064
+2026-11-10 19:06:51 ipsec,debug,packet 2f541042 92742f8e b77eb6cb 0f0eb7c3 d3ad2a8e 4fc6af9b 17807143 1c3da33a
+2026-11-10 19:06:51 ipsec,debug,packet 87d6996d 72ff91e9 c8dffd75 ced1faea 039d3549 0a4f435b 8ccf57c2 1807c0bd
+2026-11-10 19:06:51 ipsec,debug,packet 4752441e c4948ffa 69958999 76c1c8a1 d3141458 e9959286 757959df 72934501
+2026-11-10 19:06:51 ipsec,debug => iv (size 0x10)
+2026-11-10 19:06:51 ipsec,debug 2f541042 92742f8e b77eb6cb 0f0eb7c3
+2026-11-10 19:06:51 ipsec,debug decrypted packet
+2026-11-10 19:06:51 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000000 0000001c
+2026-11-10 19:06:51 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000000 0000001c
+2026-11-10 19:06:51 ipsec,debug => (size 0x84)
+2026-11-10 19:06:51 ipsec,debug 00000084 a1d31414 58e99592 86757959 df729345 51b4df32 cc94ae7b 4d308977
+2026-11-10 19:06:51 ipsec,debug 5c0d42ad 46f23f8c cbaf7c24 34c67918 b9376361 78e8f19f 09eb07e8 911a0102
+2026-11-10 19:06:51 ipsec,debug 31394257 4c9ebe79 97341ffd bc98f34a 3e8177f9 3640de6d ec005c34 50b98a28
+2026-11-10 19:06:51 ipsec,debug 72f04aa0 641a6571 e1fba2ef 457ec270 f4e2aaa7 00000000 00000000 00000000
+2026-11-10 19:06:51 ipsec,debug 00000000
+2026-11-10 19:06:51 ipsec,debug ===== sending 160 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:51 ipsec,debug 1 times of 164 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000000 000000a0 00000084
+2026-11-10 19:06:51 ipsec,debug,packet a1d31414 58e99592 86757959 df729345 51b4df32 cc94ae7b 4d308977 5c0d42ad
+2026-11-10 19:06:51 ipsec,debug,packet 46f23f8c cbaf7c24 34c67918 b9376361 78e8f19f 09eb07e8 911a0102 31394257
+2026-11-10 19:06:51 ipsec,debug,packet 4c9ebe79 97341ffd bc98f34a 3e8177f9 3640de6d ec005c34 50b98a28 72f04aa0
+2026-11-10 19:06:51 ipsec,debug,packet 641a6571 e1fba2ef 457ec270 f4e2aaa7 7ed330a7 d6ce1670 da8a34c8 0a19837c
+2026-11-10 19:06:51 ipsec,debug ===== received 160 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000003 000000a0 00000084
+2026-11-10 19:06:51 ipsec,debug,packet 5ba35060 4abada42 4e609f80 33478020 1479e04a f885634d 23efd63b bfcda9f4
+2026-11-10 19:06:51 ipsec,debug,packet f0fed953 2a90d77f 707a12d8 74289cb5 21497801 8539fd9d 21eed419 6556110e
+2026-11-10 19:06:51 ipsec,debug,packet ae737798 5283eb2b f228a561 43303295 b7a7c7f3 a4988d34 9c0f1d77 5f18400e
+2026-11-10 19:06:51 ipsec,debug,packet 49266769 fd6a6f8f 87219b36 1eef1506 7d81f21e 69abd597 dff5125b 7c6fb920
+2026-11-10 19:06:51 ipsec,debug => iv (size 0x10)
+2026-11-10 19:06:51 ipsec,debug 5ba35060 4abada42 4e609f80 33478020
+2026-11-10 19:06:51 ipsec,debug decrypted packet
+2026-11-10 19:06:51 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:06:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000003 0000001c
+2026-11-10 19:06:59 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000004 0000001c
+2026-11-10 19:06:59 ipsec,debug => (size 0x84)
+2026-11-10 19:06:59 ipsec,debug 00000084 067d81f2 1e69abd5 97dff512 5b7c6fb9 8094dc01 a1de8a57 c8250925
+2026-11-10 19:06:59 ipsec,debug d8c667d4 7f34e859 651051e1 cfc04ed2 71c3e1cf 4701c935 7b7106a2 2379bad4
+2026-11-10 19:06:59 ipsec,debug 24cf6f6b b62221a2 314c7ea5 c6da7980 1b2d791e 912e9f49 b4737845 b6a535dd
+2026-11-10 19:06:59 ipsec,debug a1425113 33ef22f0 50a72832 2c9c18fa 1931130b 00000000 00000000 00000000
+2026-11-10 19:06:59 ipsec,debug 00000000
+2026-11-10 19:06:59 ipsec,debug ===== sending 160 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:59 ipsec,debug 1 times of 164 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000004 000000a0 00000084
+2026-11-10 19:06:59 ipsec,debug,packet 067d81f2 1e69abd5 97dff512 5b7c6fb9 8094dc01 a1de8a57 c8250925 d8c667d4
+2026-11-10 19:06:59 ipsec,debug,packet 7f34e859 651051e1 cfc04ed2 71c3e1cf 4701c935 7b7106a2 2379bad4 24cf6f6b
+2026-11-10 19:06:59 ipsec,debug,packet b62221a2 314c7ea5 c6da7980 1b2d791e 912e9f49 b4737845 b6a535dd a1425113
+2026-11-10 19:06:59 ipsec,debug,packet 33ef22f0 50a72832 2c9c18fa 1931130b 5dfbdb42 1fe98116 581f004a 39173229
+2026-11-10 19:06:59 ipsec,debug ===== received 160 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000001 000000a0 00000084
+2026-11-10 19:06:59 ipsec,debug,packet a77ed330 a7d6ce16 70da8a34 c80a1983 440dfe03 c09dcf18 97fbac36 16334698
+2026-11-10 19:06:59 ipsec,debug,packet 58f836bf 39cc5e4e 321c5962 71bcfe6b 2c3cdc35 6281cd3e c894ddaf 05fb01fc
+2026-11-10 19:06:59 ipsec,debug,packet adf015c4 73433608 1094193b 7a4f691a 7beb7552 3cb3a1d7 1c2518b5 5b9da0d8
+2026-11-10 19:06:59 ipsec,debug,packet dc934677 efddef4b 10527bb4 ac2de816 70cdb1ee 2c7551a5 3c360467 6e2c8cc3
+2026-11-10 19:06:59 ipsec,debug => iv (size 0x10)
+2026-11-10 19:06:59 ipsec,debug a77ed330 a7d6ce16 70da8a34 c80a1983
+2026-11-10 19:06:59 ipsec,debug decrypted packet
+2026-11-10 19:06:59 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000001 0000001c
+2026-11-10 19:06:59 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000001 0000001c
+2026-11-10 19:06:59 ipsec,debug => (size 0x74)
+2026-11-10 19:06:59 ipsec,debug 00000074 1670cdb1 ee2c7551 a53c3604 676e2c8c e64cac6c 62db0999 9d11e444
+2026-11-10 19:06:59 ipsec,debug b38acbf9 e914355d 7c23fd03 86ac7be7 27af757c c95085b8 414ffbee aafe1b81
+2026-11-10 19:06:59 ipsec,debug 3b72050a f47b9ce8 f79143bb b075d771 d5b7ca0a 0e70c585 6c63b1c2 2acb3862
+2026-11-10 19:06:59 ipsec,debug 5d7eb0b1 00000000 00000000 00000000 00000000
+2026-11-10 19:06:59 ipsec,debug ===== sending 144 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:06:59 ipsec,debug 1 times of 148 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000001 00000090 00000074
+2026-11-10 19:06:59 ipsec,debug,packet 1670cdb1 ee2c7551 a53c3604 676e2c8c e64cac6c 62db0999 9d11e444 b38acbf9
+2026-11-10 19:06:59 ipsec,debug,packet e914355d 7c23fd03 86ac7be7 27af757c c95085b8 414ffbee aafe1b81 3b72050a
+2026-11-10 19:06:59 ipsec,debug,packet f47b9ce8 f79143bb b075d771 d5b7ca0a 0e70c585 6c63b1c2 2acb3862 5d7eb0b1
+2026-11-10 19:06:59 ipsec,debug,packet 6242c53d 466b4f74 4a55b4a0 843bc531
+2026-11-10 19:06:59 ipsec,debug ===== received 144 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000004 00000090 00000074
+2026-11-10 19:06:59 ipsec,debug,packet 0b5dfbdb 421fe981 16581f00 4a391732 f736ff38 79cf6a22 860f1198 0ea1dc35
+2026-11-10 19:06:59 ipsec,debug,packet afb27776 211a08a5 ef98cfdc 7fa7a305 7010ffb5 7fa610f8 f35a8b71 22c61e82
+2026-11-10 19:06:59 ipsec,debug,packet fa564b77 831e13e4 262e123b d2ab4890 f97700b1 0d9e714e 6f6d72cf df0c3b98
+2026-11-10 19:06:59 ipsec,debug,packet 09ee2a09 2ddb2b3d cba43276 23fe8ad2
+2026-11-10 19:06:59 ipsec,debug => iv (size 0x10)
+2026-11-10 19:06:59 ipsec,debug 0b5dfbdb 421fe981 16581f00 4a391732
+2026-11-10 19:06:59 ipsec,debug decrypted packet
+2026-11-10 19:06:59 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:06:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000004 0000001c
+2026-11-10 19:07:07 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000005 0000001c
+2026-11-10 19:07:07 ipsec,debug => (size 0x74)
+2026-11-10 19:07:07 ipsec,debug 00000074 9809ee2a 092ddb2b 3dcba432 7623fe8a 7aeed672 6a5dd06d 0c10a6b7
+2026-11-10 19:07:07 ipsec,debug 49697480 f2981f37 c731dd5d 9f426f09 d0da984c 3fce213d f52cce87 46a2f7d6
+2026-11-10 19:07:07 ipsec,debug cd784159 10c285bd 007f649f 4a1a5694 04d60412 8f35b6c8 bfecfece 40a9e386
+2026-11-10 19:07:07 ipsec,debug 9225d3de 00000000 00000000 00000000 00000000
+2026-11-10 19:07:07 ipsec,debug ===== sending 144 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:07 ipsec,debug 1 times of 148 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000005 00000090 00000074
+2026-11-10 19:07:07 ipsec,debug,packet 9809ee2a 092ddb2b 3dcba432 7623fe8a 7aeed672 6a5dd06d 0c10a6b7 49697480
+2026-11-10 19:07:07 ipsec,debug,packet f2981f37 c731dd5d 9f426f09 d0da984c 3fce213d f52cce87 46a2f7d6 cd784159
+2026-11-10 19:07:07 ipsec,debug,packet 10c285bd 007f649f 4a1a5694 04d60412 8f35b6c8 bfecfece 40a9e386 9225d3de
+2026-11-10 19:07:07 ipsec,debug,packet d0143c72 410dab8a b6ae5a1a 586fb293
+2026-11-10 19:07:07 ipsec,debug ===== received 144 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000002 00000090 00000074
+2026-11-10 19:07:07 ipsec,debug,packet b16242c5 3d466b4f 744a55b4 a0843bc5 b138c076 6b9efd20 04c63d87 f9c0e3a9
+2026-11-10 19:07:07 ipsec,debug,packet 72500a4c a30bac4c 0594e1bb 9398be80 073a5096 779d145c 03641508 f61795e9
+2026-11-10 19:07:07 ipsec,debug,packet d3c90de0 011f8d4f 51d4c7c7 85d2cbad 25a5436c 728f11b4 51760f0d fb7eb766
+2026-11-10 19:07:07 ipsec,debug,packet 90ff2a14 ede7c56f 9fc42b42 c6200407
+2026-11-10 19:07:07 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:07 ipsec,debug b16242c5 3d466b4f 744a55b4 a0843bc5
+2026-11-10 19:07:07 ipsec,debug decrypted packet
+2026-11-10 19:07:07 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000002 0000001c
+2026-11-10 19:07:07 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000002 0000001c
+2026-11-10 19:07:07 ipsec,debug => (size 0x64)
+2026-11-10 19:07:07 ipsec,debug 00000064 6690ff2a 14ede7c5 6f9fc42b 42c62004 9f945029 437c0e54 58b6e627
+2026-11-10 19:07:07 ipsec,debug 895e4ff7 0b98fcc0 02915e1d d6e88fe8 a60e26fa d6471b99 e1060c73 88db5272
+2026-11-10 19:07:07 ipsec,debug 2cc24f77 6d3ccc7f 297d81ab 864532f6 9da7148d 00000000 00000000 00000000
+2026-11-10 19:07:07 ipsec,debug 00000000
+2026-11-10 19:07:07 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:07 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000002 00000080 00000064
+2026-11-10 19:07:07 ipsec,debug,packet 6690ff2a 14ede7c5 6f9fc42b 42c62004 9f945029 437c0e54 58b6e627 895e4ff7
+2026-11-10 19:07:07 ipsec,debug,packet 0b98fcc0 02915e1d d6e88fe8 a60e26fa d6471b99 e1060c73 88db5272 2cc24f77
+2026-11-10 19:07:07 ipsec,debug,packet 6d3ccc7f 297d81ab 864532f6 9da7148d 6c6f015a 800f10c4 574f6f13 65d5133e
+2026-11-10 19:07:07 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000005 00000080 00000064
+2026-11-10 19:07:07 ipsec,debug,packet ded0143c 72410dab 8ab6ae5a 1a586fb2 426e77b7 46a323a7 876db9ab 75008518
+2026-11-10 19:07:07 ipsec,debug,packet beb2f634 b6427e75 d25adfe4 46ef1774 d8eb9bda d4b44f5b 39993073 ce55ea34
+2026-11-10 19:07:07 ipsec,debug,packet 85f6967f 696309b7 ec4bcb0c 80835a7f d78b16cb 562094eb 960e8d2e ca42a3f1
+2026-11-10 19:07:07 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:07 ipsec,debug ded0143c 72410dab 8ab6ae5a 1a586fb2
+2026-11-10 19:07:07 ipsec,debug decrypted packet
+2026-11-10 19:07:07 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000005 0000001c
+2026-11-10 19:07:12 ipsec,info killing ike2 SA: to-MKT32 10.0.1.13[4500]-10.0.1.14[4500] 7566e1bd3d48c169:415ce624f4db43f5
+2026-11-10 19:07:15 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000006 0000001c
+2026-11-10 19:07:15 ipsec,debug => (size 0x44)
+2026-11-10 19:07:15 ipsec,debug 00000044 7fd78b16 cb562094 eb960e8d 2eca42a3 898e92df 7439c658 f37fcf44
+2026-11-10 19:07:15 ipsec,debug 8dbce6a6 7ad8e40a 29bc1d61 ec1cf54a 5955ae85 00000000 00000000 00000000
+2026-11-10 19:07:15 ipsec,debug 00000000
+2026-11-10 19:07:15 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:15 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000006 00000060 00000044
+2026-11-10 19:07:15 ipsec,debug,packet 7fd78b16 cb562094 eb960e8d 2eca42a3 898e92df 7439c658 f37fcf44 8dbce6a6
+2026-11-10 19:07:15 ipsec,debug,packet 7ad8e40a 29bc1d61 ec1cf54a 5955ae85 42a6ac7d 6b0c2163 111239e7 bc3af52c
+2026-11-10 19:07:15 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000003 00000060 00000044
+2026-11-10 19:07:15 ipsec,debug,packet 8d6c6f01 5a800f10 c4574f6f 1365d513 2291caba cacd0f22 282d368f 1032939d
+2026-11-10 19:07:15 ipsec,debug,packet c315dab8 19e5cd6e 78fb0275 82f5a939 9cc8813a c8b5d59b 6c29b896 3c2a0311
+2026-11-10 19:07:15 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:15 ipsec,debug 8d6c6f01 5a800f10 c4574f6f 1365d513
+2026-11-10 19:07:15 ipsec,debug decrypted packet
+2026-11-10 19:07:15 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000003 0000001c
+2026-11-10 19:07:15 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000003 0000001c
+2026-11-10 19:07:15 ipsec,debug => (size 0x54)
+2026-11-10 19:07:15 ipsec,debug 00000054 399cc881 3ac8b5d5 9b6c29b8 963c2a03 32d55a61 bfe83854 d204af08
+2026-11-10 19:07:15 ipsec,debug 53f7d8c1 fcc14850 a0becf79 18519c04 feec7313 1efd36d0 6478725e 95471bd8
+2026-11-10 19:07:15 ipsec,debug 24fdfa42 00000000 00000000 00000000 00000000
+2026-11-10 19:07:15 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:15 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000003 00000070 00000054
+2026-11-10 19:07:15 ipsec,debug,packet 399cc881 3ac8b5d5 9b6c29b8 963c2a03 32d55a61 bfe83854 d204af08 53f7d8c1
+2026-11-10 19:07:15 ipsec,debug,packet fcc14850 a0becf79 18519c04 feec7313 1efd36d0 6478725e 95471bd8 24fdfa42
+2026-11-10 19:07:15 ipsec,debug,packet af7877f0 bb3edf3e 17a84195 68e46d73
+2026-11-10 19:07:15 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000006 00000070 00000054
+2026-11-10 19:07:15 ipsec,debug,packet 8542a6ac 7d6b0c21 63111239 e7bc3af5 0eff41cc 47e574cd 1acd5b0c 598ac2c5
+2026-11-10 19:07:15 ipsec,debug,packet 4b480afd 9eeb84b7 da25c47d f058806d 88f642d3 907d3a79 988b8160 a8b775b4
+2026-11-10 19:07:15 ipsec,debug,packet 71b94ed7 10ac4826 50d2e3f3 bad73d84
+2026-11-10 19:07:15 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:15 ipsec,debug 8542a6ac 7d6b0c21 63111239 e7bc3af5
+2026-11-10 19:07:15 ipsec,debug decrypted packet
+2026-11-10 19:07:15 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000006 0000001c
+2026-11-10 19:07:23 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000007 0000001c
+2026-11-10 19:07:23 ipsec,debug => (size 0x64)
+2026-11-10 19:07:23 ipsec,debug 00000064 b471b94e d710ac48 2650d2e3 f3bad73d 78e7ea0f e9b6e24c 0750ccfd
+2026-11-10 19:07:23 ipsec,debug 00f72bac 17010060 df04fd2c efa98e4d deb241fc f9bf6b99 6fb399d7 5b1b09ec
+2026-11-10 19:07:23 ipsec,debug 827fbf88 e59bf917 e9cc3b95 4ec1f6d6 06176ce2 00000000 00000000 00000000
+2026-11-10 19:07:23 ipsec,debug 00000000
+2026-11-10 19:07:23 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:23 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000007 00000080 00000064
+2026-11-10 19:07:23 ipsec,debug,packet b471b94e d710ac48 2650d2e3 f3bad73d 78e7ea0f e9b6e24c 0750ccfd 00f72bac
+2026-11-10 19:07:23 ipsec,debug,packet 17010060 df04fd2c efa98e4d deb241fc f9bf6b99 6fb399d7 5b1b09ec 827fbf88
+2026-11-10 19:07:23 ipsec,debug,packet e59bf917 e9cc3b95 4ec1f6d6 06176ce2 797eaabc 650cccd0 d385357c c2e2ad3a
+2026-11-10 19:07:23 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000004 00000080 00000064
+2026-11-10 19:07:23 ipsec,debug,packet 42af7877 f0bb3edf 3e17a841 9568e46d 1db88529 a40a93d8 b8f28a4b f3f452f6
+2026-11-10 19:07:23 ipsec,debug,packet b4400358 645b5de4 5a740bfa 1e5756f8 069f702b 06202259 b3e1c242 703b43ea
+2026-11-10 19:07:23 ipsec,debug,packet f7f7d7b3 c99c8d89 f4a6b3c5 e26d5e26 4674a646 ad43b6a7 5ff415f4 59007b8b
+2026-11-10 19:07:23 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:23 ipsec,debug 42af7877 f0bb3edf 3e17a841 9568e46d
+2026-11-10 19:07:23 ipsec,debug decrypted packet
+2026-11-10 19:07:23 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000004 0000001c
+2026-11-10 19:07:23 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000004 0000001c
+2026-11-10 19:07:23 ipsec,debug => (size 0x64)
+2026-11-10 19:07:23 ipsec,debug 00000064 264674a6 46ad43b6 a75ff415 f459007b 36dce5aa d7846b98 478c6f17
+2026-11-10 19:07:23 ipsec,debug 32b273d0 d9caf12f dddee746 236c20c2 db0565a7 a894087a 269280c4 a60a98a9
+2026-11-10 19:07:23 ipsec,debug 2ac98e64 53ea3e96 e6f6c8a3 8b469fe5 2da7b3ea 00000000 00000000 00000000
+2026-11-10 19:07:23 ipsec,debug 00000000
+2026-11-10 19:07:23 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:23 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000004 00000080 00000064
+2026-11-10 19:07:23 ipsec,debug,packet 264674a6 46ad43b6 a75ff415 f459007b 36dce5aa d7846b98 478c6f17 32b273d0
+2026-11-10 19:07:23 ipsec,debug,packet d9caf12f dddee746 236c20c2 db0565a7 a894087a 269280c4 a60a98a9 2ac98e64
+2026-11-10 19:07:23 ipsec,debug,packet 53ea3e96 e6f6c8a3 8b469fe5 2da7b3ea 79fd42b0 64c70383 1f8ee36c 78cd13af
+2026-11-10 19:07:23 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000007 00000080 00000064
+2026-11-10 19:07:23 ipsec,debug,packet e2797eaa bc650ccc d0d38535 7cc2e2ad d526600e 23d3d680 1d0c1db2 2360a895
+2026-11-10 19:07:23 ipsec,debug,packet ad213cdf 328485d3 9b50a703 68b05bec 65e4f529 d20171be 1c85e38c a4885f2a
+2026-11-10 19:07:23 ipsec,debug,packet cf1b7dba 69fbbc47 c07a64d6 286b0357 d39542b0 7a18d195 06ecdf95 c70944e6
+2026-11-10 19:07:23 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:23 ipsec,debug e2797eaa bc650ccc d0d38535 7cc2e2ad
+2026-11-10 19:07:23 ipsec,debug decrypted packet
+2026-11-10 19:07:23 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000007 0000001c
+2026-11-10 19:07:31 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000008 0000001c
+2026-11-10 19:07:31 ipsec,debug => (size 0x44)
+2026-11-10 19:07:31 ipsec,debug 00000044 57d39542 b07a18d1 9506ecdf 95c70944 79a7e690 09545afe 233405f3
+2026-11-10 19:07:31 ipsec,debug c2759b31 b61d412f 823b3392 5e5486dc 4df72876 00000000 00000000 00000000
+2026-11-10 19:07:31 ipsec,debug 00000000
+2026-11-10 19:07:31 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:31 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000008 00000060 00000044
+2026-11-10 19:07:31 ipsec,debug,packet 57d39542 b07a18d1 9506ecdf 95c70944 79a7e690 09545afe 233405f3 c2759b31
+2026-11-10 19:07:31 ipsec,debug,packet b61d412f 823b3392 5e5486dc 4df72876 16a589c0 1294c73f 9b6477ce 12ad8477
+2026-11-10 19:07:31 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000008 00000060 00000044
+2026-11-10 19:07:31 ipsec,debug,packet 7616a589 c01294c7 3f9b6477 ce12ad84 81ee5e34 d0c896b3 008cb7e7 15bd06b8
+2026-11-10 19:07:31 ipsec,debug,packet 13b151c3 603f5c66 a187cf6d 7a8ae00e 64d1bfc2 15bdd1fa ac5f3676 acc5c069
+2026-11-10 19:07:31 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:31 ipsec,debug 7616a589 c01294c7 3f9b6477 ce12ad84
+2026-11-10 19:07:31 ipsec,debug decrypted packet
+2026-11-10 19:07:31 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000008 0000001c
+2026-11-10 19:07:39 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000009 0000001c
+2026-11-10 19:07:39 ipsec,debug => (size 0x74)
+2026-11-10 19:07:39 ipsec,debug 00000074 0e64d1bf c215bdd1 faac5f36 76acc5c0 cd6ae8ce 61ab5bb9 355ef9db
+2026-11-10 19:07:39 ipsec,debug dd963c5e 19830d64 e3276a5a b22fdaa2 8e6a2603 ce989f20 4362c157 05858fcb
+2026-11-10 19:07:39 ipsec,debug 4592535e eac9b7a5 367774ce d2f8a600 3bb5558a d81cc3c4 1dd2b25b ffb53900
+2026-11-10 19:07:39 ipsec,debug f9ed6104 00000000 00000000 00000000 00000000
+2026-11-10 19:07:39 ipsec,debug ===== sending 144 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:39 ipsec,debug 1 times of 148 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000009 00000090 00000074
+2026-11-10 19:07:39 ipsec,debug,packet 0e64d1bf c215bdd1 faac5f36 76acc5c0 cd6ae8ce 61ab5bb9 355ef9db dd963c5e
+2026-11-10 19:07:39 ipsec,debug,packet 19830d64 e3276a5a b22fdaa2 8e6a2603 ce989f20 4362c157 05858fcb 4592535e
+2026-11-10 19:07:39 ipsec,debug,packet eac9b7a5 367774ce d2f8a600 3bb5558a d81cc3c4 1dd2b25b ffb53900 f9ed6104
+2026-11-10 19:07:39 ipsec,debug,packet 87ad24b0 63959fe1 872763e6 511bcb0b
+2026-11-10 19:07:39 ipsec,debug ===== received 144 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000005 00000090 00000074
+2026-11-10 19:07:39 ipsec,debug,packet 7616a589 c01294c7 3f9b6477 ce12ad84 f4ba4905 88fbcd83 d0672b8b 3af9d1bb
+2026-11-10 19:07:39 ipsec,debug,packet 8423d6f9 fb163894 d3148a3f 8dc8b58d 7846fcff f661c762 2a91125a e40861eb
+2026-11-10 19:07:39 ipsec,debug,packet b6811a9b 5426fd8f f2623d92 6c51bf13 0476f3da 69dfbadc 82cef52f 71d2cdb6
+2026-11-10 19:07:39 ipsec,debug,packet e6b77905 ade608de 60bd65c2 9d3c68a9
+2026-11-10 19:07:39 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:39 ipsec,debug 7616a589 c01294c7 3f9b6477 ce12ad84
+2026-11-10 19:07:39 ipsec,debug decrypted packet
+2026-11-10 19:07:39 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000005 0000001c
+2026-11-10 19:07:39 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000005 0000001c
+2026-11-10 19:07:39 ipsec,debug => (size 0x64)
+2026-11-10 19:07:39 ipsec,debug 00000064 b6e6b779 05ade608 de60bd65 c29d3c68 aba70a70 18a9f56e d9a2d36e
+2026-11-10 19:07:39 ipsec,debug 1d69b875 f2047294 1c44ea9c 4ab02654 9b59dd12 99b6edde 16eeb1db 8464fe2b
+2026-11-10 19:07:39 ipsec,debug addb352d 508e795d d92258df b3bcbe78 5ba7e24b 00000000 00000000 00000000
+2026-11-10 19:07:39 ipsec,debug 00000000
+2026-11-10 19:07:39 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:39 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000005 00000080 00000064
+2026-11-10 19:07:39 ipsec,debug,packet b6e6b779 05ade608 de60bd65 c29d3c68 aba70a70 18a9f56e d9a2d36e 1d69b875
+2026-11-10 19:07:39 ipsec,debug,packet f2047294 1c44ea9c 4ab02654 9b59dd12 99b6edde 16eeb1db 8464fe2b addb352d
+2026-11-10 19:07:39 ipsec,debug,packet 508e795d d92258df b3bcbe78 5ba7e24b 29c736d9 603c1f31 0ff989d6 7de75a1a
+2026-11-10 19:07:39 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000009 00000080 00000064
+2026-11-10 19:07:39 ipsec,debug,packet 0487ad24 b063959f e1872763 e6511bcb 302d8105 bd024dd3 e1283f02 c827c941
+2026-11-10 19:07:39 ipsec,debug,packet ce9c834e c85761f2 504f98f3 c936819b 7e864702 42245e03 7aee5b4d d654b2de
+2026-11-10 19:07:39 ipsec,debug,packet 6259a6d1 4be74372 9d2af33b cfb35514 ac5e78c9 cb4055da 015df601 2a0fce9e
+2026-11-10 19:07:39 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:39 ipsec,debug 0487ad24 b063959f e1872763 e6511bcb
+2026-11-10 19:07:39 ipsec,debug decrypted packet
+2026-11-10 19:07:39 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000009 0000001c
+2026-11-10 19:07:47 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 0000000a 0000001c
+2026-11-10 19:07:47 ipsec,debug => (size 0x54)
+2026-11-10 19:07:47 ipsec,debug 00000054 14ac5e78 c9cb4055 da015df6 012a0fce 00391604 5ee9b05e 3b47577f
+2026-11-10 19:07:47 ipsec,debug d9241f30 1dcd0cdb 3666a795 941bbcb3 c5e00406 5d82b367 2d821ba2 314bfa74
+2026-11-10 19:07:47 ipsec,debug acee45ef 00000000 00000000 00000000 00000000
+2026-11-10 19:07:47 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:47 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 0000000a 00000070 00000054
+2026-11-10 19:07:47 ipsec,debug,packet 14ac5e78 c9cb4055 da015df6 012a0fce 00391604 5ee9b05e 3b47577f d9241f30
+2026-11-10 19:07:47 ipsec,debug,packet 1dcd0cdb 3666a795 941bbcb3 c5e00406 5d82b367 2d821ba2 314bfa74 acee45ef
+2026-11-10 19:07:47 ipsec,debug,packet c8583ff3 7f640dcd db4a6490 5562cd4b
+2026-11-10 19:07:47 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000006 00000070 00000054
+2026-11-10 19:07:47 ipsec,debug,packet 4b29c736 d9603c1f 310ff989 d67de75a aec93c78 9eeb652b bf19eaa4 886e0f63
+2026-11-10 19:07:47 ipsec,debug,packet f0a6b195 559a51b3 2b493097 61fe2699 a09d9cd9 1455ea7b 9faadf70 4f6acabd
+2026-11-10 19:07:47 ipsec,debug,packet ded078f5 57814755 b49cfb2d c82ae2ab
+2026-11-10 19:07:47 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:47 ipsec,debug 4b29c736 d9603c1f 310ff989 d67de75a
+2026-11-10 19:07:47 ipsec,debug decrypted packet
+2026-11-10 19:07:47 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000006 0000001c
+2026-11-10 19:07:47 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000006 0000001c
+2026-11-10 19:07:47 ipsec,debug => (size 0x84)
+2026-11-10 19:07:47 ipsec,debug 00000084 bdded078 f5578147 55b49cfb 2dc82ae2 13bc0496 69685d9a 8f25aca9
+2026-11-10 19:07:47 ipsec,debug b33cc0d8 cf1b378c 65b75f9e 7e71c8e9 0980df1d c925784a 3d10bfb2 fa3b82ff
+2026-11-10 19:07:47 ipsec,debug 2a897f9b 26959a18 ad86e232 5383d2e7 fce2e405 5ef846f6 f8478b70 fd00f5b7
+2026-11-10 19:07:47 ipsec,debug 6857c0ef 01c3ac3d 5d558c41 35ff9bf3 8b8e9adb 00000000 00000000 00000000
+2026-11-10 19:07:47 ipsec,debug 00000000
+2026-11-10 19:07:47 ipsec,debug ===== sending 160 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:47 ipsec,debug 1 times of 164 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000006 000000a0 00000084
+2026-11-10 19:07:47 ipsec,debug,packet bdded078 f5578147 55b49cfb 2dc82ae2 13bc0496 69685d9a 8f25aca9 b33cc0d8
+2026-11-10 19:07:47 ipsec,debug,packet cf1b378c 65b75f9e 7e71c8e9 0980df1d c925784a 3d10bfb2 fa3b82ff 2a897f9b
+2026-11-10 19:07:47 ipsec,debug,packet 26959a18 ad86e232 5383d2e7 fce2e405 5ef846f6 f8478b70 fd00f5b7 6857c0ef
+2026-11-10 19:07:47 ipsec,debug,packet 01c3ac3d 5d558c41 35ff9bf3 8b8e9adb 50165f84 f8fe8f91 f73b4ec1 7a3ddb20
+2026-11-10 19:07:47 ipsec,debug ===== received 160 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 0000000a 000000a0 00000084
+2026-11-10 19:07:47 ipsec,debug,packet efc8583f f37f640d cddb4a64 905562cd 516d6bad f738827c 266c0d73 f4f4e49a
+2026-11-10 19:07:47 ipsec,debug,packet 4a709f87 3b8c35f6 38912ace 15387561 81ff496d 9fd662cd 5cd2dbd0 38186cea
+2026-11-10 19:07:47 ipsec,debug,packet 37bc633e 536744c6 9bcfa8ce 47743e9f 933be908 1568c831 4252c580 153fb6c8
+2026-11-10 19:07:47 ipsec,debug,packet 4befb59c 3f385d99 b9e154e3 9b623a25 5cc1eecc 5df552a1 32085543 66b9f3e4
+2026-11-10 19:07:47 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:47 ipsec,debug efc8583f f37f640d cddb4a64 905562cd
+2026-11-10 19:07:47 ipsec,debug decrypted packet
+2026-11-10 19:07:47 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:47 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 0000000a 0000001c
+2026-11-10 19:07:55 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 0000000b 0000001c
+2026-11-10 19:07:55 ipsec,debug => (size 0x44)
+2026-11-10 19:07:55 ipsec,debug 00000044 255cc1ee cc5df552 a1320855 4366b9f3 5d7ed673 62b716dd 0977d1b9
+2026-11-10 19:07:55 ipsec,debug 0743f7ec d5ffedb2 5807847c df8666c6 7437cb0a 00000000 00000000 00000000
+2026-11-10 19:07:55 ipsec,debug 00000000
+2026-11-10 19:07:55 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:55 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 0000000b 00000060 00000044
+2026-11-10 19:07:55 ipsec,debug,packet 255cc1ee cc5df552 a1320855 4366b9f3 5d7ed673 62b716dd 0977d1b9 0743f7ec
+2026-11-10 19:07:55 ipsec,debug,packet d5ffedb2 5807847c df8666c6 7437cb0a 2d5ca46a 86960d20 69ee1b60 33a18937
+2026-11-10 19:07:55 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000007 00000060 00000044
+2026-11-10 19:07:55 ipsec,debug,packet db50165f 84f8fe8f 91f73b4e c17a3ddb f68bba1e 0bb87b5f 20fb7420 f71a6f20
+2026-11-10 19:07:55 ipsec,debug,packet 65e90ae3 6fa88088 336d8b06 c51adfc7 e581fc2e 60575605 9aa7190d 06472c94
+2026-11-10 19:07:55 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:55 ipsec,debug db50165f 84f8fe8f 91f73b4e c17a3ddb
+2026-11-10 19:07:55 ipsec,debug decrypted packet
+2026-11-10 19:07:55 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000007 0000001c
+2026-11-10 19:07:55 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000007 0000001c
+2026-11-10 19:07:55 ipsec,debug => (size 0x54)
+2026-11-10 19:07:55 ipsec,debug 00000054 c7e581fc 2e605756 059aa719 0d06472c d49744ef 75a0fd76 dd242ae8
+2026-11-10 19:07:55 ipsec,debug dfce9a2c ae47003a 2830a984 5d1bd718 c88ce455 1080d673 b1c1f880 6118eaa0
+2026-11-10 19:07:55 ipsec,debug 72ee333b 00000000 00000000 00000000 00000000
+2026-11-10 19:07:55 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:07:55 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000007 00000070 00000054
+2026-11-10 19:07:55 ipsec,debug,packet c7e581fc 2e605756 059aa719 0d06472c d49744ef 75a0fd76 dd242ae8 dfce9a2c
+2026-11-10 19:07:55 ipsec,debug,packet ae47003a 2830a984 5d1bd718 c88ce455 1080d673 b1c1f880 6118eaa0 72ee333b
+2026-11-10 19:07:55 ipsec,debug,packet 6bd7fcc2 e3e4ae2d 3e3a14b5 a737f6fd
+2026-11-10 19:07:55 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 0000000b 00000070 00000054
+2026-11-10 19:07:55 ipsec,debug,packet 0a2d5ca4 6a86960d 2069ee1b 6033a189 5641d280 14a6833c ce5b5a32 4687a965
+2026-11-10 19:07:55 ipsec,debug,packet 050ae270 8b12130b 1ba1b40c 43a40bca 1c61655e c175e54b d3ebe090 ac0038fe
+2026-11-10 19:07:55 ipsec,debug,packet 56be9422 53b00bca 2eb0d0d0 54783b67
+2026-11-10 19:07:55 ipsec,debug => iv (size 0x10)
+2026-11-10 19:07:55 ipsec,debug 0a2d5ca4 6a86960d 2069ee1b 6033a189
+2026-11-10 19:07:55 ipsec,debug decrypted packet
+2026-11-10 19:07:55 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:07:55 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 0000000b 0000001c
+2026-11-10 19:08:03 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 0000000c 0000001c
+2026-11-10 19:08:03 ipsec,debug => (size 0x44)
+2026-11-10 19:08:03 ipsec,debug 00000044 fe56be94 2253b00b ca2eb0d0 d054783b 920abf06 fb6d2e4f 55f3fcf9
+2026-11-10 19:08:03 ipsec,debug 260164c2 610f14f5 6e1da9c4 a3537691 9c20bfee 00000000 00000000 00000000
+2026-11-10 19:08:03 ipsec,debug 00000000
+2026-11-10 19:08:03 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:03 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 0000000c 00000060 00000044
+2026-11-10 19:08:03 ipsec,debug,packet fe56be94 2253b00b ca2eb0d0 d054783b 920abf06 fb6d2e4f 55f3fcf9 260164c2
+2026-11-10 19:08:03 ipsec,debug,packet 610f14f5 6e1da9c4 a3537691 9c20bfee 84ec6dc0 75729129 1fa4702b 8705d86c
+2026-11-10 19:08:03 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000008 00000060 00000044
+2026-11-10 19:08:03 ipsec,debug,packet 3b6bd7fc c2e3e4ae 2d3e3a14 b5a737f6 37eeb501 5ad63172 f5b38698 604c63a3
+2026-11-10 19:08:03 ipsec,debug,packet d1270a8d b4fadd31 fd457cee d237ae43 22984014 51eef47c 773673ee 2d4af5ef
+2026-11-10 19:08:03 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:03 ipsec,debug 3b6bd7fc c2e3e4ae 2d3e3a14 b5a737f6
+2026-11-10 19:08:03 ipsec,debug decrypted packet
+2026-11-10 19:08:03 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000008 0000001c
+2026-11-10 19:08:03 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000008 0000001c
+2026-11-10 19:08:03 ipsec,debug => (size 0x54)
+2026-11-10 19:08:03 ipsec,debug 00000054 43229840 1451eef4 7c773673 ee2d4af5 c5eb963c af2ec891 65077bc5
+2026-11-10 19:08:03 ipsec,debug 01313f75 68f355e6 b7c514e9 c7f21409 f070bec6 1fce166e 415856a6 7f8c7c9a
+2026-11-10 19:08:03 ipsec,debug f263589c 00000000 00000000 00000000 00000000
+2026-11-10 19:08:03 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:03 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000008 00000070 00000054
+2026-11-10 19:08:03 ipsec,debug,packet 43229840 1451eef4 7c773673 ee2d4af5 c5eb963c af2ec891 65077bc5 01313f75
+2026-11-10 19:08:03 ipsec,debug,packet 68f355e6 b7c514e9 c7f21409 f070bec6 1fce166e 415856a6 7f8c7c9a f263589c
+2026-11-10 19:08:03 ipsec,debug,packet 0e380173 d86fa88e 6ce2dd19 1a7f2cfb
+2026-11-10 19:08:03 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 0000000c 00000070 00000054
+2026-11-10 19:08:03 ipsec,debug,packet ee84ec6d c0757291 291fa470 2b8705d8 897ae4bd 9f9f1134 d01a25b9 1cf0578d
+2026-11-10 19:08:03 ipsec,debug,packet f1649c2c 9b107a44 c203b0a6 4bc3bfb3 aa9debd0 332c4fe5 b4f2dff3 33ef6639
+2026-11-10 19:08:03 ipsec,debug,packet e2ce521a 6b217b3a c15607e2 a278c699
+2026-11-10 19:08:03 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:03 ipsec,debug ee84ec6d c0757291 291fa470 2b8705d8
+2026-11-10 19:08:03 ipsec,debug decrypted packet
+2026-11-10 19:08:03 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:03 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 0000000c 0000001c
+2026-11-10 19:08:11 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:11 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000009 00000060 00000044
+2026-11-10 19:08:11 ipsec,debug,packet 9c0e3801 73d86fa8 8e6ce2dd 191a7f2c 0b5421b1 006c772e a3d02529 c2f2a3c9
+2026-11-10 19:08:11 ipsec,debug,packet f9ba9cf9 12c3c2f7 202014e1 e6c79776 ba22ebc6 bc35ebe0 313a0583 e6c3d792
+2026-11-10 19:08:11 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:11 ipsec,debug 9c0e3801 73d86fa8 8e6ce2dd 191a7f2c
+2026-11-10 19:08:11 ipsec,debug decrypted packet
+2026-11-10 19:08:11 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:11 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000009 0000001c
+2026-11-10 19:08:11 ipsec,debug sending empty reply
+2026-11-10 19:08:11 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:11 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000009 0000001c
+2026-11-10 19:08:11 ipsec,debug => (size 0x44)
+2026-11-10 19:08:11 ipsec,debug 00000044 76ba22eb c6bc35eb e0313a05 83e6c3d7 215fc1a5 94bf8d21 4ca4fdfa
+2026-11-10 19:08:11 ipsec,debug 81c9a21a 6d8b6dcc e85077a2 7ad81597 a91fb563 00000000 00000000 00000000
+2026-11-10 19:08:11 ipsec,debug 00000000
+2026-11-10 19:08:11 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:11 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:11 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000009 00000060 00000044
+2026-11-10 19:08:11 ipsec,debug,packet 76ba22eb c6bc35eb e0313a05 83e6c3d7 215fc1a5 94bf8d21 4ca4fdfa 81c9a21a
+2026-11-10 19:08:11 ipsec,debug,packet 6d8b6dcc e85077a2 7ad81597 a91fb563 e2b02b52 cca765e3 1f3f2aec 889457c5
+2026-11-10 19:08:19 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 0000000d 0000001c
+2026-11-10 19:08:19 ipsec,debug => (size 0x54)
+2026-11-10 19:08:19 ipsec,debug 00000054 76ba22eb c6bc35eb e0313a05 83e6c3d7 4a9019fc bcced593 93c20124
+2026-11-10 19:08:19 ipsec,debug f79afdc1 cdc7a36d ad953b45 75fe9a3e 6f5df8d2 8dfc1f40 465d63a3 f03468de
+2026-11-10 19:08:19 ipsec,debug 61d5f57b 00000000 00000000 00000000 00000000
+2026-11-10 19:08:19 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:19 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 0000000d 00000070 00000054
+2026-11-10 19:08:19 ipsec,debug,packet 76ba22eb c6bc35eb e0313a05 83e6c3d7 4a9019fc bcced593 93c20124 f79afdc1
+2026-11-10 19:08:19 ipsec,debug,packet cdc7a36d ad953b45 75fe9a3e 6f5df8d2 8dfc1f40 465d63a3 f03468de 61d5f57b
+2026-11-10 19:08:19 ipsec,debug,packet 8f6a5be7 acf0627a 5b9e1425 76a36300
+2026-11-10 19:08:19 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 0000000a 00000070 00000054
+2026-11-10 19:08:19 ipsec,debug,packet 63e2b02b 52cca765 e31f3f2a ec889457 cd1050c6 a6b99828 6345904c 2e7f2dd2
+2026-11-10 19:08:19 ipsec,debug,packet 9b0628c8 fec3599d 6ec05d47 bae6b1ee d98423e2 33002c18 4db47750 2590ae7e
+2026-11-10 19:08:19 ipsec,debug,packet 99317e39 2b964b65 0d3b7d7e ba428b7b
+2026-11-10 19:08:19 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:19 ipsec,debug 63e2b02b 52cca765 e31f3f2a ec889457
+2026-11-10 19:08:19 ipsec,debug decrypted packet
+2026-11-10 19:08:19 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 0000000a 0000001c
+2026-11-10 19:08:19 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 0000000a 0000001c
+2026-11-10 19:08:19 ipsec,debug => (size 0x64)
+2026-11-10 19:08:19 ipsec,debug 00000064 7e99317e 392b964b 650d3b7d 7eba428b 6f114fc0 914952e7 b54f0459
+2026-11-10 19:08:19 ipsec,debug 33379a92 95e367e8 3c1ad909 fc03e73a d31bac15 e0fea801 d3446047 6209aab5
+2026-11-10 19:08:19 ipsec,debug f24ca5d5 ec88bc67 d36c5181 5d626ef3 9a0a4826 00000000 00000000 00000000
+2026-11-10 19:08:19 ipsec,debug 00000000
+2026-11-10 19:08:19 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:19 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 0000000a 00000080 00000064
+2026-11-10 19:08:19 ipsec,debug,packet 7e99317e 392b964b 650d3b7d 7eba428b 6f114fc0 914952e7 b54f0459 33379a92
+2026-11-10 19:08:19 ipsec,debug,packet 95e367e8 3c1ad909 fc03e73a d31bac15 e0fea801 d3446047 6209aab5 f24ca5d5
+2026-11-10 19:08:19 ipsec,debug,packet ec88bc67 d36c5181 5d626ef3 9a0a4826 e6964d1c a90c7388 40515d1b b46966b6
+2026-11-10 19:08:19 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 0000000d 00000080 00000064
+2026-11-10 19:08:19 ipsec,debug,packet 7b8f6a5b e7acf062 7a5b9e14 2576a363 015bf31e a176bca0 0f56c0ca 506ec07c
+2026-11-10 19:08:19 ipsec,debug,packet 6c80615d a337356d 7478a710 a92dc4f8 35ff3cef 7f01e50d 27447626 c1ba0f96
+2026-11-10 19:08:19 ipsec,debug,packet 69ee5c74 42d409d2 74ab35db 06daec7f 768ecb7d 7ddd1c9c d3e2df41 d35bcdad
+2026-11-10 19:08:19 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:19 ipsec,debug 7b8f6a5b e7acf062 7a5b9e14 2576a363
+2026-11-10 19:08:19 ipsec,debug decrypted packet
+2026-11-10 19:08:19 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:19 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 0000000d 0000001c
+2026-11-10 19:08:27 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 0000000e 0000001c
+2026-11-10 19:08:27 ipsec,debug => (size 0x44)
+2026-11-10 19:08:27 ipsec,debug 00000044 7f768ecb 7d7ddd1c 9cd3e2df 41d35bcd b30f4a0f 1067cd82 35ac2620
+2026-11-10 19:08:27 ipsec,debug 4d97991a cc9a58cf 24a45122 57ce6a48 93d16a76 00000000 00000000 00000000
+2026-11-10 19:08:27 ipsec,debug 00000000
+2026-11-10 19:08:27 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:27 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 0000000e 00000060 00000044
+2026-11-10 19:08:27 ipsec,debug,packet 7f768ecb 7d7ddd1c 9cd3e2df 41d35bcd b30f4a0f 1067cd82 35ac2620 4d97991a
+2026-11-10 19:08:27 ipsec,debug,packet cc9a58cf 24a45122 57ce6a48 93d16a76 545ef0a2 ab858489 2f0d8bb7 c2160e07
+2026-11-10 19:08:27 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 0000000b 00000060 00000044
+2026-11-10 19:08:27 ipsec,debug,packet 26e6964d 1ca90c73 8840515d 1bb46966 b97877ef 05338473 ab39348b ed899fca
+2026-11-10 19:08:27 ipsec,debug,packet f42a5203 ec48d78b 50ea60f9 e6472d2f b95b799c cb502d9f c06a755f b671dd37
+2026-11-10 19:08:27 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:27 ipsec,debug 26e6964d 1ca90c73 8840515d 1bb46966
+2026-11-10 19:08:27 ipsec,debug decrypted packet
+2026-11-10 19:08:27 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 0000000b 0000001c
+2026-11-10 19:08:27 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 0000000b 0000001c
+2026-11-10 19:08:27 ipsec,debug => (size 0x64)
+2026-11-10 19:08:27 ipsec,debug 00000064 2fb95b79 9ccb502d 9fc06a75 5fb671dd d8ba253f d1a136d6 6ff77795
+2026-11-10 19:08:27 ipsec,debug b264fa04 f2f75ae9 77284c49 982d2e76 ed9f6e43 f12b67ba 6c3bb30d f06a5f67
+2026-11-10 19:08:27 ipsec,debug 75bf58ba 19194634 75968979 e3e40aa6 87ce3783 00000000 00000000 00000000
+2026-11-10 19:08:27 ipsec,debug 00000000
+2026-11-10 19:08:27 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:27 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 0000000b 00000080 00000064
+2026-11-10 19:08:27 ipsec,debug,packet 2fb95b79 9ccb502d 9fc06a75 5fb671dd d8ba253f d1a136d6 6ff77795 b264fa04
+2026-11-10 19:08:27 ipsec,debug,packet f2f75ae9 77284c49 982d2e76 ed9f6e43 f12b67ba 6c3bb30d f06a5f67 75bf58ba
+2026-11-10 19:08:27 ipsec,debug,packet 19194634 75968979 e3e40aa6 87ce3783 c767dff2 52b8b634 fb15d2c8 a3a6399c
+2026-11-10 19:08:27 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 0000000e 00000080 00000064
+2026-11-10 19:08:27 ipsec,debug,packet 76545ef0 a2ab8584 892f0d8b b7c2160e 0ab7cea1 08c48298 3d605c77 44df1dd4
+2026-11-10 19:08:27 ipsec,debug,packet 5121f62b 8e4a882b adbc8f6b 0b41a4b3 bddafbf5 80ad68fd e9f41d3c 21dbbefd
+2026-11-10 19:08:27 ipsec,debug,packet e5557fc9 f7cd1e9d 22d06b5f b8c769b0 e2b178fe 1efc7149 0add2e47 fad6c3f9
+2026-11-10 19:08:27 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:27 ipsec,debug 76545ef0 a2ab8584 892f0d8b b7c2160e
+2026-11-10 19:08:27 ipsec,debug decrypted packet
+2026-11-10 19:08:27 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:27 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 0000000e 0000001c
+2026-11-10 19:08:35 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 0000000f 0000001c
+2026-11-10 19:08:35 ipsec,debug => (size 0x44)
+2026-11-10 19:08:35 ipsec,debug 00000044 b0e2b178 fe1efc71 490add2e 47fad6c3 b7bd5007 fa1e4a38 3b2eb29b
+2026-11-10 19:08:35 ipsec,debug 3b2a93ec eb4c7096 bdad2084 d2717743 d38eaee3 00000000 00000000 00000000
+2026-11-10 19:08:35 ipsec,debug 00000000
+2026-11-10 19:08:35 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:35 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 0000000f 00000060 00000044
+2026-11-10 19:08:35 ipsec,debug,packet b0e2b178 fe1efc71 490add2e 47fad6c3 b7bd5007 fa1e4a38 3b2eb29b 3b2a93ec
+2026-11-10 19:08:35 ipsec,debug,packet eb4c7096 bdad2084 d2717743 d38eaee3 5f2474eb 649e2a13 eff0dd4f 83705a58
+2026-11-10 19:08:35 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 0000000c 00000060 00000044
+2026-11-10 19:08:35 ipsec,debug,packet 83c767df f252b8b6 34fb15d2 c8a3a639 a33a74a1 67a855ff 620de5a6 fd803cae
+2026-11-10 19:08:35 ipsec,debug,packet 9fb3bbc1 2fafd19b 8e32ae99 01e7cd96 6ea83dfd c9c60bd0 c1f74847 f5b54e97
+2026-11-10 19:08:35 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:35 ipsec,debug 83c767df f252b8b6 34fb15d2 c8a3a639
+2026-11-10 19:08:35 ipsec,debug decrypted packet
+2026-11-10 19:08:35 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 0000000c 0000001c
+2026-11-10 19:08:35 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 0000000c 0000001c
+2026-11-10 19:08:35 ipsec,debug => (size 0x64)
+2026-11-10 19:08:35 ipsec,debug 00000064 966ea83d fdc9c60b d0c1f748 47f5b54e c8a2e6e5 dff8c3d9 be5e0550
+2026-11-10 19:08:35 ipsec,debug 6c0e8589 99d35666 c5430ba9 ae024a34 c614fd01 527ce3d5 4f370c1b b155ecac
+2026-11-10 19:08:35 ipsec,debug 2b27e58a 3dd279c9 f65879fd f1671cd6 00446b06 00000000 00000000 00000000
+2026-11-10 19:08:35 ipsec,debug 00000000
+2026-11-10 19:08:35 ipsec,debug ===== sending 128 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:35 ipsec,debug 1 times of 132 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 0000000c 00000080 00000064
+2026-11-10 19:08:35 ipsec,debug,packet 966ea83d fdc9c60b d0c1f748 47f5b54e c8a2e6e5 dff8c3d9 be5e0550 6c0e8589
+2026-11-10 19:08:35 ipsec,debug,packet 99d35666 c5430ba9 ae024a34 c614fd01 527ce3d5 4f370c1b b155ecac 2b27e58a
+2026-11-10 19:08:35 ipsec,debug,packet 3dd279c9 f65879fd f1671cd6 00446b06 f5c31544 fd9245f1 7d954562 b0cf7566
+2026-11-10 19:08:35 ipsec,debug ===== received 128 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 0000000f 00000080 00000064
+2026-11-10 19:08:35 ipsec,debug,packet e35f2474 eb649e2a 13eff0dd 4f83705a 34538214 e4f8a808 a68b092f 64334fb8
+2026-11-10 19:08:35 ipsec,debug,packet 79cfafaf 74929a36 b797971c c95d1565 bd5c7542 82dc7fc0 954b3d03 20c092c5
+2026-11-10 19:08:35 ipsec,debug,packet 740ba868 97601ba5 6e29f6e1 c0a4ff57 e4589137 c521cb38 fb66217e 4dc33233
+2026-11-10 19:08:35 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:35 ipsec,debug e35f2474 eb649e2a 13eff0dd 4f83705a
+2026-11-10 19:08:35 ipsec,debug decrypted packet
+2026-11-10 19:08:35 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:35 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 0000000f 0000001c
+2026-11-10 19:08:43 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000010 0000001c
+2026-11-10 19:08:43 ipsec,debug => (size 0x54)
+2026-11-10 19:08:43 ipsec,debug 00000054 57e45891 37c521cb 38fb6621 7e4dc332 8f087b2c f208bfc9 8af03ed6
+2026-11-10 19:08:43 ipsec,debug 77a9e01a 0f645a07 2c977441 f9973f12 edb4a09d 4e626174 2b457275 e974603e
+2026-11-10 19:08:43 ipsec,debug 185f1998 00000000 00000000 00000000 00000000
+2026-11-10 19:08:43 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:43 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000010 00000070 00000054
+2026-11-10 19:08:43 ipsec,debug,packet 57e45891 37c521cb 38fb6621 7e4dc332 8f087b2c f208bfc9 8af03ed6 77a9e01a
+2026-11-10 19:08:43 ipsec,debug,packet 0f645a07 2c977441 f9973f12 edb4a09d 4e626174 2b457275 e974603e 185f1998
+2026-11-10 19:08:43 ipsec,debug,packet 627423d1 770e0963 e8be642f 89dcb593
+2026-11-10 19:08:43 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 0000000d 00000070 00000054
+2026-11-10 19:08:43 ipsec,debug,packet 06f5c315 44fd9245 f17d9545 62b0cf75 fe94cf29 6b9f39f1 0c28913c 0b30fb4e
+2026-11-10 19:08:43 ipsec,debug,packet 03d03dca b530daf1 907e83d0 71862d50 843a3729 9a4d64c3 a9b13fad 21f72131
+2026-11-10 19:08:43 ipsec,debug,packet 08dc297a d15ad61b 91a27184 391cacc2
+2026-11-10 19:08:43 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:43 ipsec,debug 06f5c315 44fd9245 f17d9545 62b0cf75
+2026-11-10 19:08:43 ipsec,debug decrypted packet
+2026-11-10 19:08:43 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 0000000d 0000001c
+2026-11-10 19:08:43 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 0000000d 0000001c
+2026-11-10 19:08:43 ipsec,debug => (size 0x44)
+2026-11-10 19:08:43 ipsec,debug 00000044 3108dc29 7ad15ad6 1b91a271 84391cac 5da189f2 414988fa 8d4883c9
+2026-11-10 19:08:43 ipsec,debug 80a87495 41ad91c9 33bdc303 f337b6a8 747ad956 00000000 00000000 00000000
+2026-11-10 19:08:43 ipsec,debug 00000000
+2026-11-10 19:08:43 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:43 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 0000000d 00000060 00000044
+2026-11-10 19:08:43 ipsec,debug,packet 3108dc29 7ad15ad6 1b91a271 84391cac 5da189f2 414988fa 8d4883c9 80a87495
+2026-11-10 19:08:43 ipsec,debug,packet 41ad91c9 33bdc303 f337b6a8 747ad956 7dc6b153 6f8df7b2 0360e55c 43e512fd
+2026-11-10 19:08:43 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000010 00000060 00000044
+2026-11-10 19:08:43 ipsec,debug,packet 98627423 d1770e09 63e8be64 2f89dcb5 a5f31fa8 682d796f 1fc2d39f c1245aae
+2026-11-10 19:08:43 ipsec,debug,packet 4cbf0dd1 b86696c6 8ccb0cb2 4bdd74e3 91d52d60 7483671e 745b1075 7494a98f
+2026-11-10 19:08:43 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:43 ipsec,debug 98627423 d1770e09 63e8be64 2f89dcb5
+2026-11-10 19:08:43 ipsec,debug decrypted packet
+2026-11-10 19:08:43 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:43 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000010 0000001c
+2026-11-10 19:08:51 ipsec,debug ===== received 160 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 0000000e 000000a0 00000084
+2026-11-10 19:08:51 ipsec,debug,packet 567dc6b1 536f8df7 b20360e5 5c43e512 429dbc83 00eab645 2bea62e5 129a185b
+2026-11-10 19:08:51 ipsec,debug,packet 546d0013 f54b63ad c8c23b2d a587e11f ed773f09 7ad66073 dbcdbc0f c54f3fc8
+2026-11-10 19:08:51 ipsec,debug,packet 6009541a 01cc1598 4abf53e3 df36ee3f 9418cfe7 b84446a4 675c94bd d3f63a74
+2026-11-10 19:08:51 ipsec,debug,packet 164ed11a b2d76769 40adb03d dead3534 c48872e6 1bc2f680 9a8734f9 e6f809ca
+2026-11-10 19:08:51 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:51 ipsec,debug 567dc6b1 536f8df7 b20360e5 5c43e512
+2026-11-10 19:08:51 ipsec,debug decrypted packet
+2026-11-10 19:08:51 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 0000000e 0000001c
+2026-11-10 19:08:51 ipsec,debug sending empty reply
+2026-11-10 19:08:51 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 0000000e 0000001c
+2026-11-10 19:08:51 ipsec,debug => (size 0x84)
+2026-11-10 19:08:51 ipsec,debug 00000084 34c48872 e61bc2f6 809a8734 f9e6f809 e70fdc10 225ce2a8 06e00411
+2026-11-10 19:08:51 ipsec,debug a5070229 3a35e0bd eae779d7 0130fcc6 0f2f77d3 038e7cc9 6c437c21 d901bb64
+2026-11-10 19:08:51 ipsec,debug d33e0f78 65b59bdc ac0f5ad7 66871053 481091a5 8443e8e1 5dad38f5 e0547427
+2026-11-10 19:08:51 ipsec,debug eeb8803a 1f133245 a18db81d 6a6e2acc 217c3fb0 00000000 00000000 00000000
+2026-11-10 19:08:51 ipsec,debug 00000000
+2026-11-10 19:08:51 ipsec,debug ===== sending 160 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:51 ipsec,debug 1 times of 164 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:51 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 0000000e 000000a0 00000084
+2026-11-10 19:08:51 ipsec,debug,packet 34c48872 e61bc2f6 809a8734 f9e6f809 e70fdc10 225ce2a8 06e00411 a5070229
+2026-11-10 19:08:51 ipsec,debug,packet 3a35e0bd eae779d7 0130fcc6 0f2f77d3 038e7cc9 6c437c21 d901bb64 d33e0f78
+2026-11-10 19:08:51 ipsec,debug,packet 65b59bdc ac0f5ad7 66871053 481091a5 8443e8e1 5dad38f5 e0547427 eeb8803a
+2026-11-10 19:08:51 ipsec,debug,packet 1f133245 a18db81d 6a6e2acc 217c3fb0 4e7c520a b45990f8 54c1506b 65880c67
+2026-11-10 19:08:59 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000011 0000001c
+2026-11-10 19:08:59 ipsec,debug => (size 0x74)
+2026-11-10 19:08:59 ipsec,debug 00000074 34c48872 e61bc2f6 809a8734 f9e6f809 6dec0bab b6ed7640 3bf7a6ef
+2026-11-10 19:08:59 ipsec,debug 61b8d9b7 3fd03cb7 da2fa2d5 ca360993 d15805ab f20c21b3 035d5f72 3e928f2a
+2026-11-10 19:08:59 ipsec,debug 47a6f2aa d34bd106 c9c053e1 9591e36b 44778a59 54af5411 8375a0ba 0f3bea52
+2026-11-10 19:08:59 ipsec,debug 840f4d01 00000000 00000000 00000000 00000000
+2026-11-10 19:08:59 ipsec,debug ===== sending 144 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:59 ipsec,debug 1 times of 148 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000011 00000090 00000074
+2026-11-10 19:08:59 ipsec,debug,packet 34c48872 e61bc2f6 809a8734 f9e6f809 6dec0bab b6ed7640 3bf7a6ef 61b8d9b7
+2026-11-10 19:08:59 ipsec,debug,packet 3fd03cb7 da2fa2d5 ca360993 d15805ab f20c21b3 035d5f72 3e928f2a 47a6f2aa
+2026-11-10 19:08:59 ipsec,debug,packet d34bd106 c9c053e1 9591e36b 44778a59 54af5411 8375a0ba 0f3bea52 840f4d01
+2026-11-10 19:08:59 ipsec,debug,packet 3dfaaa38 df2e5af6 4f6464b4 3ff5e9ef
+2026-11-10 19:08:59 ipsec,debug ===== received 144 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 0000000f 00000090 00000074
+2026-11-10 19:08:59 ipsec,debug,packet b04e7c52 0ab45990 f854c150 6b65880c bddd428b 8bc08bb1 2c291f56 75ffd2ed
+2026-11-10 19:08:59 ipsec,debug,packet 73c69f82 8b505f50 d089d6fa 402d70ec b61dfb7f 719fc258 431366b7 6f1d5e95
+2026-11-10 19:08:59 ipsec,debug,packet 2fd81078 1f5640f5 c9348ace 121d50c8 deaae479 254e2e64 95c6602d 333ca9df
+2026-11-10 19:08:59 ipsec,debug,packet 131cab64 dc84c676 8e059ff0 c0a28f46
+2026-11-10 19:08:59 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:59 ipsec,debug b04e7c52 0ab45990 f854c150 6b65880c
+2026-11-10 19:08:59 ipsec,debug decrypted packet
+2026-11-10 19:08:59 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 0000000f 0000001c
+2026-11-10 19:08:59 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 0000000f 0000001c
+2026-11-10 19:08:59 ipsec,debug => (size 0x54)
+2026-11-10 19:08:59 ipsec,debug 00000054 df131cab 64dc84c6 768e059f f0c0a28f c244f14a 0b207fdf c3222304
+2026-11-10 19:08:59 ipsec,debug 39337bd8 807d46dc 301ba3f7 bce5cb5b 3e3566fa a8be3894 839494c7 0a8e7a60
+2026-11-10 19:08:59 ipsec,debug b13b42c9 00000000 00000000 00000000 00000000
+2026-11-10 19:08:59 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:08:59 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 0000000f 00000070 00000054
+2026-11-10 19:08:59 ipsec,debug,packet df131cab 64dc84c6 768e059f f0c0a28f c244f14a 0b207fdf c3222304 39337bd8
+2026-11-10 19:08:59 ipsec,debug,packet 807d46dc 301ba3f7 bce5cb5b 3e3566fa a8be3894 839494c7 0a8e7a60 b13b42c9
+2026-11-10 19:08:59 ipsec,debug,packet ec43e791 94b350cd 0520c39d 7214f888
+2026-11-10 19:08:59 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000011 00000070 00000054
+2026-11-10 19:08:59 ipsec,debug,packet 013dfaaa 38df2e5a f64f6464 b43ff5e9 c97594e4 ee0ae5d9 6c6a152a 5c363519
+2026-11-10 19:08:59 ipsec,debug,packet 551750b8 28b69a20 f272dd2b fbfa117b 5a9e7bbf 41a24f8d 9963fad5 51a1660d
+2026-11-10 19:08:59 ipsec,debug,packet 320085ca cd576f65 decfd730 7f5f5b9c
+2026-11-10 19:08:59 ipsec,debug => iv (size 0x10)
+2026-11-10 19:08:59 ipsec,debug 013dfaaa 38df2e5a f64f6464 b43ff5e9
+2026-11-10 19:08:59 ipsec,debug decrypted packet
+2026-11-10 19:08:59 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:08:59 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000011 0000001c
+2026-11-10 19:09:07 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000012 0000001c
+2026-11-10 19:09:07 ipsec,debug => (size 0x84)
+2026-11-10 19:09:07 ipsec,debug 00000084 0d320085 cacd576f 65decfd7 307f5f5b ba30ae89 f64de6d1 4fba2acb
+2026-11-10 19:09:07 ipsec,debug 78e0a979 d30451a1 cea5e1bb 85debf9c 91833759 e4be8a2c c55ef62f 248b389a
+2026-11-10 19:09:07 ipsec,debug a14aea8e 5a8bb89b 99c77453 f0f0d986 fdfb0969 8f0c81aa 6acd7209 d45fed3c
+2026-11-10 19:09:07 ipsec,debug 06c3dd09 aef502b7 389e97a3 6a7b85d3 575ca4e2 00000000 00000000 00000000
+2026-11-10 19:09:07 ipsec,debug 00000000
+2026-11-10 19:09:07 ipsec,debug ===== sending 160 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:07 ipsec,debug 1 times of 164 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000012 000000a0 00000084
+2026-11-10 19:09:07 ipsec,debug,packet 0d320085 cacd576f 65decfd7 307f5f5b ba30ae89 f64de6d1 4fba2acb 78e0a979
+2026-11-10 19:09:07 ipsec,debug,packet d30451a1 cea5e1bb 85debf9c 91833759 e4be8a2c c55ef62f 248b389a a14aea8e
+2026-11-10 19:09:07 ipsec,debug,packet 5a8bb89b 99c77453 f0f0d986 fdfb0969 8f0c81aa 6acd7209 d45fed3c 06c3dd09
+2026-11-10 19:09:07 ipsec,debug,packet aef502b7 389e97a3 6a7b85d3 575ca4e2 b201aabb 855b6203 410bbcb9 bb290c2a
+2026-11-10 19:09:07 ipsec,debug ===== received 160 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000012 000000a0 00000084
+2026-11-10 19:09:07 ipsec,debug,packet e2b201aa bb855b62 03410bbc b9bb290c a3cd5774 eb53c53b 87c30469 22c254ca
+2026-11-10 19:09:07 ipsec,debug,packet 5a5590ae f2985639 4f6bc979 e0a431b0 a96cc39f b38de5d7 52db6a1c dc4bfa41
+2026-11-10 19:09:07 ipsec,debug,packet 8f4c5bbd 91fa3fb6 1fdedb5d b560d0ff ba254c43 cdf32663 4bf57f9a 7a5124fa
+2026-11-10 19:09:07 ipsec,debug,packet dfa661a4 907809e3 d84ecb7f 504bea2f cf1bf5cf 577cf931 e2ae7c68 9b4b6ce4
+2026-11-10 19:09:07 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:07 ipsec,debug e2b201aa bb855b62 03410bbc b9bb290c
+2026-11-10 19:09:07 ipsec,debug decrypted packet
+2026-11-10 19:09:07 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:07 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000012 0000001c
+2026-11-10 19:09:15 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000013 0000001c
+2026-11-10 19:09:15 ipsec,debug => (size 0x84)
+2026-11-10 19:09:15 ipsec,debug 00000084 2fcf1bf5 cf577cf9 31e2ae7c 689b4b6c af1ee8d8 2442cdb2 e1662419
+2026-11-10 19:09:15 ipsec,debug b822717e f06b209c 6f530272 ef83cc09 db41dcb2 ebf946c8 0555c293 037f58b2
+2026-11-10 19:09:15 ipsec,debug 7089f871 5065c403 67926129 49afbb8d 78bf6e97 a5fd6f77 0b646b39 c3eb17ef
+2026-11-10 19:09:15 ipsec,debug d1e08aaa 89649e93 1f16a98b 9be0722c 06fcc682 00000000 00000000 00000000
+2026-11-10 19:09:15 ipsec,debug 00000000
+2026-11-10 19:09:15 ipsec,debug ===== sending 160 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:15 ipsec,debug 1 times of 164 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000013 000000a0 00000084
+2026-11-10 19:09:15 ipsec,debug,packet 2fcf1bf5 cf577cf9 31e2ae7c 689b4b6c af1ee8d8 2442cdb2 e1662419 b822717e
+2026-11-10 19:09:15 ipsec,debug,packet f06b209c 6f530272 ef83cc09 db41dcb2 ebf946c8 0555c293 037f58b2 7089f871
+2026-11-10 19:09:15 ipsec,debug,packet 5065c403 67926129 49afbb8d 78bf6e97 a5fd6f77 0b646b39 c3eb17ef d1e08aaa
+2026-11-10 19:09:15 ipsec,debug,packet 89649e93 1f16a98b 9be0722c 06fcc682 d0e81d61 ad1689e3 d1f68941 d50a86c1
+2026-11-10 19:09:15 ipsec,debug ===== received 160 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000010 000000a0 00000084
+2026-11-10 19:09:15 ipsec,debug,packet e2b201aa bb855b62 03410bbc b9bb290c a3cd5774 eb53c53b 87c30469 22c254ca
+2026-11-10 19:09:15 ipsec,debug,packet 5a5590ae f2985639 4f6bc979 e0a431b0 a96cc39f b38de5d7 52db6a1c dc4bfa41
+2026-11-10 19:09:15 ipsec,debug,packet 8f4c5bbd 91fa3fb6 1fdedb5d b560d0ff ba254c43 cdf32663 4bf57f9a 7a5124fa
+2026-11-10 19:09:15 ipsec,debug,packet dfa661a4 907809e3 d84ecb7f 504bea2f 90650a5a 18ade936 427f1325 be6039ff
+2026-11-10 19:09:15 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:15 ipsec,debug e2b201aa bb855b62 03410bbc b9bb290c
+2026-11-10 19:09:15 ipsec,debug decrypted packet
+2026-11-10 19:09:15 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000010 0000001c
+2026-11-10 19:09:15 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000010 0000001c
+2026-11-10 19:09:15 ipsec,debug => (size 0x54)
+2026-11-10 19:09:15 ipsec,debug 00000054 2f90650a 5a18ade9 36427f13 25be6039 6730fe13 813982e9 44fb91b7
+2026-11-10 19:09:15 ipsec,debug 8cfb6061 20b71da3 7f186b6e a287d288 e5217e32 552a6412 c1c416a3 37abaa59
+2026-11-10 19:09:15 ipsec,debug 2645d394 00000000 00000000 00000000 00000000
+2026-11-10 19:09:15 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:15 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000010 00000070 00000054
+2026-11-10 19:09:15 ipsec,debug,packet 2f90650a 5a18ade9 36427f13 25be6039 6730fe13 813982e9 44fb91b7 8cfb6061
+2026-11-10 19:09:15 ipsec,debug,packet 20b71da3 7f186b6e a287d288 e5217e32 552a6412 c1c416a3 37abaa59 2645d394
+2026-11-10 19:09:15 ipsec,debug,packet 9ce2ee38 cae1ab1d 388abeda f492e459
+2026-11-10 19:09:15 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000013 00000070 00000054
+2026-11-10 19:09:15 ipsec,debug,packet 82d0e81d 61ad1689 e3d1f689 41d50a86 3932b3f2 222279ef 395270e1 728ee0b1
+2026-11-10 19:09:15 ipsec,debug,packet 7065305d bbc58155 738afd8a ba138cda e06856fd d6bcfe9c f00c873c 00cdd12d
+2026-11-10 19:09:15 ipsec,debug,packet 74097e4a 602cfd39 41c0d251 503dc29b
+2026-11-10 19:09:15 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:15 ipsec,debug 82d0e81d 61ad1689 e3d1f689 41d50a86
+2026-11-10 19:09:15 ipsec,debug decrypted packet
+2026-11-10 19:09:15 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:15 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000013 0000001c
+2026-11-10 19:09:23 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000014 0000001c
+2026-11-10 19:09:23 ipsec,debug => (size 0x44)
+2026-11-10 19:09:23 ipsec,debug 00000044 2d74097e 4a602cfd 3941c0d2 51503dc2 4010cbec b97ac6d8 80b0ec88
+2026-11-10 19:09:23 ipsec,debug aa4c38a0 f8d4b886 74b083a6 10708382 c833841b 00000000 00000000 00000000
+2026-11-10 19:09:23 ipsec,debug 00000000
+2026-11-10 19:09:23 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:23 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000014 00000060 00000044
+2026-11-10 19:09:23 ipsec,debug,packet 2d74097e 4a602cfd 3941c0d2 51503dc2 4010cbec b97ac6d8 80b0ec88 aa4c38a0
+2026-11-10 19:09:23 ipsec,debug,packet f8d4b886 74b083a6 10708382 c833841b 5264cf87 98fdde15 8b6428cb 69fba62b
+2026-11-10 19:09:23 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000011 00000060 00000044
+2026-11-10 19:09:23 ipsec,debug,packet 949ce2ee 38cae1ab 1d388abe daf492e4 9d0ee549 48e1f302 d73705b4 79466d5d
+2026-11-10 19:09:23 ipsec,debug,packet a56a51ad f0c9b2e2 0dd5e969 9db3d5d6 58d09dfb 040779c7 e3455e88 258db813
+2026-11-10 19:09:23 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:23 ipsec,debug 949ce2ee 38cae1ab 1d388abe daf492e4
+2026-11-10 19:09:23 ipsec,debug decrypted packet
+2026-11-10 19:09:23 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000011 0000001c
+2026-11-10 19:09:23 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000011 0000001c
+2026-11-10 19:09:23 ipsec,debug => (size 0x74)
+2026-11-10 19:09:23 ipsec,debug 00000074 d658d09d fb040779 c7e3455e 88258db8 6b1b703f 3a92c895 812ec099
+2026-11-10 19:09:23 ipsec,debug 83548f4c 6f9dc0f0 ca401eee ab284e84 3441a4d2 30f9ac7f ff7b508b 8cd18ff1
+2026-11-10 19:09:23 ipsec,debug 19305456 4cc42b3f 0a532c9d c9db946f ceea2912 1b8bbed3 d59f02fa 327440e4
+2026-11-10 19:09:23 ipsec,debug 0e28a1fb 00000000 00000000 00000000 00000000
+2026-11-10 19:09:23 ipsec,debug ===== sending 144 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:23 ipsec,debug 1 times of 148 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000011 00000090 00000074
+2026-11-10 19:09:23 ipsec,debug,packet d658d09d fb040779 c7e3455e 88258db8 6b1b703f 3a92c895 812ec099 83548f4c
+2026-11-10 19:09:23 ipsec,debug,packet 6f9dc0f0 ca401eee ab284e84 3441a4d2 30f9ac7f ff7b508b 8cd18ff1 19305456
+2026-11-10 19:09:23 ipsec,debug,packet 4cc42b3f 0a532c9d c9db946f ceea2912 1b8bbed3 d59f02fa 327440e4 0e28a1fb
+2026-11-10 19:09:23 ipsec,debug,packet d79fd78c 39c444db 7210dbaa 9052ad16
+2026-11-10 19:09:23 ipsec,debug ===== received 144 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000014 00000090 00000074
+2026-11-10 19:09:23 ipsec,debug,packet 1b5264cf 8798fdde 158b6428 cb69fba6 6ed2ffbe 085f76e1 cece8915 d7af48d3
+2026-11-10 19:09:23 ipsec,debug,packet ad9421ef 244a9d4e 2d652cfe 14f913e2 943e63f6 03cbef7e 77e80e88 678b16aa
+2026-11-10 19:09:23 ipsec,debug,packet 1dc697d4 be823560 c48d0ef6 5e0ea254 306ddae8 474fd2d3 785140db 38e6765d
+2026-11-10 19:09:23 ipsec,debug,packet a213690a 869bb114 32b3f31c 45490de9
+2026-11-10 19:09:23 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:23 ipsec,debug 1b5264cf 8798fdde 158b6428 cb69fba6
+2026-11-10 19:09:23 ipsec,debug decrypted packet
+2026-11-10 19:09:23 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:23 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000014 0000001c
+2026-11-10 19:09:31 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000015 0000001c
+2026-11-10 19:09:31 ipsec,debug => (size 0x54)
+2026-11-10 19:09:31 ipsec,debug 00000054 5da21369 0a869bb1 1432b3f3 1c45490d 8a1f83c8 a38c6454 0ed73952
+2026-11-10 19:09:31 ipsec,debug 5161d43c 017aa0ea 05e84888 feeb294e 38bd6ea0 9ed04c35 4f6e793b 31f72c53
+2026-11-10 19:09:31 ipsec,debug 4da798f9 00000000 00000000 00000000 00000000
+2026-11-10 19:09:31 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:31 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000015 00000070 00000054
+2026-11-10 19:09:31 ipsec,debug,packet 5da21369 0a869bb1 1432b3f3 1c45490d 8a1f83c8 a38c6454 0ed73952 5161d43c
+2026-11-10 19:09:31 ipsec,debug,packet 017aa0ea 05e84888 feeb294e 38bd6ea0 9ed04c35 4f6e793b 31f72c53 4da798f9
+2026-11-10 19:09:31 ipsec,debug,packet e42b50e0 e4972ede 28be132d fdd2b496
+2026-11-10 19:09:31 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000012 00000070 00000054
+2026-11-10 19:09:31 ipsec,debug,packet fbd79fd7 8c39c444 db7210db aa9052ad b4b2f309 289b6d90 d8479eed 69a4dcda
+2026-11-10 19:09:31 ipsec,debug,packet a26cafb7 6df27de4 692947bf 60057aee 04141695 f44f94e1 80d731d2 0dd1e7de
+2026-11-10 19:09:31 ipsec,debug,packet 35f159b1 35c328ab 244cdd32 da3c5e32
+2026-11-10 19:09:31 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:31 ipsec,debug fbd79fd7 8c39c444 db7210db aa9052ad
+2026-11-10 19:09:31 ipsec,debug decrypted packet
+2026-11-10 19:09:31 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000012 0000001c
+2026-11-10 19:09:31 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000012 0000001c
+2026-11-10 19:09:31 ipsec,debug => (size 0x54)
+2026-11-10 19:09:31 ipsec,debug 00000054 de35f159 b135c328 ab244cdd 32da3c5e 835839f0 6f6a46bd 58cf9e86
+2026-11-10 19:09:31 ipsec,debug 232e2846 39ec2a7c d42e7f6b cbbd0755 176440b5 bf535e02 b5cba280 a8ca17bc
+2026-11-10 19:09:31 ipsec,debug d6aecfe8 00000000 00000000 00000000 00000000
+2026-11-10 19:09:31 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:31 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000012 00000070 00000054
+2026-11-10 19:09:31 ipsec,debug,packet de35f159 b135c328 ab244cdd 32da3c5e 835839f0 6f6a46bd 58cf9e86 232e2846
+2026-11-10 19:09:31 ipsec,debug,packet 39ec2a7c d42e7f6b cbbd0755 176440b5 bf535e02 b5cba280 a8ca17bc d6aecfe8
+2026-11-10 19:09:31 ipsec,debug,packet 6064c9a3 ab47eecb 440032c4 530b80f8
+2026-11-10 19:09:31 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000015 00000070 00000054
+2026-11-10 19:09:31 ipsec,debug,packet f9e42b50 e0e4972e de28be13 2dfdd2b4 1dbe0c3c bdd5c2e0 fa59d35e 81fbc16a
+2026-11-10 19:09:31 ipsec,debug,packet 58964edc feaad49e 38f233e8 85d7a845 46dafcf4 1bbf4f83 d529c46b 5b3abb2b
+2026-11-10 19:09:31 ipsec,debug,packet 04753bc5 558dabb9 89d0c620 59144522
+2026-11-10 19:09:31 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:31 ipsec,debug f9e42b50 e0e4972e de28be13 2dfdd2b4
+2026-11-10 19:09:31 ipsec,debug decrypted packet
+2026-11-10 19:09:31 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:31 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000015 0000001c
+2026-11-10 19:09:39 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202508 00000016 0000001c
+2026-11-10 19:09:39 ipsec,debug => (size 0x44)
+2026-11-10 19:09:39 ipsec,debug 00000044 2b04753b c5558dab b989d0c6 20591445 7ef73436 5107ddb6 899ed16f
+2026-11-10 19:09:39 ipsec,debug fc980327 a5b717b8 5bd8d3d7 bc070d50 c35c7852 00000000 00000000 00000000
+2026-11-10 19:09:39 ipsec,debug 00000000
+2026-11-10 19:09:39 ipsec,debug ===== sending 96 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:39 ipsec,debug 1 times of 100 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202508 00000016 00000060 00000044
+2026-11-10 19:09:39 ipsec,debug,packet 2b04753b c5558dab b989d0c6 20591445 7ef73436 5107ddb6 899ed16f fc980327
+2026-11-10 19:09:39 ipsec,debug,packet a5b717b8 5bd8d3d7 bc070d50 c35c7852 475afedb e4f8fca3 90cd46a4 39cbc82d
+2026-11-10 19:09:39 ipsec,debug ===== received 96 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202500 00000013 00000060 00000044
+2026-11-10 19:09:39 ipsec,debug,packet e86064c9 a3ab47ee cb440032 c4530b80 dea3d98d 6ac8cde1 2d524186 c8ac666e
+2026-11-10 19:09:39 ipsec,debug,packet 0cb5e643 6306a308 7edece9f c7608c63 e2f15c1e a9dae05c 6d93cbfa 948c848e
+2026-11-10 19:09:39 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:39 ipsec,debug e86064c9 a3ab47ee cb440032 c4530b80
+2026-11-10 19:09:39 ipsec,debug decrypted packet
+2026-11-10 19:09:39 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202500 00000013 0000001c
+2026-11-10 19:09:39 ipsec,debug,packet => outgoing plain packet (size 0x1c)
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202528 00000013 0000001c
+2026-11-10 19:09:39 ipsec,debug => (size 0x54)
+2026-11-10 19:09:39 ipsec,debug 00000054 63e2f15c 1ea9dae0 5c6d93cb fa948c84 20257741 31e4b404 975fa3bd
+2026-11-10 19:09:39 ipsec,debug a08f0174 8c383cd6 434f88c2 a47bea78 9d057f2a 22b583df 8f9053a9 3e62a5c1
+2026-11-10 19:09:39 ipsec,debug 0adbe4c5 00000000 00000000 00000000 00000000
+2026-11-10 19:09:39 ipsec,debug ===== sending 112 bytes from 10.0.1.14[4500] to 10.0.1.13[4500]
+2026-11-10 19:09:39 ipsec,debug 1 times of 116 bytes message will be sent to 10.0.1.13[4500]
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202528 00000013 00000070 00000054
+2026-11-10 19:09:39 ipsec,debug,packet 63e2f15c 1ea9dae0 5c6d93cb fa948c84 20257741 31e4b404 975fa3bd a08f0174
+2026-11-10 19:09:39 ipsec,debug,packet 8c383cd6 434f88c2 a47bea78 9d057f2a 22b583df 8f9053a9 3e62a5c1 0adbe4c5
+2026-11-10 19:09:39 ipsec,debug,packet 4ec38827 dbf231d5 a140c24d 8bc17244
+2026-11-10 19:09:39 ipsec,debug ===== received 112 bytes from 10.0.1.13[4500] to 10.0.1.14[4500]
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 2e202520 00000016 00000070 00000054
+2026-11-10 19:09:39 ipsec,debug,packet 52475afe dbe4f8fc a390cd46 a439cbc8 b9a104fa 78549101 41d42678 ce3ec4ba
+2026-11-10 19:09:39 ipsec,debug,packet 27c68827 5c360aee e9b4eaf7 e86e61ba 9d0b7619 26285e30 1d3131f3 00aeeb87
+2026-11-10 19:09:39 ipsec,debug,packet e5e94ddd 3752b4bb 71d9124f c9382e8c
+2026-11-10 19:09:39 ipsec,debug => iv (size 0x10)
+2026-11-10 19:09:39 ipsec,debug 52475afe dbe4f8fc a390cd46 a439cbc8
+2026-11-10 19:09:39 ipsec,debug decrypted packet
+2026-11-10 19:09:39 ipsec,debug,packet => decrypted packet (size 0x1c)
+2026-11-10 19:09:39 ipsec,debug,packet 087fc0e2 20da6a56 b271f00d 056907f0 00202520 00000016 0000001c

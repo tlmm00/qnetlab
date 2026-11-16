@@ -1,0 +1,14 @@
+
+# --- 10 OSPFv2 (RouterOS v7): ether2/ether3 ativas; interfaces de KME e NODE passivas -----
+/routing ospf interface-template remove [find where comment~"^qnetlab-"]
+/routing ospf area remove [find where name={{ ospf.area }}]
+/routing ospf instance remove [find where name={{ ospf.instance }}]
+/routing ospf instance add name={{ ospf.instance }} version=2 router-id={{ ospf.router_id }} comment=qnetlab-ospf
+/routing ospf area add name={{ ospf.area }} area-id={{ ospf.area_id }} instance={{ ospf.instance }} comment=qnetlab-ospf
+{% for i in r.interfaces %}
+{% if i.passive %}
+/routing ospf interface-template add area={{ ospf.area }} interfaces={{ i.name }} passive comment="qnetlab-ospf {{ i.role }}"
+{% else %}
+/routing ospf interface-template add area={{ ospf.area }} interfaces={{ i.name }} type=ptp cost={{ i.cost }} comment="qnetlab-ospf {{ i.role }} {{ i.peer }}"
+{% endif %}
+{% endfor %}

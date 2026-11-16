@@ -1,0 +1,168 @@
+# QNetLab — IaC para laboratórios de redes QKD / IPsec pós-quântico no GNS3
+
+Transforma o cenário manual "MikroTik CHR + KMEs em Docker" em um pipeline declarativo,
+reprodutível e extensível: **um YAML → projeto GNS3, PKI, imagens Docker, OSPF, IPsec IKEv2 + PPK,
+carga, coleta e gráficos**.
+
+```
+topologies/ring4.yaml ──► qnetlab up ──► GNS3 (2 CHR + KME + NODE + NAT por site) ──► qnetlab run ──► output.tar.gz
+```
+
+## Documentação
+
+A documentação técnica completa está em [`docs/`](docs/index.md): [visão geral](docs/01-overview.md),
+[arquitetura](docs/02-architecture.md), [topologia e endereçamento](docs/03-topology-addressing.md),
+[instalação e guia rápido](docs/04-installation-quickstart.md), [referência de configuração](docs/05-configuration-reference.md),
+[CLI e Makefile](docs/06-cli-reference.md), [segurança](docs/07-security.md), [configuração RouterOS](docs/08-routeros-config.md),
+[contêineres KME/NODE](docs/09-containers-kme-node.md), [operação e telemetria](docs/10-operations-telemetry.md),
+[solução de problemas](docs/11-troubleshooting.md), [desenvolvimento](docs/12-development.md) e
+[limitações e roteiro](docs/13-limitations-roadmap.md), [plano de validação](docs/14-validation-test-plan.md). Decisões de projeto: [ADRs](docs/decisions.md).
+
+## Topologia (espelha o laboratório MITACS)
+
+O framework gera, a partir de `ring.size: N`, o mesmo desenho dos seus laboratórios `Rede_MITACS_1_ring4.pdf` e
+`Rede_MITACS_3_ring6.pdf`: por site `i`, **2 CHRs MikroTik (MKTi1, MKTi2) + 1 KME + 1 NODE (cliente, 2 interfaces) + 1 nó NAT por CHR**.
+Os nós NAT são os **nós NAT embutidos do GNS3** (ícone de nuvem, porta `nat0`), criados a partir do template `NAT` do servidor e
+numerados como no seu ring4: `NAT1`=MKT11, `NAT2`=MKT12, `NAT3`=MKT21 … `NAT2N`=MKT N2 (se o servidor não tiver o template,
+o nó `nat` é criado direto com o símbolo de nuvem).
+Não há switches: todos os enlaces são ponto a ponto (só CHR Qemu, contêineres Docker e nós NAT existem no GNS3).
+
+```
+        KMEi ──eth0── KMA ──eth1── KME(i+1)               ether1: KME      ether2: anel (IPsec IKEv2 + PPK/QKD)
+       eth2│ │eth3                                         ether3: CHR irmão  ether7: NODE   ether8: NAT (mgmt)
+   ether1  │ │  ether1                                     NODE: eth0 ← MKTi1, eth1 ← MKTi2
+  NAT─e8─MKTi1 ──e3── MKTi2─e8─NAT
+        e2│ e7        e7 │ e2        MKTi2.e2 ── MKT(i+1)1.e2
+          │   NODEi      │
+```
+
+| Enlace | Pool (um /30 por enlace) | Pontas |
+|---|---|---|
+| KME↔CHR | `10.0.0.0/24` | KME `.1` (eth2/eth3), CHR `.2` (ether1) |
+| CHR↔CHR entre sites | `10.0.1.0/24` | MKTi2.ether2 ↔ MKT(i+1)1.ether2 (o de menor índice fica com `.1`) |
+| CHR↔CHR no site | `10.0.2.0/24` | MKTi1 `.1`, MKTi2 `.2` (ether3) |
+| CHR↔NODE | `10.0.3.0/24` | CHR `.1` (ether7), NODE `.2` (eth0/eth1) |
+| KME↔KME (KMA) | `172.16.100.0/24` | KMEi `.1` (eth0), KME(i+1) `.2` (eth1) |
+| Gerenciamento (NAT) | `192.168.122.0/24` | NAT1↔MKT11=`.10`, NAT2↔MKT12=`.20`, NAT3↔MKT21=`.30` … em ether8 |
+
+Cada CHR tem exatamente um enlace `ether2`; logo, **cada enlace do anel é um túnel IPsec/QKD** e cada CHR tem um único
+`/ip ipsec key qkd` (`peer-sae-id` = CHR do outro lado). O NODE tem rotas estáticas para os /30 dos NODEs vizinhos.
+Os NODEs e KMEs **não têm rede de gerenciamento** (como no seu laboratório): o framework os alcança com `docker exec`
+(`GNS3.<nó>.<id do projeto>`), portanto `load`, `collect` e o gatilho do IKE no `verify` precisam rodar no host do Docker do GNS3.
+
+### Diferenças em relação aos seus PDFs (normalizações)
+
+O gerador é regular; no ring4 do PDF alguns blocos tinham ordem diferente (p. ex., sites 2–3 com CHR/KME trocados e o
+bloco `10.0.2.x`/`10.0.1.17+`). Aqui o endereçamento segue **exatamente a tabela do ring6** para qualquer N, então o ring4 gerado
+pode diferir do PDF em alguns IPs (a estrutura e as funções são as mesmas). Também: o agente do NODE embutido faz só
+sondas UDP (RTT/perda) — use `containers.app_source_dir` para colocar o seu cliente DFL; o KME é o seu `main.py` sem alterações.
+
+## Estado de validação (leia antes de usar)
+
+| Parte | Como foi validada |
+|---|---|
+| Config, endereçamento (conferido com a tabela do ring6), túneis, PKI/OpenSSL, templates `.rsc`, compose | testes automatizados |
+| **Seu KME (KMS-sim `main.py`)** com o `kme_config.yaml` gerado, sync KMA entre 2 KMEs, mTLS com SAN de IP, consulta SQL do coletor, agente do NODE, consolidação/gráficos | teste ponta a ponta **local** real (2 processos do `main.py` + OpenSSL) |
+| Login/execução no console RouterOS | servidor telnet falso |
+| Deployer GNS3 (nós, adaptadores, portas, enlaces, NAT) e `docker exec` | cliente GNS3 e runner Docker falsos |
+| **GNS3 real, CHR real, `docker build`, entrypoint com `ip` real** | **não testado** (ambiente de desenvolvimento sem GNS3/Docker/iproute2) |
+
+Na primeira execução em GNS3 real use `-v` e espere ajustes finos (`/rest/execute`, login do console CHR, `ip` no entrypoint).
+
+## Pré-requisitos
+
+* GNS3 Server 2.2.x (API v2, porta 3080) com um **template Qemu do MikroTik CHR RouterOS 7.22 ou mais novo** (nome padrão `MikroTik CHR`; `/ip ipsec key qkd` e `ppk=qkd` exigem isso).
+  O `configure` (ou `qnetlab upgrade`) lê a versão pelo REST de cada CHR; se for anterior a `router.min_version`
+  (padrão `7.22`) e `router.auto_update: true` (padrão), o CHR é atualizado. Padrão `update_method: host`: **o host que roda o
+  `qnetlab` baixa o pacote principal (`https://download.mikrotik.com/routeros/<versão>/routeros-<versão>.npk`) uma única vez**
+  para `build/<lab>/cache/` (versão = `router.update_version` — nos YAMLs, **`7.22.1` exata** — ou a mais nova do canal `update_channel` se vazio; CHRs abaixo dela são atualizados e o resultado é conferido; CHRs mais novos não são rebaixados), envia por FTP a cada CHR
+  e reinicia; o RouterOS instala no boot e o framework espera a versão nova. Não depende de DNS/Internet dentro dos CHRs.
+  `update_method: device` faz o CHR baixar sozinho (rota/DNS temporários via NAT). Com `auto_update: false` só aborta com
+  mensagem clara.
+  Dica: como cada `make up --recreate` cria CHRs novos a partir da imagem do template, atualize a imagem do template uma vez
+  (ou use um CHR 7.22+) para não baixar o pacote em todos os roteadores a cada deploy.
+* Docker no mesmo host do GNS3 usando o daemon do sistema (`docker context use default`).
+* **Sem Dynamips/Cisco e sem switches.**
+* Python ≥ 3.10, OpenSSL ≥ 1.1.1. `pip install -e '.[dev]'`.
+* O host precisa **alcançar `192.168.122.0/24`** (nós NAT do GNS3 → `virbr0`) para configurar/coletar dos CHRs.
+* Limite de gerenciamento: `mgmt_start + mgmt_step*(2N-1) ≤ 254`; com `mgmt_step: 10` isso dá N ≤ 12 (use `mgmt_step: 5` para N até 24).
+
+## Uso
+
+```bash
+make validate TOPO=topologies/ring6.yaml     # valida e checa endereçamento
+make plan                                    # nós, IPs, enlaces e túneis
+make render                                  # gera PKI + .rsc + compose SEM GNS3 (bom para revisar)
+make images                                  # docker build (KME por site; NODE só se app_source_dir)
+make up                                      # pki -> docker build -> GNS3 -> bootstrap -> (upgrade do RouterOS) -> configure -> verify
+make run                                     # carga nos NODEs + coleta + gráficos + build/<lab>/output/output.tar.gz
+make destroy
+```
+
+Passos isolados: `qnetlab {pki,images,deploy,bootstrap,upgrade,configure,verify,load,collect,destroy} -t <yaml>`.
+Variáveis: `GNS3_USER`, `GNS3_PASSWORD`, `QNETLAB_ADMIN_PASSWORD`. Acesso manual: `docker exec -it GNS3.KME1.<id> sh`.
+Grupo de controle: `ipsec.unprotected_links: [2]` deixa o enlace 2 do anel sem IPsec (sondas marcadas `protected: false`).
+
+## Arquitetura (as 4 camadas)
+
+```
+src/qnetlab/
+  config/        modelos imutáveis + loader YAML/JSON (env ${VAR:-x}, chaves desconhecidas = erro, JSON Schema)
+  addressing.py  planejamento determinístico: /30 por enlace, router-id, mgmt NAT, túneis, rotas dos NODEs
+  infra/         [1] Gns3Client (REST), TopologyDeployer (projeto, CHR, NAT, Docker, enlaces), console telnet
+  pki/           [2] CertificateAuthority: Root CA + certificados com SAN estritos (OpenSSL)
+  containers/    [2] ImageBuilder, env dos nós, kme_config, DockerExec (docker exec/cp), compose (só KMEs)
+  dataplane/     [3] contexto, RouterConfigRenderer, RouterOsClient (REST+FTP), DataPlaneConfigurator
+  telemetry/     [4] LoadRunner, TelemetryCollector, plot_metrics
+  lab.py / cli.py  fachada e CLI
+templates/mikrotik/   00_base 10_ospf 20_pki 30_ipsec 40_firewall 50_logging (+ bootstrap por console)
+templates/docker/     Dockerfile.node.j2, docker-compose.yml.j2, kme_config.yaml.j2
+docker/node/          imagem-base: KME (seu KMS-sim `kme/main.py`) e agente do NODE, entrypoint.sh
+topologies/           ring4.yaml, ring6.yaml     schema/topology.schema.json     tests/
+```
+
+### Decisões importantes de projeto
+
+1. **Um túnel QKD por CHR.** `/ip ipsec key qkd` é um objeto único; a topologia garante 1 `ether2` por CHR.
+2. **Bypass.** Políticas `action=none` (antes das de túnel) e `srcnat accept` isolam o tráfego do próprio roteador;
+   o tráfego KME↔CHR (ether1) e KME↔KME nunca passa pelos túneis, evitando a dependência circular chave↔túnel.
+3. **Lifetimes.** `ipsec.proposal_lifetime: 1m` (SA filho/ESP, no `proposal`) força um rekey por minuto — uma chave QKD nova a cada rekey; `ipsec.lifetime: 1h` é a SA do IKE (no `profile`).
+3b. **`enforce_encryption`**: o CHR descarta tráfego NODE↔NODE em claro por ether2 (só ESP passa).
+4. **SAN estritos.** KME: CN = `kme-sim-i`, SAN com IPs do KME + `127.0.0.1`; CHR: CN = `sae-chrXY`, SAN com IPs das interfaces + IP NAT.
+5. **Reprodutibilidade.** Segredos (PSKs, seeds KMA) ficam em `build/<lab>/state.json` (0600); cada `.rsc` limpa o que criou
+   (`comment=qnetlab-*`) e é reaplicável; o `.rsc` com PSKs é apagado do roteador após o `/import`.
+6. **Certificados nas imagens.** Nós Docker do GNS3 não têm bind mounts; cada KME ganha uma camada com seus `/certs`.
+
+### KME = o seu KMS-sim
+
+O KME dos nós é o `main.py` do seu `KMS-sim` (Flask/werkzeug, sqlite, mTLS, sync KMA por seed), vendorizado **sem
+modificações** em `docker/node/kme/main.py` (origem e sha256 em `docker/node/kme/UPSTREAM.md`). O framework não
+reimplementa nada do KME; ele só gera a configuração:
+
+* **`kme_config.yaml` por KME** (`templates/docker/kme_config.yaml.j2`, embutido na imagem em `/etc/qnetlab/`):
+  `peer_sync.peers` tem os dois KMEs vizinhos no anel KMA (`base_url` = IP KMA do vizinho, porta 8443); a `seed` é de 256 bits **por par**, igual nas duas pontas, gerada uma vez e guardada em
+  `state.json`; `kme_topology` lista todos os KMEs com seus SAEs (`sae-chrXY`, os CHRs), de onde o KME deriva as rotas.
+* **Parâmetros de sync** na seção `kme:` da topologia (`sync_interval_s`, `generation_delay_s`, `sync_threshold`,
+  `request_timeout_ms`, `max_retries`, `log_level`). Os padrões são os do código do KME; seus experimentos
+  (10 / 120 / 1000 / 10000 / 10000) cabem aqui.
+* **Para usar o seu checkout** em vez da cópia vendorizada: `containers.kme_source_dir: ~/Codes/KMS-sim/src`
+  (pasta que contém `main.py`). `containers.app_source_dir` constrói a imagem dos NODEs com o seu cliente (deve conter `src/main.py`).
+* **Identidade do SAE = CN do certificado** (o KME lê `SSL_CLIENT_CN`); o PKI emite `sae-chrXY` para cada CHR. A coleta de
+  telemetria dos KMEs usa `docker exec` (log + pool de chaves no sqlite), não mTLS.
+* O KME só entrega chaves de **256 bits** (por isso `containers.key_size_bits` deve ser 256 sem `kme_source_dir`).
+  Pedidos com `size` ≤ 128 são lidos como **bytes**; por isso `ipsec.qkd_key_size: 32` (valor literal de `key-size`
+  no RouterOS) resulta em 256 bits.
+
+Eventos de aplicação (ex.: `{"type":"accuracy","round":3,"value":0.91}`) enviados por `POST :9100/event` ao agente do NODE (`docker exec`, porta 9100) entram nos gráficos.
+
+### Pontos a confirmar na sua versão do RouterOS
+
+* `key-size` do QKD: a referência CLI diz **bits**, a página de manual cita bytes — configure em `ipsec.qkd_key_size` (padrão 256, como no seu laboratório; no KME do KMS-sim, ≤128 é lido como bytes).
+* PPK estático (`ppk_mode: static`): sintaxe do `identity` marcada `VERIFY` em `templates/mikrotik/30_ipsec.rsc.j2`.
+* `auth_method: cert` reutiliza os certificados SAE como identidade IKE; o padrão `psk` é o mais simples.
+
+## Saída do experimento
+
+`build/<lab>/output/output.tar.gz`: `metrics/*.jsonl`, `logs/MKT*-ipsec.log`, `logs/KME*.log`, `logs/KME*-keys.json` (depuração IPsec/QKD do RouterOS), snapshots de
+OSPF/IPsec/QKD, `plots/` (`rtt_time.png`, `rtt_cdf.png`, `loss.png`, `key_latency.png`, `accuracy.png`, `summary.*`),
+`rsc/` com segredos mascarados e `manifest.json` com SHA-256. Regerar gráficos: `python scripts/plot_metrics.py -i … -o …`.

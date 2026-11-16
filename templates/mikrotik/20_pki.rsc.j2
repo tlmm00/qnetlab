@@ -1,0 +1,7 @@
+# --- 20 PKI: feita pelo configurador via REST antes deste script ------------------
+# (envio por FTP + /certificate import + renomeação; os PEMs são apagados do roteador).
+# O CN do certificado do roteador é a sua identidade SAE perante o KME (modo QKD).
+{% for c in certs %}
+# certificado esperado: {{ c.name }}{% if c.trusted %} (trusted){% endif %}
+
+{% endfor %}

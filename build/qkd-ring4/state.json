@@ -1,0 +1,163 @@
+{
+  "nodes": {
+    "KME1": {
+      "console": 5036,
+      "console_host": "0.0.0.0",
+      "id": "d08c4928-9d64-440b-8e30-45a3cc3b2cc5",
+      "type": "docker"
+    },
+    "KME2": {
+      "console": 5046,
+      "console_host": "0.0.0.0",
+      "id": "496180fe-fe5b-49d3-9bdc-7adf802ff38b",
+      "type": "docker"
+    },
+    "KME3": {
+      "console": 5056,
+      "console_host": "0.0.0.0",
+      "id": "ae0b595c-c451-47c5-8a26-43aaa4430421",
+      "type": "docker"
+    },
+    "KME4": {
+      "console": 5066,
+      "console_host": "0.0.0.0",
+      "id": "a72d6285-0d44-4dfb-8a2e-7dced60bf6bb",
+      "type": "docker"
+    },
+    "MKT11": {
+      "console": 5030,
+      "console_host": "0.0.0.0",
+      "id": "5145919d-9764-49dc-a570-ab00a08ac2e7",
+      "type": "qemu"
+    },
+    "MKT12": {
+      "console": 5033,
+      "console_host": "0.0.0.0",
+      "id": "2410d474-ea29-41c6-aca6-22b953d951dd",
+      "type": "qemu"
+    },
+    "MKT21": {
+      "console": 5040,
+      "console_host": "0.0.0.0",
+      "id": "1ce24226-6761-4658-93c3-fe760edd7bf5",
+      "type": "qemu"
+    },
+    "MKT22": {
+      "console": 5043,
+      "console_host": "0.0.0.0",
+      "id": "6885e8d8-6339-4b84-a4d0-4d98ac03ea6c",
+      "type": "qemu"
+    },
+    "MKT31": {
+      "console": 5050,
+      "console_host": "0.0.0.0",
+      "id": "5a22a5e6-ea2a-4893-983f-feccad8dd77b",
+      "type": "qemu"
+    },
+    "MKT32": {
+      "console": 5053,
+      "console_host": "0.0.0.0",
+      "id": "dd715498-ef96-4fc5-8664-9ee8ea52c7bc",
+      "type": "qemu"
+    },
+    "MKT41": {
+      "console": 5060,
+      "console_host": "0.0.0.0",
+      "id": "4641171e-664e-4ad3-beba-a0a5e574b9eb",
+      "type": "qemu"
+    },
+    "MKT42": {
+      "console": 5063,
+      "console_host": "0.0.0.0",
+      "id": "dbd6e5fd-d4f1-4c9f-8af9-49531f76933c",
+      "type": "qemu"
+    },
+    "NAT1": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "e48fda1f-4050-40a0-ba84-57fb50a45184",
+      "type": "nat"
+    },
+    "NAT2": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "1b96bdf5-e26a-4592-b78b-d289b91b244a",
+      "type": "nat"
+    },
+    "NAT3": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "81179fbe-bd96-4f52-bdd0-973971d87bdc",
+      "type": "nat"
+    },
+    "NAT4": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "347d22e1-326c-41fe-8951-971caf65a776",
+      "type": "nat"
+    },
+    "NAT5": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "54fdb01e-56f9-4890-ac4b-064102722b00",
+      "type": "nat"
+    },
+    "NAT6": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "820ec3f4-d74e-4146-8013-c1c9101a8653",
+      "type": "nat"
+    },
+    "NAT7": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "2e0cf650-2407-428d-bf63-0e830b86d7f5",
+      "type": "nat"
+    },
+    "NAT8": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "87357937-612d-4ef0-ba9e-018b7d0ead08",
+      "type": "nat"
+    },
+    "NODE1": {
+      "console": 5038,
+      "console_host": "0.0.0.0",
+      "id": "f417d7e7-651e-450b-90b4-fa2ae5a4c7da",
+      "type": "docker"
+    },
+    "NODE2": {
+      "console": 5048,
+      "console_host": "0.0.0.0",
+      "id": "aaecf359-5db0-41c8-a77a-b7be871f3816",
+      "type": "docker"
+    },
+    "NODE3": {
+      "console": 5058,
+      "console_host": "0.0.0.0",
+      "id": "e96740fd-1f6e-41c1-999a-78b1732b8f20",
+      "type": "docker"
+    },
+    "NODE4": {
+      "console": 5068,
+      "console_host": "0.0.0.0",
+      "id": "b5f4f741-5fd7-48a1-9487-b553eee2b34f",
+      "type": "docker"
+    }
+  },
+  "project_id": "1bdcb7e6-4a49-4ad8-906c-3c8856a43bb7",
+  "secrets": {
+    "ike_psk:MKT12-MKT21": "d24970946de6103b28af457affd4a85207a05c17fc65948d0edf6287608005ed",
+    "ike_psk:MKT22-MKT31": "c151c6f3aee8e5a207f847083af10a9229047ea1690f43b6ad2f6eb4098e55ac",
+    "ike_psk:MKT32-MKT41": "e98df98fbcfbea1ec8e9ccc8ba5efcfbaec622b31464dd6d5be88b0582034aae",
+    "ike_psk:MKT42-MKT11": "0fda5759385d816cdbf6287e3f80a8dbc28fc0691a09c28ded770627bfca54fe",
+    "kma_seed:kme-sim-1-kme-sim-2": "40066adba0485b6cd68c25164fcb0e1e183ff724ff763e4e5249e435b8a01d6c",
+    "kma_seed:kme-sim-1-kme-sim-4": "1c9a1ff18234ff9d800e19ef9ab3ceaeac48aaa26f2fcd2ebb478fb9c80bd1f0",
+    "kma_seed:kme-sim-2-kme-sim-3": "83a2aced8b576a1c3007b1bf3c6d48e1b39f660dd7c8a5f1d17fbfa702b1149a",
+    "kma_seed:kme-sim-3-kme-sim-4": "1340c30618c30a20777e488c6379ce54c600e34be408c61ac60b48a32ed95a18",
+    "static_ppk:MKT12-MKT21": "818e4101563032d30f7f2b9ef3da6365236da5ae764cc19df94163faab7ae5ae",
+    "static_ppk:MKT22-MKT31": "3b820793f34f9b03f76bd3a0cede9e077489babee9070e1480428c4010cbb2cc",
+    "static_ppk:MKT32-MKT41": "26b9e140db7acb8fad9a5a35191a7f36913ad3556ee54e428f588a27cdd7d32c",
+    "static_ppk:MKT42-MKT11": "3dc5dabe170d459ba480557d3c9347f87cc457edefe7cf4f12d6d972a699c0c8"
+  }
+}

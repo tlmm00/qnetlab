@@ -1,0 +1,458 @@
+2026-11-11 22:01:47,386 INFO [MainThread] Loaded configuration from /etc/qnetlab/kme_config.yaml
+2026-11-11 22:01:47,425 INFO [MainThread] Database initialised at /opt/kme/data/kme-sim-4.db
+2026-11-11 22:01:47,426 INFO [MainThread] KMA link seeded for peer kme-sim-3 at https://172.16.100.9:8443
+2026-11-11 22:01:47,427 INFO [MainThread] KMA link seeded for peer kme-sim-5 at https://172.16.100.14:8443
+2026-11-11 22:01:47,427 INFO [MainThread] SAE route seeded: sae-chr11 -> kme-sim-1
+2026-11-11 22:01:47,427 INFO [MainThread] SAE route seeded: sae-chr12 -> kme-sim-1
+2026-11-11 22:01:47,427 INFO [MainThread] SAE route seeded: sae-chr21 -> kme-sim-2
+2026-11-11 22:01:47,427 INFO [MainThread] SAE route seeded: sae-chr22 -> kme-sim-2
+2026-11-11 22:01:47,427 INFO [MainThread] SAE route seeded: sae-chr31 -> kme-sim-3
+2026-11-11 22:01:47,428 INFO [MainThread] SAE route seeded: sae-chr32 -> kme-sim-3
+2026-11-11 22:01:47,428 INFO [MainThread] SAE route seeded: sae-chr51 -> kme-sim-5
+2026-11-11 22:01:47,428 INFO [MainThread] SAE route seeded: sae-chr52 -> kme-sim-5
+2026-11-11 22:01:47,428 INFO [MainThread] SAE route seeded: sae-chr61 -> kme-sim-6
+2026-11-11 22:01:47,429 INFO [MainThread] SAE route seeded: sae-chr62 -> kme-sim-6
+2026-11-11 22:01:47,429 INFO [MainThread] SAE route seeded: sae-chr71 -> kme-sim-7
+2026-11-11 22:01:47,429 INFO [MainThread] SAE route seeded: sae-chr72 -> kme-sim-7
+2026-11-11 22:01:47,430 INFO [MainThread] SAE route seeded: sae-chr81 -> kme-sim-8
+2026-11-11 22:01:47,430 INFO [MainThread] SAE route seeded: sae-chr82 -> kme-sim-8
+2026-11-11 22:01:47,439 INFO [KMASync] KMA Sync background task started. Thread ID: 140065206871744
+2026-11-11 22:01:47,440 INFO [MainThread] KMA Sync thread started (ID: 140065206871744)
+2026-11-11 22:01:47,440 INFO [MainThread] KME server starting — KME_ID=kme-sim-4  DB=/opt/kme/data/kme-sim-4.db  0.0.0.0:8443
+2026-11-11 22:01:47,476 INFO [MainThread] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8443
+ * Running on https://127.0.0.1:8443
+2026-11-11 22:01:47,477 INFO [MainThread] [33mPress CTRL+C to quit[0m
+2026-11-11 22:01:51,000 INFO [MainThread] Received sync request from kme-sim-3 (counter: 1, key_id: c6a2470b)
+2026-11-11 22:01:51,008 INFO [MainThread] Successfully synchronized key c6a2470b with kme-sim-3 (counter: 1)
+2026-11-11 22:01:51,009 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:51] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:51,578 INFO [MainThread] Received sync request from kme-sim-3 (counter: 2, key_id: 520a7ecc)
+2026-11-11 22:01:51,588 INFO [MainThread] Successfully synchronized key 520a7ecc with kme-sim-3 (counter: 2)
+2026-11-11 22:01:51,589 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:51] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:52,155 INFO [MainThread] Received sync request from kme-sim-3 (counter: 3, key_id: 980a853e)
+2026-11-11 22:01:52,162 INFO [MainThread] Successfully synchronized key 980a853e with kme-sim-3 (counter: 3)
+2026-11-11 22:01:52,162 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:52] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:52,467 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 0, threshold: 100)
+2026-11-11 22:01:52,763 INFO [MainThread] Received sync request from kme-sim-3 (counter: 4, key_id: 15140ce8)
+2026-11-11 22:01:52,778 INFO [MainThread] Successfully synchronized key 15140ce8 with kme-sim-3 (counter: 4)
+2026-11-11 22:01:52,781 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:52] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:53,411 INFO [MainThread] Received sync request from kme-sim-3 (counter: 5, key_id: 3f56b74e)
+2026-11-11 22:01:53,419 INFO [MainThread] Successfully synchronized key 3f56b74e with kme-sim-3 (counter: 5)
+2026-11-11 22:01:53,420 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:53] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:53,987 INFO [MainThread] Received sync request from kme-sim-3 (counter: 6, key_id: 8f4964fa)
+2026-11-11 22:01:53,994 INFO [MainThread] Successfully synchronized key 8f4964fa with kme-sim-3 (counter: 6)
+2026-11-11 22:01:53,995 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:53] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:54,557 INFO [MainThread] Received sync request from kme-sim-3 (counter: 7, key_id: 78344342)
+2026-11-11 22:01:54,565 INFO [MainThread] Successfully synchronized key 78344342 with kme-sim-3 (counter: 7)
+2026-11-11 22:01:54,566 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:54] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:55,117 INFO [MainThread] Received sync request from kme-sim-3 (counter: 8, key_id: 1938338e)
+2026-11-11 22:01:55,124 INFO [MainThread] Successfully synchronized key 1938338e with kme-sim-3 (counter: 8)
+2026-11-11 22:01:55,124 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:55] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:55,692 INFO [MainThread] Received sync request from kme-sim-3 (counter: 9, key_id: 5d5de783)
+2026-11-11 22:01:55,702 INFO [MainThread] Successfully synchronized key 5d5de783 with kme-sim-3 (counter: 9)
+2026-11-11 22:01:55,703 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:55] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:56,285 INFO [MainThread] Received sync request from kme-sim-3 (counter: 10, key_id: cd31758c)
+2026-11-11 22:01:56,295 INFO [MainThread] Successfully synchronized key cd31758c with kme-sim-3 (counter: 10)
+2026-11-11 22:01:56,296 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:01:56] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:01:57,856 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:02:01,390 INFO [MainThread] Received sync request from kme-sim-3 (counter: 11, key_id: d1c1267e)
+2026-11-11 22:02:01,408 INFO [MainThread] Successfully synchronized key d1c1267e with kme-sim-3 (counter: 11)
+2026-11-11 22:02:01,410 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:01] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:01,962 INFO [MainThread] Received sync request from kme-sim-3 (counter: 12, key_id: 11650864)
+2026-11-11 22:02:01,968 INFO [MainThread] Successfully synchronized key 11650864 with kme-sim-3 (counter: 12)
+2026-11-11 22:02:01,969 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:01] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:02,535 INFO [MainThread] Received sync request from kme-sim-3 (counter: 13, key_id: ee534dbb)
+2026-11-11 22:02:02,544 INFO [MainThread] Successfully synchronized key ee534dbb with kme-sim-3 (counter: 13)
+2026-11-11 22:02:02,545 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:02] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:02,860 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 10, threshold: 100)
+2026-11-11 22:02:03,115 INFO [MainThread] Received sync request from kme-sim-3 (counter: 14, key_id: d9d74529)
+2026-11-11 22:02:03,121 INFO [MainThread] Successfully synchronized key d9d74529 with kme-sim-3 (counter: 14)
+2026-11-11 22:02:03,122 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:03] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:03,680 INFO [MainThread] Received sync request from kme-sim-3 (counter: 15, key_id: 49a3da89)
+2026-11-11 22:02:03,686 INFO [MainThread] Successfully synchronized key 49a3da89 with kme-sim-3 (counter: 15)
+2026-11-11 22:02:03,687 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:03] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:04,237 INFO [MainThread] Received sync request from kme-sim-3 (counter: 16, key_id: d658e655)
+2026-11-11 22:02:04,243 INFO [MainThread] Successfully synchronized key d658e655 with kme-sim-3 (counter: 16)
+2026-11-11 22:02:04,244 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:04] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:04,805 INFO [MainThread] Received sync request from kme-sim-3 (counter: 17, key_id: 651d71d4)
+2026-11-11 22:02:04,813 INFO [MainThread] Successfully synchronized key 651d71d4 with kme-sim-3 (counter: 17)
+2026-11-11 22:02:04,813 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:04] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:05,366 INFO [MainThread] Received sync request from kme-sim-3 (counter: 18, key_id: a2228dbb)
+2026-11-11 22:02:05,372 INFO [MainThread] Successfully synchronized key a2228dbb with kme-sim-3 (counter: 18)
+2026-11-11 22:02:05,374 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:05] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:05,932 INFO [MainThread] Received sync request from kme-sim-3 (counter: 19, key_id: 64d84dad)
+2026-11-11 22:02:05,939 INFO [MainThread] Successfully synchronized key 64d84dad with kme-sim-3 (counter: 19)
+2026-11-11 22:02:05,940 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:05] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:06,523 INFO [MainThread] Received sync request from kme-sim-3 (counter: 20, key_id: a6fd5437)
+2026-11-11 22:02:06,530 INFO [MainThread] Successfully synchronized key a6fd5437 with kme-sim-3 (counter: 20)
+2026-11-11 22:02:06,534 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:06] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:08,184 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:02:11,600 INFO [MainThread] Received sync request from kme-sim-3 (counter: 21, key_id: d500097c)
+2026-11-11 22:02:11,609 INFO [MainThread] Successfully synchronized key d500097c with kme-sim-3 (counter: 21)
+2026-11-11 22:02:11,610 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:11] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:12,170 INFO [MainThread] Received sync request from kme-sim-3 (counter: 22, key_id: ce2e2a08)
+2026-11-11 22:02:12,184 INFO [MainThread] Successfully synchronized key ce2e2a08 with kme-sim-3 (counter: 22)
+2026-11-11 22:02:12,184 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:12] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:12,744 INFO [MainThread] Received sync request from kme-sim-3 (counter: 23, key_id: 05a271db)
+2026-11-11 22:02:12,751 INFO [MainThread] Successfully synchronized key 05a271db with kme-sim-3 (counter: 23)
+2026-11-11 22:02:12,752 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:12] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:13,186 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 20, threshold: 100)
+2026-11-11 22:02:13,318 INFO [MainThread] Received sync request from kme-sim-3 (counter: 24, key_id: 04e64da1)
+2026-11-11 22:02:13,331 INFO [MainThread] Successfully synchronized key 04e64da1 with kme-sim-3 (counter: 24)
+2026-11-11 22:02:13,332 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:13] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:13,892 INFO [MainThread] Received sync request from kme-sim-3 (counter: 25, key_id: 0d02b850)
+2026-11-11 22:02:13,900 INFO [MainThread] Successfully synchronized key 0d02b850 with kme-sim-3 (counter: 25)
+2026-11-11 22:02:13,901 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:13] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:14,459 INFO [MainThread] Received sync request from kme-sim-3 (counter: 26, key_id: cbc64498)
+2026-11-11 22:02:14,469 INFO [MainThread] Successfully synchronized key cbc64498 with kme-sim-3 (counter: 26)
+2026-11-11 22:02:14,470 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:14] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:15,019 INFO [MainThread] Received sync request from kme-sim-3 (counter: 27, key_id: ff149b3f)
+2026-11-11 22:02:15,028 INFO [MainThread] Successfully synchronized key ff149b3f with kme-sim-3 (counter: 27)
+2026-11-11 22:02:15,028 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:15] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:15,587 INFO [MainThread] Received sync request from kme-sim-3 (counter: 28, key_id: 58856d52)
+2026-11-11 22:02:15,594 INFO [MainThread] Successfully synchronized key 58856d52 with kme-sim-3 (counter: 28)
+2026-11-11 22:02:15,596 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:15] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:16,145 INFO [MainThread] Received sync request from kme-sim-3 (counter: 29, key_id: fed2318c)
+2026-11-11 22:02:16,153 INFO [MainThread] Successfully synchronized key fed2318c with kme-sim-3 (counter: 29)
+2026-11-11 22:02:16,153 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:16] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:16,719 INFO [MainThread] Received sync request from kme-sim-3 (counter: 30, key_id: ef937858)
+2026-11-11 22:02:16,741 INFO [MainThread] Successfully synchronized key ef937858 with kme-sim-3 (counter: 30)
+2026-11-11 22:02:16,742 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:16] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:18,244 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:02:21,795 INFO [MainThread] Received sync request from kme-sim-3 (counter: 31, key_id: 47f7e61a)
+2026-11-11 22:02:21,804 INFO [MainThread] Successfully synchronized key 47f7e61a with kme-sim-3 (counter: 31)
+2026-11-11 22:02:21,805 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:21] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:22,359 INFO [MainThread] Received sync request from kme-sim-3 (counter: 32, key_id: 134a570a)
+2026-11-11 22:02:22,369 INFO [MainThread] Successfully synchronized key 134a570a with kme-sim-3 (counter: 32)
+2026-11-11 22:02:22,370 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:22] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:22,934 INFO [MainThread] Received sync request from kme-sim-3 (counter: 33, key_id: 0f92247b)
+2026-11-11 22:02:22,945 INFO [MainThread] Successfully synchronized key 0f92247b with kme-sim-3 (counter: 33)
+2026-11-11 22:02:22,946 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:22] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:23,245 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 30, threshold: 100)
+2026-11-11 22:02:23,515 INFO [MainThread] Received sync request from kme-sim-3 (counter: 34, key_id: 07462f4d)
+2026-11-11 22:02:23,525 INFO [MainThread] Successfully synchronized key 07462f4d with kme-sim-3 (counter: 34)
+2026-11-11 22:02:23,525 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:23] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:24,065 INFO [MainThread] Received sync request from kme-sim-3 (counter: 35, key_id: ab7538d4)
+2026-11-11 22:02:24,070 INFO [MainThread] Successfully synchronized key ab7538d4 with kme-sim-3 (counter: 35)
+2026-11-11 22:02:24,071 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:24] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:24,624 INFO [MainThread] Received sync request from kme-sim-3 (counter: 36, key_id: 1a541983)
+2026-11-11 22:02:24,635 INFO [MainThread] Successfully synchronized key 1a541983 with kme-sim-3 (counter: 36)
+2026-11-11 22:02:24,635 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:24] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:25,187 INFO [MainThread] Received sync request from kme-sim-3 (counter: 37, key_id: 6412cbda)
+2026-11-11 22:02:25,198 INFO [MainThread] Successfully synchronized key 6412cbda with kme-sim-3 (counter: 37)
+2026-11-11 22:02:25,198 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:25] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:25,739 INFO [MainThread] Received sync request from kme-sim-3 (counter: 38, key_id: 41d8a589)
+2026-11-11 22:02:25,748 INFO [MainThread] Successfully synchronized key 41d8a589 with kme-sim-3 (counter: 38)
+2026-11-11 22:02:25,748 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:25] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:26,291 INFO [MainThread] Received sync request from kme-sim-3 (counter: 39, key_id: d4e84994)
+2026-11-11 22:02:26,298 INFO [MainThread] Successfully synchronized key d4e84994 with kme-sim-3 (counter: 39)
+2026-11-11 22:02:26,298 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:26] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:26,840 INFO [MainThread] Received sync request from kme-sim-3 (counter: 40, key_id: 70b94b13)
+2026-11-11 22:02:26,846 INFO [MainThread] Successfully synchronized key 70b94b13 with kme-sim-3 (counter: 40)
+2026-11-11 22:02:26,846 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:26] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:28,232 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:02:31,889 INFO [MainThread] Received sync request from kme-sim-3 (counter: 41, key_id: d2da986c)
+2026-11-11 22:02:31,897 INFO [MainThread] Successfully synchronized key d2da986c with kme-sim-3 (counter: 41)
+2026-11-11 22:02:31,897 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:31] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:32,439 INFO [MainThread] Received sync request from kme-sim-3 (counter: 42, key_id: 4721c283)
+2026-11-11 22:02:32,447 INFO [MainThread] Successfully synchronized key 4721c283 with kme-sim-3 (counter: 42)
+2026-11-11 22:02:32,447 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:32] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:32,989 INFO [MainThread] Received sync request from kme-sim-3 (counter: 43, key_id: 0db342d7)
+2026-11-11 22:02:32,996 INFO [MainThread] Successfully synchronized key 0db342d7 with kme-sim-3 (counter: 43)
+2026-11-11 22:02:32,997 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:32] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:33,233 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 40, threshold: 100)
+2026-11-11 22:02:33,540 INFO [MainThread] Received sync request from kme-sim-3 (counter: 44, key_id: fda80efc)
+2026-11-11 22:02:33,547 INFO [MainThread] Successfully synchronized key fda80efc with kme-sim-3 (counter: 44)
+2026-11-11 22:02:33,548 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:33] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:34,089 INFO [MainThread] Received sync request from kme-sim-3 (counter: 45, key_id: 7c5c8f18)
+2026-11-11 22:02:34,097 INFO [MainThread] Successfully synchronized key 7c5c8f18 with kme-sim-3 (counter: 45)
+2026-11-11 22:02:34,098 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:34] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:34,645 INFO [MainThread] Received sync request from kme-sim-3 (counter: 46, key_id: ab1c97aa)
+2026-11-11 22:02:34,651 INFO [MainThread] Successfully synchronized key ab1c97aa with kme-sim-3 (counter: 46)
+2026-11-11 22:02:34,651 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:34] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:35,196 INFO [MainThread] Received sync request from kme-sim-3 (counter: 47, key_id: 0ae8d056)
+2026-11-11 22:02:35,202 INFO [MainThread] Successfully synchronized key 0ae8d056 with kme-sim-3 (counter: 47)
+2026-11-11 22:02:35,203 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:35] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:35,749 INFO [MainThread] Received sync request from kme-sim-3 (counter: 48, key_id: e87cc7c0)
+2026-11-11 22:02:35,755 INFO [MainThread] Successfully synchronized key e87cc7c0 with kme-sim-3 (counter: 48)
+2026-11-11 22:02:35,756 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:35] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:36,302 INFO [MainThread] Received sync request from kme-sim-3 (counter: 49, key_id: 793bb9a2)
+2026-11-11 22:02:36,313 INFO [MainThread] Successfully synchronized key 793bb9a2 with kme-sim-3 (counter: 49)
+2026-11-11 22:02:36,313 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:36] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:36,886 INFO [MainThread] Received sync request from kme-sim-3 (counter: 50, key_id: 4be90567)
+2026-11-11 22:02:36,899 INFO [MainThread] Successfully synchronized key 4be90567 with kme-sim-3 (counter: 50)
+2026-11-11 22:02:36,903 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:36] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:38,285 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:02:41,982 INFO [MainThread] Received sync request from kme-sim-3 (counter: 51, key_id: 613c4f9b)
+2026-11-11 22:02:41,990 INFO [MainThread] Successfully synchronized key 613c4f9b with kme-sim-3 (counter: 51)
+2026-11-11 22:02:41,991 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:41] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:42,563 INFO [MainThread] Received sync request from kme-sim-3 (counter: 52, key_id: a9c7e9e8)
+2026-11-11 22:02:42,573 INFO [MainThread] Successfully synchronized key a9c7e9e8 with kme-sim-3 (counter: 52)
+2026-11-11 22:02:42,574 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:42] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:43,160 INFO [MainThread] Received sync request from kme-sim-3 (counter: 53, key_id: 9a464a60)
+2026-11-11 22:02:43,169 INFO [MainThread] Successfully synchronized key 9a464a60 with kme-sim-3 (counter: 53)
+2026-11-11 22:02:43,169 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:43] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:43,290 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 50, threshold: 100)
+2026-11-11 22:02:43,756 INFO [MainThread] Received sync request from kme-sim-3 (counter: 54, key_id: fa8051c4)
+2026-11-11 22:02:43,765 INFO [MainThread] Successfully synchronized key fa8051c4 with kme-sim-3 (counter: 54)
+2026-11-11 22:02:43,766 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:43] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:44,344 INFO [MainThread] Received sync request from kme-sim-3 (counter: 55, key_id: 344eb593)
+2026-11-11 22:02:44,351 INFO [MainThread] Successfully synchronized key 344eb593 with kme-sim-3 (counter: 55)
+2026-11-11 22:02:44,352 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:44] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:44,930 INFO [MainThread] Received sync request from kme-sim-3 (counter: 56, key_id: 7376811c)
+2026-11-11 22:02:44,942 INFO [MainThread] Successfully synchronized key 7376811c with kme-sim-3 (counter: 56)
+2026-11-11 22:02:44,944 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:44] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:45,516 INFO [MainThread] Received sync request from kme-sim-3 (counter: 57, key_id: 0bb6327c)
+2026-11-11 22:02:45,524 INFO [MainThread] Successfully synchronized key 0bb6327c with kme-sim-3 (counter: 57)
+2026-11-11 22:02:45,524 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:45] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:46,092 INFO [MainThread] Received sync request from kme-sim-3 (counter: 58, key_id: 0a971b60)
+2026-11-11 22:02:46,100 INFO [MainThread] Successfully synchronized key 0a971b60 with kme-sim-3 (counter: 58)
+2026-11-11 22:02:46,101 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:46] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:46,667 INFO [MainThread] Received sync request from kme-sim-3 (counter: 59, key_id: f24050d9)
+2026-11-11 22:02:46,673 INFO [MainThread] Successfully synchronized key f24050d9 with kme-sim-3 (counter: 59)
+2026-11-11 22:02:46,675 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:46] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:47,236 INFO [MainThread] Received sync request from kme-sim-3 (counter: 60, key_id: 85b43428)
+2026-11-11 22:02:47,242 INFO [MainThread] Successfully synchronized key 85b43428 with kme-sim-3 (counter: 60)
+2026-11-11 22:02:47,243 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:47] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:48,636 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:02:52,310 INFO [MainThread] Received sync request from kme-sim-3 (counter: 61, key_id: 5cb6bdfa)
+2026-11-11 22:02:52,320 INFO [MainThread] Successfully synchronized key 5cb6bdfa with kme-sim-3 (counter: 61)
+2026-11-11 22:02:52,322 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:52] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:52,890 INFO [MainThread] Received sync request from kme-sim-3 (counter: 62, key_id: 9aee8105)
+2026-11-11 22:02:52,902 INFO [MainThread] Successfully synchronized key 9aee8105 with kme-sim-3 (counter: 62)
+2026-11-11 22:02:52,904 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:52] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:53,481 INFO [MainThread] Received sync request from kme-sim-3 (counter: 63, key_id: 864060fc)
+2026-11-11 22:02:53,490 INFO [MainThread] Successfully synchronized key 864060fc with kme-sim-3 (counter: 63)
+2026-11-11 22:02:53,494 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:53] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:53,641 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 60, threshold: 100)
+2026-11-11 22:02:54,049 INFO [MainThread] Received sync request from kme-sim-3 (counter: 64, key_id: ddc7b624)
+2026-11-11 22:02:54,057 INFO [MainThread] Successfully synchronized key ddc7b624 with kme-sim-3 (counter: 64)
+2026-11-11 22:02:54,058 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:54] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:54,609 INFO [MainThread] Received sync request from kme-sim-3 (counter: 65, key_id: cb1e51e2)
+2026-11-11 22:02:54,616 INFO [MainThread] Successfully synchronized key cb1e51e2 with kme-sim-3 (counter: 65)
+2026-11-11 22:02:54,617 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:54] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:55,184 INFO [MainThread] Received sync request from kme-sim-3 (counter: 66, key_id: e1ebed57)
+2026-11-11 22:02:55,193 INFO [MainThread] Successfully synchronized key e1ebed57 with kme-sim-3 (counter: 66)
+2026-11-11 22:02:55,194 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:55] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:55,758 INFO [MainThread] Received sync request from kme-sim-3 (counter: 67, key_id: 1db0b15b)
+2026-11-11 22:02:55,766 INFO [MainThread] Successfully synchronized key 1db0b15b with kme-sim-3 (counter: 67)
+2026-11-11 22:02:55,767 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:55] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:56,319 INFO [MainThread] Received sync request from kme-sim-3 (counter: 68, key_id: 7e233804)
+2026-11-11 22:02:56,326 INFO [MainThread] Successfully synchronized key 7e233804 with kme-sim-3 (counter: 68)
+2026-11-11 22:02:56,327 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:56] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:56,882 INFO [MainThread] Received sync request from kme-sim-3 (counter: 69, key_id: c881caa4)
+2026-11-11 22:02:56,888 INFO [MainThread] Successfully synchronized key c881caa4 with kme-sim-3 (counter: 69)
+2026-11-11 22:02:56,889 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:56] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:57,443 INFO [MainThread] Received sync request from kme-sim-3 (counter: 70, key_id: 178c0c3c)
+2026-11-11 22:02:57,453 INFO [MainThread] Successfully synchronized key 178c0c3c with kme-sim-3 (counter: 70)
+2026-11-11 22:02:57,453 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:02:57] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:02:58,885 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:03:02,532 INFO [MainThread] Received sync request from kme-sim-3 (counter: 71, key_id: f302c0a2)
+2026-11-11 22:03:02,542 INFO [MainThread] Successfully synchronized key f302c0a2 with kme-sim-3 (counter: 71)
+2026-11-11 22:03:02,543 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:02] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:03,144 INFO [MainThread] Received sync request from kme-sim-3 (counter: 72, key_id: 808af072)
+2026-11-11 22:03:03,152 INFO [MainThread] Successfully synchronized key 808af072 with kme-sim-3 (counter: 72)
+2026-11-11 22:03:03,153 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:03] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:03,728 INFO [MainThread] Received sync request from kme-sim-3 (counter: 73, key_id: e42d2be2)
+2026-11-11 22:03:03,738 INFO [MainThread] Successfully synchronized key e42d2be2 with kme-sim-3 (counter: 73)
+2026-11-11 22:03:03,742 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:03] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:03,887 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 70, threshold: 100)
+2026-11-11 22:03:04,309 INFO [MainThread] Received sync request from kme-sim-3 (counter: 74, key_id: 075f6078)
+2026-11-11 22:03:04,317 INFO [MainThread] Successfully synchronized key 075f6078 with kme-sim-3 (counter: 74)
+2026-11-11 22:03:04,318 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:04] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:04,898 INFO [MainThread] Received sync request from kme-sim-3 (counter: 75, key_id: 07bde39f)
+2026-11-11 22:03:04,909 INFO [MainThread] Successfully synchronized key 07bde39f with kme-sim-3 (counter: 75)
+2026-11-11 22:03:04,910 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:04] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:05,495 INFO [MainThread] Received sync request from kme-sim-3 (counter: 76, key_id: 3660690d)
+2026-11-11 22:03:05,503 INFO [MainThread] Successfully synchronized key 3660690d with kme-sim-3 (counter: 76)
+2026-11-11 22:03:05,504 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:05] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:06,091 INFO [MainThread] Received sync request from kme-sim-3 (counter: 77, key_id: 110aa602)
+2026-11-11 22:03:06,100 INFO [MainThread] Successfully synchronized key 110aa602 with kme-sim-3 (counter: 77)
+2026-11-11 22:03:06,104 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:06] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:06,679 INFO [MainThread] Received sync request from kme-sim-3 (counter: 78, key_id: e900067e)
+2026-11-11 22:03:06,690 INFO [MainThread] Successfully synchronized key e900067e with kme-sim-3 (counter: 78)
+2026-11-11 22:03:06,692 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:06] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:07,251 INFO [MainThread] Received sync request from kme-sim-3 (counter: 79, key_id: 10be7a8f)
+2026-11-11 22:03:07,266 INFO [MainThread] Successfully synchronized key 10be7a8f with kme-sim-3 (counter: 79)
+2026-11-11 22:03:07,267 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:07] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:07,827 INFO [MainThread] Received sync request from kme-sim-3 (counter: 80, key_id: be5dfdfe)
+2026-11-11 22:03:07,839 INFO [MainThread] Successfully synchronized key be5dfdfe with kme-sim-3 (counter: 80)
+2026-11-11 22:03:07,842 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:07] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:09,290 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:03:12,904 INFO [MainThread] Received sync request from kme-sim-3 (counter: 81, key_id: 9af58270)
+2026-11-11 22:03:12,910 INFO [MainThread] Successfully synchronized key 9af58270 with kme-sim-3 (counter: 81)
+2026-11-11 22:03:12,911 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:12] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:13,470 INFO [MainThread] Received sync request from kme-sim-3 (counter: 82, key_id: aad5d3d1)
+2026-11-11 22:03:13,477 INFO [MainThread] Successfully synchronized key aad5d3d1 with kme-sim-3 (counter: 82)
+2026-11-11 22:03:13,478 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:13] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:14,028 INFO [MainThread] Received sync request from kme-sim-3 (counter: 83, key_id: 6a822c32)
+2026-11-11 22:03:14,035 INFO [MainThread] Successfully synchronized key 6a822c32 with kme-sim-3 (counter: 83)
+2026-11-11 22:03:14,036 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:14] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:14,292 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 80, threshold: 100)
+2026-11-11 22:03:14,596 INFO [MainThread] Received sync request from kme-sim-3 (counter: 84, key_id: 18dc626b)
+2026-11-11 22:03:14,602 INFO [MainThread] Successfully synchronized key 18dc626b with kme-sim-3 (counter: 84)
+2026-11-11 22:03:14,603 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:14] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:15,176 INFO [MainThread] Received sync request from kme-sim-3 (counter: 85, key_id: b8bcc75c)
+2026-11-11 22:03:15,183 INFO [MainThread] Successfully synchronized key b8bcc75c with kme-sim-3 (counter: 85)
+2026-11-11 22:03:15,184 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:15] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:15,741 INFO [MainThread] Received sync request from kme-sim-3 (counter: 86, key_id: cf0a1f64)
+2026-11-11 22:03:15,748 INFO [MainThread] Successfully synchronized key cf0a1f64 with kme-sim-3 (counter: 86)
+2026-11-11 22:03:15,750 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:15] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:16,297 INFO [MainThread] Received sync request from kme-sim-3 (counter: 87, key_id: 9925005d)
+2026-11-11 22:03:16,303 INFO [MainThread] Successfully synchronized key 9925005d with kme-sim-3 (counter: 87)
+2026-11-11 22:03:16,303 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:16] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:16,854 INFO [MainThread] Received sync request from kme-sim-3 (counter: 88, key_id: 277f886c)
+2026-11-11 22:03:16,862 INFO [MainThread] Successfully synchronized key 277f886c with kme-sim-3 (counter: 88)
+2026-11-11 22:03:16,863 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:16] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:17,414 INFO [MainThread] Received sync request from kme-sim-3 (counter: 89, key_id: 9b0775d7)
+2026-11-11 22:03:17,422 INFO [MainThread] Successfully synchronized key 9b0775d7 with kme-sim-3 (counter: 89)
+2026-11-11 22:03:17,423 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:17] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:17,971 INFO [MainThread] Received sync request from kme-sim-3 (counter: 90, key_id: 37e4964c)
+2026-11-11 22:03:17,977 INFO [MainThread] Successfully synchronized key 37e4964c with kme-sim-3 (counter: 90)
+2026-11-11 22:03:17,978 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:17] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:19,519 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:03:23,022 INFO [MainThread] Received sync request from kme-sim-3 (counter: 91, key_id: 745b19b3)
+2026-11-11 22:03:23,031 INFO [MainThread] Successfully synchronized key 745b19b3 with kme-sim-3 (counter: 91)
+2026-11-11 22:03:23,032 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:23] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:23,589 INFO [MainThread] Received sync request from kme-sim-3 (counter: 92, key_id: 87d8707f)
+2026-11-11 22:03:23,596 INFO [MainThread] Successfully synchronized key 87d8707f with kme-sim-3 (counter: 92)
+2026-11-11 22:03:23,598 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:23] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:24,157 INFO [MainThread] Received sync request from kme-sim-3 (counter: 93, key_id: 0d8909ae)
+2026-11-11 22:03:24,290 INFO [MainThread] Successfully synchronized key 0d8909ae with kme-sim-3 (counter: 93)
+2026-11-11 22:03:24,291 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:24] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:24,522 INFO [KMASync] Generating 10 keys for peer kme-sim-5 (current: 90, threshold: 100)
+2026-11-11 22:03:24,850 INFO [MainThread] Received sync request from kme-sim-3 (counter: 94, key_id: ad042a06)
+2026-11-11 22:03:24,856 INFO [MainThread] Successfully synchronized key ad042a06 with kme-sim-3 (counter: 94)
+2026-11-11 22:03:24,857 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:24] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:25,409 INFO [MainThread] Received sync request from kme-sim-3 (counter: 95, key_id: 2244c8b9)
+2026-11-11 22:03:25,419 INFO [MainThread] Successfully synchronized key 2244c8b9 with kme-sim-3 (counter: 95)
+2026-11-11 22:03:25,421 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:25] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:25,964 INFO [MainThread] Received sync request from kme-sim-3 (counter: 96, key_id: 4fbe3f08)
+2026-11-11 22:03:25,970 INFO [MainThread] Successfully synchronized key 4fbe3f08 with kme-sim-3 (counter: 96)
+2026-11-11 22:03:25,970 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:25] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:26,522 INFO [MainThread] Received sync request from kme-sim-3 (counter: 97, key_id: 7ac5ba55)
+2026-11-11 22:03:26,530 INFO [MainThread] Successfully synchronized key 7ac5ba55 with kme-sim-3 (counter: 97)
+2026-11-11 22:03:26,531 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:26] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:27,079 INFO [MainThread] Received sync request from kme-sim-3 (counter: 98, key_id: c4db7dfd)
+2026-11-11 22:03:27,085 INFO [MainThread] Successfully synchronized key c4db7dfd with kme-sim-3 (counter: 98)
+2026-11-11 22:03:27,086 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:27] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:27,625 INFO [MainThread] Received sync request from kme-sim-3 (counter: 99, key_id: de3a8892)
+2026-11-11 22:03:27,632 INFO [MainThread] Successfully synchronized key de3a8892 with kme-sim-3 (counter: 99)
+2026-11-11 22:03:27,634 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:27] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:28,185 INFO [MainThread] Received sync request from kme-sim-3 (counter: 100, key_id: dd7c57ff)
+2026-11-11 22:03:28,192 INFO [MainThread] Successfully synchronized key dd7c57ff with kme-sim-3 (counter: 100)
+2026-11-11 22:03:28,192 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:28] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:29,648 INFO [KMASync] Successfully synced 10/10 keys with kme-sim-5
+2026-11-11 22:03:40,189 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:40,189 INFO [MainThread]   key delivered to master: c6a2470b-fdc1-450a-b5cd-6455ce2fe902
+2026-11-11 22:03:40,190 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:40] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:40,654 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:40,654 INFO [MainThread]   key delivered to master: 39a380fc-57df-4b4d-8e93-7e538c95b650
+2026-11-11 22:03:40,654 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:40] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:41,150 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:41,150 INFO [MainThread]   key delivered to master: 520a7ecc-194f-4e83-847c-851854731579
+2026-11-11 22:03:41,151 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:41] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:41,600 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:41,600 INFO [MainThread]   key delivered to master: 53852ec9-5e1b-4b08-8cb7-a09d5fb4e39f
+2026-11-11 22:03:41,601 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:41] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:42,052 INFO [MainThread] dec_keys: slave=sae-chr41 master=sae-chr32 count=1
+2026-11-11 22:03:42,053 INFO [MainThread]   key delivered to slave:  c6a2470b-fdc1-450a-b5cd-6455ce2fe902
+2026-11-11 22:03:42,057 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:42] "POST /api/v1/keys/sae-chr32/dec_keys HTTP/1.1" 200 -
+2026-11-11 22:03:42,489 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:42,489 INFO [MainThread]   key delivered to master: 7a76d0bd-304a-4b7e-95d0-dfa72fe00aa3
+2026-11-11 22:03:42,490 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:42] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:42,896 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:42,897 INFO [MainThread]   key delivered to master: 980a853e-3533-455e-b78e-a07bef75189e
+2026-11-11 22:03:42,897 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:42] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:43,281 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:43,281 INFO [MainThread]   key delivered to master: 395ca1ba-2dd8-4b36-8fbf-5f335c6fa0f6
+2026-11-11 22:03:43,282 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:43] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:43,661 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:43,663 INFO [MainThread]   key delivered to master: 15140ce8-ebb0-4142-91d4-b2dca4428016
+2026-11-11 22:03:43,663 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:43] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:43,695 INFO [MainThread] Received sync request from kme-sim-3 (counter: 101, key_id: a63db610)
+2026-11-11 22:03:43,703 INFO [MainThread] Successfully synchronized key a63db610 with kme-sim-3 (counter: 101)
+2026-11-11 22:03:43,704 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:43] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:44,126 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:44,126 INFO [MainThread]   key delivered to master: ec32e8aa-ab11-4912-a78b-f0b6d8b38b0f
+2026-11-11 22:03:44,126 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:44] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:44,492 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:44,494 INFO [MainThread]   key delivered to master: 3f56b74e-1386-48b8-87ab-fc3fe90ecaec
+2026-11-11 22:03:44,494 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:44] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:44,651 INFO [KMASync] Generating 5 keys for peer kme-sim-5 (current: 95, threshold: 100)
+2026-11-11 22:03:44,834 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:44,834 INFO [MainThread]   key delivered to master: 79db8a6b-6e73-47fe-b38d-f86c09545e97
+2026-11-11 22:03:44,835 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:44] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:45,194 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:45,194 INFO [MainThread]   key delivered to master: 8f4964fa-ef5e-472f-a937-102a906e3c46
+2026-11-11 22:03:45,195 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:45] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:45,650 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:45,651 INFO [MainThread]   key delivered to master: 3fd67c5f-f328-440f-ac52-586bf2ad963a
+2026-11-11 22:03:45,652 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:45] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:46,069 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:46,069 INFO [MainThread]   key delivered to master: 78344342-92bf-48d7-9fea-749210f5a4ac
+2026-11-11 22:03:46,070 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:46] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:46,566 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:46,567 INFO [MainThread]   key delivered to master: cfb48e69-d233-49c9-95fc-fba567ffaa81
+2026-11-11 22:03:46,569 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:46] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:46,931 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:46,933 INFO [MainThread]   key delivered to master: 1938338e-6bd0-4878-afc4-1c1c2dee72b9
+2026-11-11 22:03:46,937 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:46] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:47,373 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:47,374 INFO [MainThread]   key delivered to master: ea225390-bd9f-460b-9064-8619531a1465
+2026-11-11 22:03:47,375 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:47] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:47,852 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:47,853 INFO [MainThread]   key delivered to master: 5d5de783-29cd-4740-8133-117122ca9531
+2026-11-11 22:03:47,853 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:47] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:48,262 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:48,264 INFO [MainThread]   key delivered to master: 3159e647-a2db-40b6-be24-e97b307594ef
+2026-11-11 22:03:48,266 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:48] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:48,816 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:48,817 INFO [MainThread]   key delivered to master: cd31758c-2f8b-4654-8fc1-21513ce88af1
+2026-11-11 22:03:48,817 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:48] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:49,294 INFO [MainThread] enc_keys: master=sae-chr42 slave=sae-chr51 peer_kme=kme-sim-5 count=1
+2026-11-11 22:03:49,294 INFO [MainThread]   key delivered to master: d30a477b-24f4-4143-b7f1-32978c1b7551
+2026-11-11 22:03:49,295 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:03:49] "POST /api/v1/keys/sae-chr51/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:49,331 INFO [MainThread] Received sync request from kme-sim-3 (counter: 102, key_id: 23555443)
+2026-11-11 22:03:49,338 INFO [MainThread] Successfully synchronized key 23555443 with kme-sim-3 (counter: 102)
+2026-11-11 22:03:49,339 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:49] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:49,740 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:03:49,740 INFO [MainThread]   key delivered to master: d1c1267e-d6cd-4d36-9467-e579694e72de
+2026-11-11 22:03:49,741 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:03:49] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -
+2026-11-11 22:03:49,929 INFO [MainThread] Received sync request from kme-sim-3 (counter: 103, key_id: cb1a9573)
+2026-11-11 22:03:49,937 INFO [MainThread] Successfully synchronized key cb1a9573 with kme-sim-3 (counter: 103)
+2026-11-11 22:03:49,937 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:49] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:50,497 INFO [MainThread] Received sync request from kme-sim-3 (counter: 104, key_id: ac7aa5fb)
+2026-11-11 22:03:50,504 INFO [MainThread] Successfully synchronized key ac7aa5fb with kme-sim-3 (counter: 104)
+2026-11-11 22:03:50,508 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:50] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:51,235 INFO [KMASync] Successfully synced 5/5 keys with kme-sim-5
+2026-11-11 22:03:55,560 INFO [MainThread] Received sync request from kme-sim-3 (counter: 105, key_id: 31f0c218)
+2026-11-11 22:03:55,566 INFO [MainThread] Successfully synchronized key 31f0c218 with kme-sim-3 (counter: 105)
+2026-11-11 22:03:55,567 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:55] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:56,111 INFO [MainThread] Received sync request from kme-sim-3 (counter: 106, key_id: fab5aecc)
+2026-11-11 22:03:56,116 INFO [MainThread] Successfully synchronized key fab5aecc with kme-sim-3 (counter: 106)
+2026-11-11 22:03:56,117 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:56] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:56,237 INFO [KMASync] Generating 6 keys for peer kme-sim-5 (current: 94, threshold: 100)
+2026-11-11 22:03:56,665 INFO [MainThread] Received sync request from kme-sim-3 (counter: 107, key_id: 670a6243)
+2026-11-11 22:03:56,675 INFO [MainThread] Successfully synchronized key 670a6243 with kme-sim-3 (counter: 107)
+2026-11-11 22:03:56,675 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:56] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:57,254 INFO [MainThread] Received sync request from kme-sim-3 (counter: 108, key_id: e6c8607c)
+2026-11-11 22:03:57,266 INFO [MainThread] Successfully synchronized key e6c8607c with kme-sim-3 (counter: 108)
+2026-11-11 22:03:57,268 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:57] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:57,809 INFO [MainThread] Received sync request from kme-sim-3 (counter: 109, key_id: 9e617686)
+2026-11-11 22:03:57,818 INFO [MainThread] Successfully synchronized key 9e617686 with kme-sim-3 (counter: 109)
+2026-11-11 22:03:57,819 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:57] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:58,366 INFO [MainThread] Received sync request from kme-sim-3 (counter: 110, key_id: 74cc84d5)
+2026-11-11 22:03:58,375 INFO [MainThread] Successfully synchronized key 74cc84d5 with kme-sim-3 (counter: 110)
+2026-11-11 22:03:58,376 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:58] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:58,930 INFO [MainThread] Received sync request from kme-sim-3 (counter: 111, key_id: 27728341)
+2026-11-11 22:03:58,942 INFO [MainThread] Successfully synchronized key 27728341 with kme-sim-3 (counter: 111)
+2026-11-11 22:03:58,943 INFO [MainThread] 172.16.100.9 - - [11/Nov/2026 22:03:58] "POST /api/v1/kma/sync HTTP/1.1" 200 -
+2026-11-11 22:03:59,070 INFO [KMASync] Successfully synced 6/6 keys with kme-sim-5
+2026-11-11 22:04:46,432 INFO [MainThread] dec_keys: slave=sae-chr42 master=sae-chr51 count=1
+2026-11-11 22:04:46,432 INFO [MainThread]   key delivered to slave:  39a380fc-57df-4b4d-8e93-7e538c95b650
+2026-11-11 22:04:46,433 INFO [MainThread] 10.0.0.30 - - [11/Nov/2026 22:04:46] "POST /api/v1/keys/sae-chr51/dec_keys HTTP/1.1" 200 -
+2026-11-11 22:04:47,943 INFO [MainThread] enc_keys: master=sae-chr41 slave=sae-chr32 peer_kme=kme-sim-3 count=1
+2026-11-11 22:04:47,943 INFO [MainThread]   key delivered to master: 11650864-6d9d-4eca-9d32-63866c20755e
+2026-11-11 22:04:47,944 INFO [MainThread] 10.0.0.26 - - [11/Nov/2026 22:04:47] "POST /api/v1/keys/sae-chr32/enc_keys HTTP/1.1" 200 -

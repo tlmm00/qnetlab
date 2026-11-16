@@ -1,0 +1,108 @@
+{
+  "ospf_neighbors": [
+    {
+      ".id": "*F3FDD800",
+      "address": "10.0.1.2",
+      "adjacency": "4m51s",
+      "area": "backbone",
+      "dynamic": "true",
+      "instance": "ospf-v2",
+      "interface": "ether2",
+      "router-id": "10.255.0.32",
+      "state": "Full",
+      "state-changes": "6",
+      "timeout": "39s"
+    },
+    {
+      ".id": "*F3FDD7D2",
+      "address": "10.0.2.2",
+      "adjacency": "4m51s",
+      "area": "backbone",
+      "dynamic": "true",
+      "instance": "ospf-v2",
+      "interface": "ether3",
+      "router-id": "10.255.0.12",
+      "state": "Full",
+      "state-changes": "5",
+      "timeout": "39s"
+    }
+  ],
+  "ipsec_active_peers": [
+    {
+      ".id": "*2",
+      "id": "10.0.1.2",
+      "last-seen": "1s",
+      "local-address": "10.0.1.1",
+      "natt-peer": "false",
+      "ph2-total": "1",
+      "port": "4500",
+      "ppk": "true",
+      "remote-address": "10.0.1.2",
+      "responder": "false",
+      "rx-bytes": "106104",
+      "rx-packets": "1206",
+      "side": "initiator",
+      "spii": "31b3fd67ccd142c1",
+      "spir": "4586b2da2746a62a",
+      "state": "established",
+      "tx-bytes": "106104",
+      "tx-packets": "1206",
+      "uptime": "4m57s"
+    }
+  ],
+  "ipsec_installed_sa": [
+    {
+      ".id": "*9",
+      "ESP": "true",
+      "add-lifetime": "1m1s/1m17s",
+      "addtime": "2026-11-12 13:26:18",
+      "auth-algorithm": "sha256",
+      "auth-key": "ce2ba94b1ead9e1d92c1d1606f992f5b8356bec2596c5680f7ec3a613e8a06ba",
+      "current-bytes": "90728",
+      "current-packets": "1031",
+      "dst-address": "10.0.1.1",
+      "enc-algorithm": "aes-cbc",
+      "enc-key": "b48954ec51b841cc80748a1cca2d59002bbef672bcacdc5e1a2186f86e739ab4",
+      "enc-key-size": "256",
+      "expires-in": "19s",
+      "hw-aead": "false",
+      "replay": "128",
+      "seen-traffic": "true",
+      "spi": "0xD558C9F",
+      "src-address": "10.0.1.2",
+      "state": "mature"
+    },
+    {
+      ".id": "*A",
+      "ESP": "true",
+      "add-lifetime": "1m1s/1m17s",
+      "addtime": "2026-11-12 13:26:19",
+      "auth-algorithm": "sha256",
+      "auth-key": "dd492f7550a5a1d289a63d82e3ca128829c238be78b5b30711e477055ff691a7",
+      "current-bytes": "88968",
+      "current-packets": "1011",
+      "dst-address": "10.0.1.2",
+      "enc-algorithm": "aes-cbc",
+      "enc-key": "bc4fc1ced7bbbdfb38a68f4fee37b5a854317e23c5b489aa192c603ce25e92d2",
+      "enc-key-size": "256",
+      "expires-in": "20s",
+      "hw-aead": "false",
+      "replay": "128",
+      "seen-traffic": "true",
+      "spi": "0x2B400F",
+      "src-address": "10.0.1.1",
+      "state": "mature"
+    }
+  ],
+  "qkd": {
+    "address": "10.0.0.1:8443",
+    "cache-size": "10",
+    "cache-state": "10",
+    "certificate": "sae-chr11",
+    "enabled": "true",
+    "key-size": "256",
+    "kme-id": "kme-sim-1",
+    "peer-sae-id": "sae-chr32",
+    "total-keys-received": "16"
+  }
+}

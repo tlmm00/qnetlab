@@ -1,0 +1,110 @@
+{
+  "probes": [
+    {
+      "src": "NODE1",
+      "dst": "NODE2",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.392,
+      "rtt_p50_ms": 4.495,
+      "rtt_p95_ms": 5.108,
+      "rtt_p99_ms": 5.353,
+      "rtt_max_ms": 5.676
+    },
+    {
+      "src": "NODE1",
+      "dst": "NODE4",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.388,
+      "rtt_p50_ms": 4.486,
+      "rtt_p95_ms": 5.124,
+      "rtt_p99_ms": 5.362,
+      "rtt_max_ms": 5.438
+    },
+    {
+      "src": "NODE2",
+      "dst": "NODE1",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.481,
+      "rtt_p50_ms": 4.555,
+      "rtt_p95_ms": 5.172,
+      "rtt_p99_ms": 5.417,
+      "rtt_max_ms": 5.956
+    },
+    {
+      "src": "NODE2",
+      "dst": "NODE3",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.429,
+      "rtt_p50_ms": 4.499,
+      "rtt_p95_ms": 5.113,
+      "rtt_p99_ms": 5.297,
+      "rtt_max_ms": 5.613
+    },
+    {
+      "src": "NODE3",
+      "dst": "NODE2",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.346,
+      "rtt_p50_ms": 4.404,
+      "rtt_p95_ms": 5.043,
+      "rtt_p99_ms": 5.212,
+      "rtt_max_ms": 5.431
+    },
+    {
+      "src": "NODE3",
+      "dst": "NODE4",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.36,
+      "rtt_p50_ms": 4.446,
+      "rtt_p95_ms": 5.024,
+      "rtt_p99_ms": 5.233,
+      "rtt_max_ms": 5.967
+    },
+    {
+      "src": "NODE4",
+      "dst": "NODE1",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.273,
+      "rtt_p50_ms": 4.357,
+      "rtt_p95_ms": 4.947,
+      "rtt_p99_ms": 5.16,
+      "rtt_max_ms": 5.467
+    },
+    {
+      "src": "NODE4",
+      "dst": "NODE3",
+      "protected": true,
+      "sent": 600,
+      "received": 600,
+      "loss_pct": 0.0,
+      "rtt_mean_ms": 4.294,
+      "rtt_p50_ms": 4.354,
+      "rtt_p95_ms": 4.959,
+      "rtt_p99_ms": 5.21,
+      "rtt_max_ms": 5.411
+    }
+  ],
+  "keys": [],
+  "accuracy": []
+}
