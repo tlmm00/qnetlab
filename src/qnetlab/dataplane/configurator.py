@@ -131,8 +131,9 @@ class DataPlaneConfigurator:
         return versions
 
     # --------------------------------------------------------------- configure
-    def configure(self) -> None:
-        self.upgrade()
+    def configure(self, upgrade: bool = True) -> None:
+        if upgrade:                                   # `Lab.up` cronometra a atualização à parte e passa False
+            self.upgrade()
         self.renderer.render_all()
 
         def one(name: str) -> str:

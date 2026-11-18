@@ -15,6 +15,10 @@
 /ip route remove [find where comment~"^qnetlab-"]
 /ip route add dst-address=10.0.3.28/30 gateway=10.0.1.2 comment="qnetlab-static route mkt42"
 
+# Descoberta de vizinhos (MNDP/LLDP/CDP): anuncia identidade e versão do RouterOS em claro em TODAS as interfaces, inclusive
+# no enlace do túnel (achado do SEG-01). Controlado por router.neighbor_discovery.
+/ip neighbor discovery-settings set discover-interface-list=none
+
 # --- 10 OSPFv2 (RouterOS v7): ether2/ether3 ativas; interfaces de KME e NODE passivas -----
 /routing ospf interface-template remove [find where comment~"^qnetlab-"]
 /routing ospf area remove [find where name=backbone]

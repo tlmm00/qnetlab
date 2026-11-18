@@ -18,6 +18,13 @@
 > `~/.docker/desktop/docker.sock`, outro daemon que não é o do GNS3. Os KMEs/NODEs criados pelo GNS3 só enxergam imagens do
 > daemon do sistema: use `docker context use default`.
 
+> **Servidor GNS3 em contêiner:** se o `gns3server` roda dentro de um contêiner Docker (confira com
+> `sudo head -1 /proc/$(pgrep -f gns3server | head -1)/cgroup`: `docker-<id>.scope`), ele precisa do **socket e do cliente**
+> do Docker do host: `-v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker:ro`. Sem o cliente, tudo
+> funciona (criar nós usa o socket) **menos parar nós Docker**: o GNS3 roda `docker exec` ao parar, falha e o controlador
+> esconde o erro (o nó continua `started`). Isso afeta `qnetlab fault node … stop` e o teste HAB-02; veja
+> [11](11-troubleshooting.md).
+
 ## 2. Instalação
 
 ```console

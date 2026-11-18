@@ -1,0 +1,3 @@
+{"ts": 1794946396.842, "iso": "2026-11-17T17:13:16-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "ca3afeb5-0461-4e09-ac78-da1c2fa6e470", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794946397.504, "iso": "2026-11-17T17:13:17-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "ca3afeb5-0461-4e09-ac78-da1c2fa6e470", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794946397.964, "iso": "2026-11-17T17:13:17-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "ca3afeb5-0461-4e09-ac78-da1c2fa6e470"}}

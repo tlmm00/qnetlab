@@ -1,9 +1,9 @@
 {
   "ospf_neighbors": [
     {
-      ".id": "*F3FDD800",
+      ".id": "*F3FDD7D2",
       "address": "10.0.1.2",
-      "adjacency": "2m53s",
+      "adjacency": "2m41s",
       "area": "backbone",
       "dynamic": "true",
       "instance": "ospf-v2",
@@ -11,85 +11,85 @@
       "router-id": "10.255.0.42",
       "state": "Full",
       "state-changes": "6",
-      "timeout": "37s"
+      "timeout": "39s"
     },
     {
-      ".id": "*F3FDD7D2",
+      ".id": "*F3FDD800",
       "address": "10.0.2.2",
-      "adjacency": "2m53s",
+      "adjacency": "2m41s",
       "area": "backbone",
       "dynamic": "true",
       "instance": "ospf-v2",
       "interface": "ether3",
       "router-id": "10.255.0.12",
       "state": "Full",
-      "state-changes": "5",
-      "timeout": "37s"
+      "state-changes": "6",
+      "timeout": "39s"
     }
   ],
   "ipsec_active_peers": [
     {
-      ".id": "*1",
+      ".id": "*2",
       "id": "10.0.1.2",
-      "last-seen": "3s",
+      "last-seen": "0s",
       "local-address": "10.0.1.1",
       "natt-peer": "false",
       "ph2-total": "1",
       "port": "4500",
       "ppk": "true",
       "remote-address": "10.0.1.2",
-      "responder": "true",
+      "responder": "false",
       "rx-bytes": "105852",
       "rx-packets": "1203",
-      "side": "responder",
-      "spii": "f5ff12bb33458f8d",
-      "spir": "55d0ab40cb6354a3",
+      "side": "initiator",
+      "spii": "196d9f07e9e3293e",
+      "spir": "c8a8a6db5c84a030",
       "state": "established",
       "tx-bytes": "105852",
       "tx-packets": "1203",
-      "uptime": "3m"
+      "uptime": "2m47s"
     }
   ],
   "ipsec_installed_sa": [
     {
-      ".id": "*1",
+      ".id": "*7",
       "ESP": "true",
-      "add-lifetime": "24m8s/30m10s",
-      "addtime": "2026-11-10 19:06:43",
+      "add-lifetime": "57s/1m12s",
+      "addtime": "2026-11-17 17:34:06",
       "auth-algorithm": "sha256",
-      "auth-key": "566e5eb0dcf1d7a786f7954b6439259a1776bc66f82f7a876f601a2139c006d2",
-      "current-bytes": "105852",
-      "current-packets": "1203",
+      "auth-key": "1b097321b183b4666ec1dd9eabc0ce0f0a4db4f27bc293bcfb696ca682ee317c",
+      "current-bytes": "22352",
+      "current-packets": "254",
       "dst-address": "10.0.1.1",
       "enc-algorithm": "aes-cbc",
-      "enc-key": "d189250387295c390c626bb77ad4db2de6d04a63e87e881f6d011359c82068ed",
+      "enc-key": "5150bad9124b86e1cdcaae3dd5d3b1f17508b554b0264620400d30d393c0d681",
       "enc-key-size": "256",
-      "expires-in": "27m11s",
+      "expires-in": "53s",
       "hw-aead": "false",
       "replay": "128",
       "seen-traffic": "true",
-      "spi": "0xC8EE5A4",
+      "spi": "0x6AC225E",
       "src-address": "10.0.1.2",
       "state": "mature"
     },
     {
-      ".id": "*2",
+      ".id": "*8",
       "ESP": "true",
-      "add-lifetime": "24m8s/30m10s",
-      "addtime": "2026-11-10 19:06:43",
+      "add-lifetime": "57s/1m12s",
+      "addtime": "2026-11-17 17:34:08",
       "auth-algorithm": "sha256",
-      "auth-key": "2fa9a00562d253d00d48d171953f63d66503c654fc0ae105bc40a8603375da80",
-      "current-bytes": "105852",
-      "current-packets": "1203",
+      "auth-key": "2c240aa25e0455bf2a7db423d8ee3c520896b57e9c79654aac7119a190aa3601",
+      "current-bytes": "18832",
+      "current-packets": "214",
       "dst-address": "10.0.1.2",
       "enc-algorithm": "aes-cbc",
-      "enc-key": "d8e7f82931be8ff41efbc5ba2ef40d445dbcddf8953af27e827bebab0a1c579c",
+      "enc-key": "279f75bd05dfae33ba2c5e11e8d2f11515da6c26bfe6a656ed8204b73349fa0c",
       "enc-key-size": "256",
-      "expires-in": "27m11s",
+      "expires-in": "55s",
       "hw-aead": "false",
       "replay": "128",
       "seen-traffic": "true",
-      "spi": "0xC04ED37",
+      "spi": "0x2606039",
       "src-address": "10.0.1.1",
       "state": "mature"
     }
@@ -103,6 +103,6 @@
     "key-size": "256",
     "kme-id": "kme-sim-1",
     "peer-sae-id": "sae-chr42",
-    "total-keys-received": "12"
+    "total-keys-received": "15"
   }
 }

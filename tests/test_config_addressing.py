@@ -135,3 +135,14 @@ def test_mgmt_none_has_no_nat_links(ring4_path):
     plan = build_plan(parse_topology(raw))
     assert not [l for l in plan.links if l.kind == "nat"]
     assert all(c.mgmt_ip is None for c in plan.chrs())
+
+
+def test_control_topology_has_exactly_one_unprotected_ring_link():
+    """topologies/ring4-control.yaml (controle positivo do SEG-01): só o enlace 2 em claro; o 1 continua protegido."""
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    topo = load_topology(root / "topologies" / "ring4-control.yaml")
+    plan = build_plan(topo)
+    assert topo.name == "qkd-ring4-control"                       # não colide com o build/projeto do ring4
+    assert [t.protected for t in plan.tunnels] == [True, False, True, True]
+    assert plan.tunnels[1].name == "MKT22-MKT31"

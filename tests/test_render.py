@@ -203,3 +203,19 @@ def test_proposal_lifetime_is_configurable_and_validated(tmp_path, ring4_path):
     raw["ipsec"]["proposal_lifetime"] = "soon"
     with pytest.raises(ConfigError):
         parse_topology(raw)
+
+
+def test_neighbor_discovery_is_disabled_by_default_and_can_be_enabled(tmp_path, ring4_path):
+    """Achado do SEG-01: MNDP/LLDP/CDP vazam identidade e versão em claro; por padrão o CHR não os anuncia."""
+    topo = load_topology(ring4_path)
+    assert topo.router.neighbor_discovery is False
+    ws = Workspace(tmp_path, topo.name).ensure()
+    text = RouterConfigRenderer(topo, build_plan(topo), ws).render_router("MKT11")
+    assert "/ip neighbor discovery-settings set discover-interface-list=none" in text
+    assert "discover-interface-list=!dynamic" not in text
+
+    raw = yaml.safe_load(ring4_path.read_text())
+    raw["router"]["neighbor_discovery"] = True
+    on = parse_topology(raw)
+    text = RouterConfigRenderer(on, build_plan(on), Workspace(tmp_path / "on", on.name).ensure()).render_router("MKT11")
+    assert "discover-interface-list=!dynamic" in text and "discover-interface-list=none" not in text

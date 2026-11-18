@@ -1,37 +1,37 @@
 {
   "ospf_neighbors": [
     {
-      ".id": "*F3FDD800",
+      ".id": "*F3FDD7D2",
       "address": "10.0.1.9",
-      "adjacency": "2m53s",
+      "adjacency": "2m44s",
       "area": "backbone",
       "dynamic": "true",
       "instance": "ospf-v2",
       "interface": "ether2",
       "router-id": "10.255.0.22",
       "state": "Full",
-      "state-changes": "6",
-      "timeout": "37s"
+      "state-changes": "5",
+      "timeout": "36s"
     },
     {
-      ".id": "*F3FDD7D2",
+      ".id": "*F3FDD800",
       "address": "10.0.2.10",
-      "adjacency": "2m53s",
+      "adjacency": "2m44s",
       "area": "backbone",
       "dynamic": "true",
       "instance": "ospf-v2",
       "interface": "ether3",
       "router-id": "10.255.0.32",
       "state": "Full",
-      "state-changes": "6",
-      "timeout": "37s"
+      "state-changes": "5",
+      "timeout": "36s"
     }
   ],
   "ipsec_active_peers": [
     {
       ".id": "*2",
       "id": "10.0.1.9",
-      "last-seen": "3s",
+      "last-seen": "1s",
       "local-address": "10.0.1.10",
       "natt-peer": "false",
       "ph2-total": "1",
@@ -39,57 +39,57 @@
       "ppk": "true",
       "remote-address": "10.0.1.9",
       "responder": "false",
-      "rx-bytes": "105852",
-      "rx-packets": "1203",
+      "rx-bytes": "105600",
+      "rx-packets": "1200",
       "side": "initiator",
-      "spii": "87527cb7d16d248d",
-      "spir": "36d8d8e577493a5e",
+      "spii": "3463ef752d828bcf",
+      "spir": "43093fc8ddf76937",
       "state": "established",
-      "tx-bytes": "105852",
-      "tx-packets": "1203",
-      "uptime": "3m"
+      "tx-bytes": "105600",
+      "tx-packets": "1200",
+      "uptime": "2m50s"
     }
   ],
   "ipsec_installed_sa": [
     {
-      ".id": "*1",
+      ".id": "*7",
       "ESP": "true",
-      "add-lifetime": "24m20s/30m25s",
-      "addtime": "2026-11-10 19:06:43",
+      "add-lifetime": "48s/1m1s",
+      "addtime": "2026-11-17 17:34:07",
       "auth-algorithm": "sha256",
-      "auth-key": "3c1315cec11207aaf9be13bc75f4beb3ffa7503ceae4dca97c84fa94e99540db",
-      "current-bytes": "105852",
-      "current-packets": "1203",
+      "auth-key": "5a39075f12f7e58d9440405160523de3c120bd866bd2129761b5fe6411beda96",
+      "current-bytes": "18216",
+      "current-packets": "207",
       "dst-address": "10.0.1.10",
       "enc-algorithm": "aes-cbc",
-      "enc-key": "02c716ccf8358b2067667fc2b0519ed4e3e811eef5a031d52a6e037066ad672e",
+      "enc-key": "0ff031e2bd9bf566bde2ec3ebbde47fc6c2b2800e8410036ebedc2f09f1d999e",
       "enc-key-size": "256",
-      "expires-in": "27m26s",
+      "expires-in": "41s",
       "hw-aead": "false",
       "replay": "128",
       "seen-traffic": "true",
-      "spi": "0xA855252",
+      "spi": "0x7F42425",
       "src-address": "10.0.1.9",
       "state": "mature"
     },
     {
-      ".id": "*2",
+      ".id": "*8",
       "ESP": "true",
-      "add-lifetime": "24m20s/30m25s",
-      "addtime": "2026-11-10 19:06:43",
+      "add-lifetime": "48s/1m1s",
+      "addtime": "2026-11-17 17:34:07",
       "auth-algorithm": "sha256",
-      "auth-key": "22593756c0a5f942e7c8a080283b33a982ffe19fc182083f54487bd6cd54c891",
-      "current-bytes": "105852",
-      "current-packets": "1203",
+      "auth-key": "0d27bf30b46dc8ce7bb637a4f58b92f8b9b90db71f67b63b047479f739a33166",
+      "current-bytes": "21384",
+      "current-packets": "243",
       "dst-address": "10.0.1.9",
       "enc-algorithm": "aes-cbc",
-      "enc-key": "72a15e151afc0f0d08e6433a78cb9aaa7c03913b28d30c73dc596e924f29afdb",
+      "enc-key": "a8e281b8d5f8d82a527465061ebc316456b7ef8004876ecc83886ddaeff908bd",
       "enc-key-size": "256",
-      "expires-in": "27m26s",
+      "expires-in": "41s",
       "hw-aead": "false",
       "replay": "128",
       "seen-traffic": "true",
-      "spi": "0x6D9E12E",
+      "spi": "0xBABF491",
       "src-address": "10.0.1.10",
       "state": "mature"
     }
@@ -103,6 +103,6 @@
     "key-size": "256",
     "kme-id": "kme-sim-3",
     "peer-sae-id": "sae-chr22",
-    "total-keys-received": "12"
+    "total-keys-received": "16"
   }
 }

@@ -2,7 +2,7 @@
 
 Layout (``<root>/<nome-da-topologia>/``)::
 
-    pki/  rsc/  docker/  compose/  logs/  metrics/  output/  state.json
+    pki/  rsc/  docker/  compose/  logs/  metrics/  output/  bench/  captures/  evidence/  state.json
 
 ``state.json`` guarda IDs do GNS3 e segredos gerados (PSKs, semente dos KMEs).
 Os segredos são criados uma única vez, o que torna reexecuções reprodutíveis
@@ -53,12 +53,20 @@ class Workspace:
         return self.root / "output"
 
     @property
+    def bench_dir(self) -> Path:
+        return self.root / "bench"
+
+    @property
+    def evidence_dir(self) -> Path:
+        return self.root / "evidence"
+
+    @property
     def state_path(self) -> Path:
         return self.root / "state.json"
 
     def ensure(self) -> "Workspace":
         for d in (self.pki_dir, self.rsc_dir, self.docker_dir, self.compose_dir,
-                  self.logs_dir, self.metrics_dir, self.output_dir):
+                  self.logs_dir, self.metrics_dir, self.output_dir, self.bench_dir):
             d.mkdir(parents=True, exist_ok=True)
         return self
 

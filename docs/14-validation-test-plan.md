@@ -179,30 +179,49 @@ com um marcador (`network`) é uma melhoria barata (§8).
 
 ## 9. Habilitadores: o que o framework precisa ganhar para executar o plano
 
-Alguns testes **não são executáveis hoje** sem pequenas extensões. Prioridade: **A** = bloqueia vários testes, **B** = útil,
-**C** = futuro.
+Alguns testes não eram executáveis sem pequenas extensões. Prioridade: **A** = bloqueia vários testes, **B** = útil,
+**C** = futuro. **Estado:** os habilitadores **A (HAB-01…05) estão implementados**: foram testados com dublês (GNS3, `/proc`,
+`docker stats` falsos), mas **ainda não foram executados contra um GNS3 real**. O primeiro passo da Fase 1 é rodar
+`tests/lab` (§9.1) e corrigir o que o GNS3 recusar. Os demais seguem pendentes.
 
 | ID | Habilitador | Para que serve | Esboço | Prioridade |
 |---|---|---|---|---|
-| HAB-01 | Guardar `link_id` no `state.json` e **injeção de falhas** (`suspend`, atraso, perda, corrupção, BPF) | FID-08, REDE-02…09, SEG-03 | O GNS3 2.2 expõe `filters` e `suspend` nos links; `Gns3Client` ainda não os usa | **A** |
-| HAB-02 | **Controle de contêineres** (parar/iniciar KME/NODE) | REDE-02, SEG-11 | `docker stop/start` via `DockerExec` ou API de nós do GNS3 | **A** |
-| HAB-03 | **Captura de pacotes** por enlace (`start_capture`/`stop_capture`) + resumo com `tshark` | SEG-01/02, FID-03 | endpoints de captura do GNS3 | **A** |
-| HAB-04 | **Cronometragem por etapa** e **amostrador de recursos do host** (`qnetlab bench`) | DES-01…05 | tempos no `Lab.up`; amostragem periódica de CPU/RAM por processo/contêiner | **A** |
-| HAB-05 | **Harness de testes de laboratório** (marcador `lab`, opt-in) que executa os experimentos e grava JSON de evidência | todos os N1/N2 | pytest com `Lab` real; falhas não rodam sem GNS3 | **A** |
+| HAB-01 | Guardar `link_id` no `state.json` e **injeção de falhas** (`suspend`, atraso, perda, corrupção, BPF) | FID-08, REDE-02…09, SEG-03 | **Feito:** `state.json` guarda `links`; `qnetlab fault link/down/up/clear` e `qnetlab.faults.FaultInjector` | **A** ✔ |
+| HAB-02 | **Controle de contêineres** (parar/iniciar KME/NODE) | REDE-02, SEG-11 | **Feito** pela API de nós do GNS3: `qnetlab fault node <nó> stop\|start\|restart\|pause\|resume` (vale também para CHR) | **A** ✔ |
+| HAB-03 | **Captura de pacotes** por enlace (`start_capture`/`stop_capture`) + resumo | SEG-01/02, FID-03 | **Feito:** `qnetlab capture run/list/summary` e `PacketCapture.capturing()`; resumo em Python (ESP, IKE, claro). A decodificação do IKE/PPK (FID-03) ainda exige tshark | **A** ✔ |
+| HAB-04 | **Cronometragem por etapa** e **amostrador de recursos do host** (`qnetlab bench`) | DES-01…05 | **Feito:** `Lab.up` grava `bench/up-*.json`; `qnetlab bench sample/up` (host, CHRs, contêineres, regra de saturação). Só mede o host local | **A** ✔ |
+| HAB-05 | **Harness de testes de laboratório** (marcador `lab`, opt-in) que executa os experimentos e grava JSON de evidência | todos os N1/N2 | **Feito:** `tests/lab/` (fixtures `lab`, `faults`, `capture`, `evidence`); sem `QNETLAB_TOPOLOGY` tudo é pulado | **A** ✔ |
 | HAB-06 | **Certificado de SAE para o NODE** (opcional) | UTI-04, SEG-06/07 | emitir `sae-nodeX` e instalar no NODE | B |
 | HAB-07 | **Modelo de canal quântico** no KME (taxa de bits por distância, QBER, abortar acima do limiar) | SEG-14, REDE-01 | ou *wrapper*/extensão do KMS-sim; precisa de decisão de escopo | C |
 | HAB-08 | Marcador `network` nos testes de DNS e **suíte de conformidade da API ETSI 014** | FID-01, DES-08 | `tests/` | B |
-| HAB-09 | `unprotected_links` com **controle de grupo** documentado nos relatórios | SEG-01, DES-06 | já existe; só padronizar o uso | B |
+| HAB-09 | `unprotected_links` com **controle de grupo** documentado nos relatórios | SEG-01, DES-06 | **Feito:** `topologies/ring4-control.yaml` (enlace 2 em claro; nome próprio `qkd-ring4-control`, com o procedimento no cabeçalho). Os relatórios ainda não listam o grupo de controle | B |
 
-Os caminhos propostos (apenas esboço, ainda inexistentes):
+### 9.1 Como usar os habilitadores
+
+```bash
+export QNETLAB_TOPOLOGY=topologies/ring4.yaml
+python -m pytest tests/lab -m "lab and not disruptive" -v -rs   # fumaça sem derrubar nada
+python -m pytest tests/lab -v -rs                               # inclui queda de enlace e parada do KME1
+ls build/qkd-ring4/evidence/                                    # um JSON por teste (§10.2)
+```
+
+Testes já escritos em `tests/lab/test_enablers.py` (hipótese e critério no docstring, escritos antes da execução):
+
+| Teste | Plano | O que verifica |
+|---|---|---|
+| `test_baseline_verify_is_ok` | FID-00 (parte) | `verify` com `_ok: true` |
+| `test_gns3_accepts_filters_and_suspend` | HAB-01 | o GNS3 aceita e devolve os filtros (inclui o formato do `bpf`) |
+| `test_link_down_breaks_ospf_and_up_recovers` | HAB-01 | queda do enlace derruba a adjacência OSPF; religar recupera |
+| `test_stop_and_start_kme_container` | HAB-02 | o KME1 some e volta |
+| `test_up_stage_timings_were_recorded`, `test_resource_sampler_sees_the_lab` | HAB-04 | tempos por etapa e amostragem de todos os CHRs/contêineres |
+| `test_passive_interception_sees_only_ike_and_esp` | **SEG-01** | no enlace do túnel só há IKE e ESP (+ OSPF); nenhum ICMP/TCP/UDP de aplicação em claro. Descoberta de vizinhos (MNDP, LLDP, CDP) é contada à parte em `discovery_packets` e registrada como *finding* (vaza identidade e versão do RouterOS; mitigado por padrão: `router.neighbor_discovery: false` desliga MNDP/LLDP/CDP, e o teste reprova se ainda houver pacotes de descoberta) |
+| `test_seg01_positive_control` | SEG-01 (controle) | em enlace de `unprotected_links` o ping aparece em claro (pula se não houver; use `topologies/ring4-control.yaml`) |
+
+Itens que **ainda não existem**: a suíte de conformidade da API ETSI 014 (HAB-08) e os testes FID-02, SEG-03, REDE-02 e DES-03
+completos (os habilitadores para eles já existem; veja o roteiro em §11).
 
 ```text
-tests/lab/                     testes N1/N2 (marcador "lab")
-tests/lab/conftest.py          fixture Lab real, ambiente e evidências
-tests/test_kme_conformance.py  FID-01 (N0)
-src/qnetlab/faults.py          HAB-01/02 (links e contêineres)
-src/qnetlab/capture.py         HAB-03
-src/qnetlab/bench.py           HAB-04
+tests/test_kme_conformance.py  FID-01 (N0), ainda inexistente
 ```
 
 ## 10. Roteiro, registro de evidências e critérios globais
@@ -212,7 +231,7 @@ src/qnetlab/bench.py           HAB-04
 | Fase | Conteúdo | Saída |
 |---|---|---|
 | **0 — Base** (sem laboratório) | FID-01, FID-09, SEG-04/05 (certificados, em loopback), marcador `network`, HAB-08 | suíte N0 ampliada |
-| **1 — Habilitadores** | HAB-01…05 | `make bench`, `make capture`, `make fault` |
+| **1 — Habilitadores** | HAB-01…05 (implementados; falta validar em GNS3 real) | `qnetlab bench`, `qnetlab capture`, `qnetlab fault`, `tests/lab` |
 | **2 — Linha de base** | FID-00, DES-03, N1 no ring4 e ring6 | tolerâncias e orçamento de tempo |
 | **3 — Fidelidade e segurança** | FID-02…08, SEG-01…13 | tabela de aderência (fidelidade) e lista de *findings* |
 | **4 — Rede** | REDE-01…10 | relatório de cenários de falha |
@@ -255,5 +274,6 @@ Conclusão: confirmou / refutou / inconclusivo — desvios e decisão (aceitar, 
 ## 11. Próximos passos sugeridos
 
 1. Revisar este plano (limiares, prioridades) e escolher 3–5 testes "de ouro" para a primeira rodada: **FID-02, SEG-01, SEG-03, REDE-02, DES-03**.
-2. Implementar os habilitadores **A** (HAB-01…05) — são pequenos e destravam a maior parte do plano.
+2. ~~Implementar os habilitadores A (HAB-01…05)~~ — **feito**; o próximo passo é executar `tests/lab` em um laboratório real e
+   corrigir as diferenças (§9.1). Depois, escrever os testes FID-02, SEG-03, REDE-02 e DES-03 sobre eles.
 3. Executar a Fase 2 (linha de base) e só então congelar os critérios numéricos.

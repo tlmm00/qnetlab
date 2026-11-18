@@ -60,6 +60,7 @@ class RouterConfig:
     update_version: str = ""        # fixa a versão (ex.: "7.20.6"); vazio = a mais nova do canal
     update_dns: str = ""            # DNS usado só durante a atualização (vazio = gateway do NAT)
     update_timeout: float = 900.0   # tempo máximo (s) de download + reinício por roteador
+    neighbor_discovery: bool = False  # MNDP/LLDP/CDP: desligado por padrão (anunciam identidade e versão do RouterOS em claro)
     # Papel de cada interface do CHR (iguais às do laboratório MITACS)
     if_kme: str = "ether1"          # -> KME do site
     if_ring: str = "ether2"         # -> CHR do site vizinho (enlace protegido por IPsec/QKD)

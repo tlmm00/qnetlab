@@ -61,9 +61,9 @@ qnetlab/
 ├── docker/node/             # imagem-base de KME/NODE (Dockerfile, entrypoint, KME vendorizado, agente SAE)
 ├── schema/                  # JSON Schema da topologia
 ├── scripts/                 # utilitários (plot_metrics.py, gen_config_reference.py)
-├── src/qnetlab/             # código (config, addressing, infra, pki, containers, dataplane, telemetry, cli, lab)
+├── src/qnetlab/             # código (config, addressing, infra, pki, containers, dataplane, telemetry, faults, capture, bench, cli, lab)
 ├── templates/               # Jinja2: mikrotik/*.rsc.j2 e docker/*.j2
-├── tests/                   # pytest (sem GNS3/Docker)
+├── tests/                   # pytest (sem GNS3/Docker); tests/lab = laboratório real, opt-in
 ├── topologies/              # ring4.yaml, ring6.yaml
 ├── Makefile · pyproject.toml · requirements.txt
 └── build/<topologia>/       # (gerado) artefatos, estado e segredos — fora do controle de versão

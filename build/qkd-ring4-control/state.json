@@ -1,0 +1,451 @@
+{
+  "links": [
+    {
+      "a": "KME1",
+      "a_if": "eth2",
+      "b": "MKT11",
+      "b_if": "ether1",
+      "id": "3d70c611-1aad-421e-befc-f36d1d37af86",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE1",
+      "a_if": "eth0",
+      "b": "MKT11",
+      "b_if": "ether7",
+      "id": "8177ccdb-3b22-4cd0-a9d3-7411e2305843",
+      "kind": "node"
+    },
+    {
+      "a": "KME1",
+      "a_if": "eth3",
+      "b": "MKT12",
+      "b_if": "ether1",
+      "id": "54fc2f8c-3f61-43b6-8419-9cac68d1707a",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE1",
+      "a_if": "eth1",
+      "b": "MKT12",
+      "b_if": "ether7",
+      "id": "72e6bb12-cdab-49b9-b61f-8ec6f73f67b6",
+      "kind": "node"
+    },
+    {
+      "a": "MKT11",
+      "a_if": "ether3",
+      "b": "MKT12",
+      "b_if": "ether3",
+      "id": "3827c0ba-f501-443f-86cc-4c493dbcb795",
+      "kind": "sibling"
+    },
+    {
+      "a": "KME2",
+      "a_if": "eth2",
+      "b": "MKT21",
+      "b_if": "ether1",
+      "id": "4ac435a7-1715-4f62-ba58-379510ca4d9d",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE2",
+      "a_if": "eth0",
+      "b": "MKT21",
+      "b_if": "ether7",
+      "id": "b534d6e6-1dff-480c-ab4d-e153317b2562",
+      "kind": "node"
+    },
+    {
+      "a": "KME2",
+      "a_if": "eth3",
+      "b": "MKT22",
+      "b_if": "ether1",
+      "id": "db509228-0b2b-4625-82f3-b1194359fc92",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE2",
+      "a_if": "eth1",
+      "b": "MKT22",
+      "b_if": "ether7",
+      "id": "97481970-f29d-495d-9332-7c9387b5ec05",
+      "kind": "node"
+    },
+    {
+      "a": "MKT21",
+      "a_if": "ether3",
+      "b": "MKT22",
+      "b_if": "ether3",
+      "id": "6414c41a-4e52-48b2-883a-41ecb864ab67",
+      "kind": "sibling"
+    },
+    {
+      "a": "KME3",
+      "a_if": "eth2",
+      "b": "MKT31",
+      "b_if": "ether1",
+      "id": "ece3dc98-1bdc-4a2b-be54-eabdb147fad2",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE3",
+      "a_if": "eth0",
+      "b": "MKT31",
+      "b_if": "ether7",
+      "id": "8c6931f9-e7e7-4f97-a3fe-8ab39aeed598",
+      "kind": "node"
+    },
+    {
+      "a": "KME3",
+      "a_if": "eth3",
+      "b": "MKT32",
+      "b_if": "ether1",
+      "id": "66cf3368-d0bf-4d13-8465-ba804b213ac5",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE3",
+      "a_if": "eth1",
+      "b": "MKT32",
+      "b_if": "ether7",
+      "id": "449116f6-a3bd-48f1-9b22-d2ea3495b8fe",
+      "kind": "node"
+    },
+    {
+      "a": "MKT31",
+      "a_if": "ether3",
+      "b": "MKT32",
+      "b_if": "ether3",
+      "id": "c863743f-6783-4ca6-972b-493f400cd44a",
+      "kind": "sibling"
+    },
+    {
+      "a": "KME4",
+      "a_if": "eth2",
+      "b": "MKT41",
+      "b_if": "ether1",
+      "id": "aff610f7-6e33-4cfe-bbba-defa0fa008cc",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE4",
+      "a_if": "eth0",
+      "b": "MKT41",
+      "b_if": "ether7",
+      "id": "ee25e8df-e90f-4abf-bc40-a01c40c61526",
+      "kind": "node"
+    },
+    {
+      "a": "KME4",
+      "a_if": "eth3",
+      "b": "MKT42",
+      "b_if": "ether1",
+      "id": "8b99356c-8aa9-4706-9a9a-effa0f50a1f1",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE4",
+      "a_if": "eth1",
+      "b": "MKT42",
+      "b_if": "ether7",
+      "id": "aaeaf6ac-fb45-4f01-ab92-20693155de69",
+      "kind": "node"
+    },
+    {
+      "a": "MKT41",
+      "a_if": "ether3",
+      "b": "MKT42",
+      "b_if": "ether3",
+      "id": "708fff71-cce4-4c14-a639-06b554812a68",
+      "kind": "sibling"
+    },
+    {
+      "a": "MKT12",
+      "a_if": "ether2",
+      "b": "MKT21",
+      "b_if": "ether2",
+      "id": "ca3afeb5-0461-4e09-ac78-da1c2fa6e470",
+      "kind": "ring"
+    },
+    {
+      "a": "KME1",
+      "a_if": "eth0",
+      "b": "KME2",
+      "b_if": "eth1",
+      "id": "c73ca7e0-6d0d-4024-a31d-3cebf278cd1a",
+      "kind": "kma"
+    },
+    {
+      "a": "MKT22",
+      "a_if": "ether2",
+      "b": "MKT31",
+      "b_if": "ether2",
+      "id": "5a021217-bc69-437c-ba9b-9ca8eb4d90ee",
+      "kind": "ring"
+    },
+    {
+      "a": "KME2",
+      "a_if": "eth0",
+      "b": "KME3",
+      "b_if": "eth1",
+      "id": "fc9765a9-fa22-4642-aec5-06ea8b8da2c4",
+      "kind": "kma"
+    },
+    {
+      "a": "MKT32",
+      "a_if": "ether2",
+      "b": "MKT41",
+      "b_if": "ether2",
+      "id": "42bec3c4-b342-406d-bfdc-43a159956412",
+      "kind": "ring"
+    },
+    {
+      "a": "KME3",
+      "a_if": "eth0",
+      "b": "KME4",
+      "b_if": "eth1",
+      "id": "2493d56c-9cd6-4eed-9506-2436fbb1de13",
+      "kind": "kma"
+    },
+    {
+      "a": "MKT42",
+      "a_if": "ether2",
+      "b": "MKT11",
+      "b_if": "ether2",
+      "id": "05ad6350-e928-4971-811c-94f909a65edc",
+      "kind": "ring"
+    },
+    {
+      "a": "KME4",
+      "a_if": "eth0",
+      "b": "KME1",
+      "b_if": "eth1",
+      "id": "993eb154-51fb-4029-bbd0-712dc3dfa54a",
+      "kind": "kma"
+    },
+    {
+      "a": "NAT1",
+      "a_if": "nat0",
+      "b": "MKT11",
+      "b_if": "ether8",
+      "id": "a9fbff5d-2196-4fba-952d-29db55751bdc",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT2",
+      "a_if": "nat0",
+      "b": "MKT12",
+      "b_if": "ether8",
+      "id": "9f738cb2-f99f-4f66-bb3c-a4ba7e431323",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT3",
+      "a_if": "nat0",
+      "b": "MKT21",
+      "b_if": "ether8",
+      "id": "4cea1db7-9c1c-4ce0-86b4-970a9785cd04",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT4",
+      "a_if": "nat0",
+      "b": "MKT22",
+      "b_if": "ether8",
+      "id": "7bf3a23a-dbb6-4c2f-bf32-ab2867dbed4c",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT5",
+      "a_if": "nat0",
+      "b": "MKT31",
+      "b_if": "ether8",
+      "id": "7116b92c-4419-4068-9164-7c82430b99f7",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT6",
+      "a_if": "nat0",
+      "b": "MKT32",
+      "b_if": "ether8",
+      "id": "57371d1d-abc7-486b-9e42-b8f3e3007d53",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT7",
+      "a_if": "nat0",
+      "b": "MKT41",
+      "b_if": "ether8",
+      "id": "44a50b0f-fac2-4c01-a77b-72285e55fb81",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT8",
+      "a_if": "nat0",
+      "b": "MKT42",
+      "b_if": "ether8",
+      "id": "1f81b739-175a-4f39-b91c-74fa6cafa544",
+      "kind": "nat"
+    }
+  ],
+  "nodes": {
+    "KME1": {
+      "console": 5006,
+      "console_host": "0.0.0.0",
+      "id": "28b426ea-9416-4eed-a93b-66bc2a3a4e93",
+      "type": "docker"
+    },
+    "KME2": {
+      "console": 5016,
+      "console_host": "0.0.0.0",
+      "id": "05b03a77-3b3f-4718-9526-5616c05b8727",
+      "type": "docker"
+    },
+    "KME3": {
+      "console": 5026,
+      "console_host": "0.0.0.0",
+      "id": "9a95dc7c-982e-4477-b84b-f5045b340608",
+      "type": "docker"
+    },
+    "KME4": {
+      "console": 5036,
+      "console_host": "0.0.0.0",
+      "id": "ca6a274a-e0f2-4e46-9a3c-9859589f20eb",
+      "type": "docker"
+    },
+    "MKT11": {
+      "console": 5000,
+      "console_host": "0.0.0.0",
+      "id": "bc46661c-1f49-46e5-ab10-559b0f5d54d8",
+      "type": "qemu"
+    },
+    "MKT12": {
+      "console": 5003,
+      "console_host": "0.0.0.0",
+      "id": "7cb19ea4-c896-44ad-ad13-cc281670b3ca",
+      "type": "qemu"
+    },
+    "MKT21": {
+      "console": 5010,
+      "console_host": "0.0.0.0",
+      "id": "114f103d-1ee7-4c91-8d64-f66369210e3e",
+      "type": "qemu"
+    },
+    "MKT22": {
+      "console": 5013,
+      "console_host": "0.0.0.0",
+      "id": "27bfca43-9424-4743-b2b2-afd7318af765",
+      "type": "qemu"
+    },
+    "MKT31": {
+      "console": 5020,
+      "console_host": "0.0.0.0",
+      "id": "61a3d1a2-252a-41d8-a092-6ec3d3b6eefb",
+      "type": "qemu"
+    },
+    "MKT32": {
+      "console": 5023,
+      "console_host": "0.0.0.0",
+      "id": "fac25884-6fb6-4792-bf24-5cf145441436",
+      "type": "qemu"
+    },
+    "MKT41": {
+      "console": 5030,
+      "console_host": "0.0.0.0",
+      "id": "f6987826-1789-4f25-bcf2-1dcf09248c9d",
+      "type": "qemu"
+    },
+    "MKT42": {
+      "console": 5033,
+      "console_host": "0.0.0.0",
+      "id": "80d653b3-0478-4a53-b2a4-6719426436e4",
+      "type": "qemu"
+    },
+    "NAT1": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "9c462bde-6e94-4478-9491-4869856883a3",
+      "type": "nat"
+    },
+    "NAT2": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "569d9f45-513b-4f18-b039-6623dd0215f4",
+      "type": "nat"
+    },
+    "NAT3": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "a322e99a-7cef-4850-a674-e5d4bc2cced9",
+      "type": "nat"
+    },
+    "NAT4": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "d090f983-db82-45aa-a90a-53016649d331",
+      "type": "nat"
+    },
+    "NAT5": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "4e508b8d-4426-4b33-9c99-af7298f3b254",
+      "type": "nat"
+    },
+    "NAT6": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "ec26c2e3-a17b-4734-b282-10f6341256e3",
+      "type": "nat"
+    },
+    "NAT7": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "5498e39c-9d9d-421e-a866-638fe7eb20db",
+      "type": "nat"
+    },
+    "NAT8": {
+      "console": null,
+      "console_host": "0.0.0.0",
+      "id": "68901a7d-3278-4070-b8b0-6790b5efd1b2",
+      "type": "nat"
+    },
+    "NODE1": {
+      "console": 5008,
+      "console_host": "0.0.0.0",
+      "id": "129409a8-526a-495f-8348-973c58a61ebe",
+      "type": "docker"
+    },
+    "NODE2": {
+      "console": 5018,
+      "console_host": "0.0.0.0",
+      "id": "c8aa9fdd-bf72-442e-8422-11384267ef68",
+      "type": "docker"
+    },
+    "NODE3": {
+      "console": 5028,
+      "console_host": "0.0.0.0",
+      "id": "ea43d9c0-291e-43ab-88d0-6a9300012027",
+      "type": "docker"
+    },
+    "NODE4": {
+      "console": 5038,
+      "console_host": "0.0.0.0",
+      "id": "db0a70cf-bd42-45f6-8ca9-3dec3e13bcb6",
+      "type": "docker"
+    }
+  },
+  "project_id": "1112e9b2-e24f-4d53-ab0e-04bbb3910d7f",
+  "secrets": {
+    "ike_psk:MKT12-MKT21": "5950ea7b637124aeb668d56ad63f032bc2b06e2647e8f6900def4de6c6ae9694",
+    "ike_psk:MKT32-MKT41": "ff32e4b64ad59caade96829ea1a1c9027dc7ac879eab8c313f105f7bc3cd00c7",
+    "ike_psk:MKT42-MKT11": "5cc31e91a95b5b70d02b11c0e40928dab0def3d25d2dee6458264ddd2c7fe251",
+    "kma_seed:kme-sim-1-kme-sim-2": "7c1e39b3c0353680b85a5d86df28a29979e5a7878f6f7ded8360fe55dfdcfd6a",
+    "kma_seed:kme-sim-1-kme-sim-4": "4188ab1c22bf6b1a39ead7ccd8aaeb62daf5a17371f4dc97876b7ac8ee738489",
+    "kma_seed:kme-sim-2-kme-sim-3": "dbf75fd37a4bfb4bd90802dddaef2a08fa8eacf16f08de58b00a9bfec8231cb8",
+    "kma_seed:kme-sim-3-kme-sim-4": "14cdc0b7866b25229387b4a9e40cd994c548016c790ab32be9e7989f80439b13",
+    "static_ppk:MKT12-MKT21": "fd7cc289c4d2e75cb742eb80853245b96c9b21f73fa4175ed3d01d53eee5d2ca",
+    "static_ppk:MKT32-MKT41": "d035b45e06515f191dcef537ca109434f1a0975c779a76de7e9e46cb7edbee4f",
+    "static_ppk:MKT42-MKT11": "0b11ba190e7ea981711d5cac88e74e7cd2cec4e082f92ab8b35d9267b056d67f"
+  }
+}

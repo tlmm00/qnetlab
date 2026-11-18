@@ -51,7 +51,9 @@ class FakeGns3:
         return self.nodes[nid]
 
     def get_node(self, pid, nid): return {**self.nodes[nid], "console_host": "127.0.0.1"}
-    def create_link(self, pid, a, b): self.links.append((a, b))
+    def create_link(self, pid, a, b):
+        self.links.append((a, b))
+        return {"link_id": f"L{len(self.links)}", "nodes": [a, b]}
 
 
 @pytest.fixture()

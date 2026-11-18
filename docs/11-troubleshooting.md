@@ -41,6 +41,10 @@
 | `PkiError: OpenSSL não encontrado` | `openssl` ausente do PATH | Instale o OpenSSL. |
 | `SAN ausente(s) no certificado` | Certificado antigo com IPs diferentes | `qnetlab pki` reemite o que mudou (ou `--force`). |
 | `verify` ⇒ `_ok: false` | Ver seção "verify falha" | |
+| `O GNS3 não conhece o projeto … do state.json` / projeto `closed` | `state.json` desatualizado (projeto apagado, GNS3 reiniciado ou trocado) | `make up` (ou `deploy --recreate`); confira com `curl -s localhost:3080/v2/projects`. |
+| `O fluxo do .pcap não conectou` / `não encerrou o fluxo da captura` | O enlace está suspenso ou sem nós iniciados; ou o GNS3 não fechou o fluxo após o `stop` | Confira `qnetlab fault list` (enlace suspenso?) e os nós `started`; repita. O arquivo parcial fica em `captures/`. |
+| `fault node … stop` (ou o teste do KME1): `Nó KME1 não chegou ao estado 'stopped'` + `Could not fix permissions … No such file or directory: 'docker'` | O GNS3 2.2 só para um nó Docker depois de rodar `docker exec` (corrige permissões dos volumes). Se o servidor GNS3 **roda em contêiner** (`sudo head -1 /proc/$(pgrep -f gns3server \| head -1)/cgroup` mostra `docker-<id>.scope`) ou não tem `docker` no PATH, o comando falha, o `stop` é abortado e o controlador responde 204 do mesmo jeito (o contêiner continua `Up`) | Contêiner: recrie o servidor com o cliente montado, `-v /usr/bin/docker:/usr/bin/docker:ro` (além de `-v /var/run/docker.sock:/var/run/docker.sock`), preservando os volumes dos projetos. No host: ponha `docker` no PATH do servidor. O QNetLab repete a ação direto no compute e mostra esta causa no erro. Não pare o contêiner por fora do GNS3: isso deixa a ligação de rede do nó inconsistente. |
+| `fluxo sem assinatura de pcap (N bytes recebidos); início: …` | O GNS3 devolveu algo que não é pcap (erro interno, enquadramento inesperado) | O corpo cru fica em `captures/*.pcap.raw`; abra-o ou anexe-o ao reportar. O GNS3 2.2.56 devolve o corpo sem enquadramento *chunked* válido — o QNetLab lê o socket cru e extrai o pcap. |
 | `collect`: muitos "coleta falhou (… No route to host)" | Rede de gerenciamento inacessível | Ver seção abaixo. |
 
 ---
@@ -139,6 +143,9 @@ O relatório lista, por CHR, `ospf_full`, `ipsec_active_peers`, `ipsec_installed
 3. PSK divergente entre as pontas: reaplique `make configure` (os dois lados leem o mesmo `state.json`).
 4. Rota para o par: `ping` entre os IPs de `ether2` dos dois CHRs.
 5. Firewall: devem existir as regras `qnetlab-ike-*` e `qnetlab-esp-*`.
+6. `key qkd` com `total-keys-received: 0` em todos os CHRs: o KME não entrega chaves. Confira se os contêineres KME estão
+   rodando (`docker ps -a --filter name=GNS3.KME`; ausentes do `docker stats` = parados) e leia `docker logs GNS3.KME1.<id>`.
+   O `tests/lab` (baseline e amostrador) aponta esse caso.
 
 ### Túnel de pé, mas `key qkd` com erro
 

@@ -1,0 +1,26 @@
+{
+  "stages": [
+    {
+      "stage": "pki",
+      "start_ts": 1794944157.649,
+      "seconds": 0.268,
+      "ok": true
+    },
+    {
+      "stage": "images",
+      "start_ts": 1794944157.917,
+      "seconds": 2.272,
+      "ok": true
+    },
+    {
+      "stage": "deploy",
+      "start_ts": 1794944160.188,
+      "seconds": 0.123,
+      "ok": false
+    }
+  ],
+  "total_seconds": 2.663,
+  "elapsed_seconds": 2.662,
+  "lab": "qkd-ring4",
+  "verify_ok": null
+}

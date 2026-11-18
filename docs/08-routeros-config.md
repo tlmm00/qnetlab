@@ -219,3 +219,10 @@ No roteador:
 /routing ospf neighbor print
 /log print where topics~"ipsec"
 ```
+
+## Descoberta de vizinhos (MNDP/LLDP/CDP)
+
+Por padrão o CHR anuncia, em *broadcast* e em claro, o nome do roteador e a versão do RouterOS em **todas** as interfaces,
+inclusive a do túnel IPsec (achado do SEG-01: um espião passivo aprende a topologia e a versão sem ver nenhum dado).
+O `00_base.rsc.j2` desliga isso com `/ip neighbor discovery-settings set discover-interface-list=none`. Para reativar
+(por exemplo, para depurar com `/ip neighbor print`), use `router.neighbor_discovery: true` e rode `qnetlab configure`.

@@ -76,13 +76,23 @@ flowchart TB
 | `rendering` | Ambiente Jinja2 com `StrictUndefined`: variável ausente = erro, nunca texto vazio. |
 | `errors` | Hierarquia `QNetLabError` (`ConfigError`, `AddressingError`, `Gns3Error`, `ConsoleError`, `PkiError`, `ImageBuildError`, `RouterOsError`, `TelemetryError`). |
 
+### Camada de experimentos (`faults`, `capture`, `bench`)
+
+Módulos de topo, usados sobre um laboratório **já implantado** (não participam do `up`, exceto o cronômetro):
+
+| Módulo | Responsabilidade |
+|---|---|
+| `faults` | `LinkIndex` (resolve `NÓ[:iface]` para enlaces do GNS3, a partir de `state.json` ou reconstruído do GNS3) e `FaultInjector`: filtros de enlace (`delay`, `packet_loss`, `corrupt`, `frequency_drop`, `bpf`), `suspend`, ações de nó (`stop`/`start`/`reload`/`suspend`) e `restore()`. Registra cada ação em `logs/fault-events.jsonl` e nos NODEs. |
+| `capture` | `PacketCapture` (`start_capture`/`stop_capture` do GNS3, baixando o `.pcap` pela API durante a captura) e `summarize()`: leitor de `.pcap` em Python puro que conta protocolos IP, ESP, IKE e tráfego em claro. |
+| `bench` | `StageTimer` (usado por `Lab.up`), `ResourceSampler` (host via `/proc`, CHRs pelo processo `qemu`, contêineres via `docker stats`), regra de saturação e registro do ambiente. |
+
 ### Camada 1 — infra (`qnetlab.infra`)
 
 - `Gns3Client`: sessão `requests` com *retry* em GET/PUT/DELETE (502/503/504), mensagens de erro com status e corpo.
   Localiza templates (`MikroTik CHR` e o template nativo `NAT`).
 - `TopologyDeployer`: cria o projeto, os nós (CHR por template, KME/NODE como `docker`, NAT pelo template nativo, renomeado
-  `NAT1..NAT2N`), liga os enlaces por `adapter_number`/`port_number`, inicia tudo e grava `project_id`/`nodes` em
-  `state.json`. `--recreate` apaga um projeto de mesmo nome antes.
+  `NAT1..NAT2N`), liga os enlaces por `adapter_number`/`port_number`, inicia tudo e grava `project_id`, `nodes` e `links`
+  (ID, tipo e pontas de cada enlace) em `state.json`. `--recreate` apaga um projeto de mesmo nome antes.
 - `TelnetConsole` / `RouterOsConsole`: login serial/telnet para o *bootstrap*, tolerante a prompts repetidos.
 
 Mapeamento de interfaces → portas do GNS3:

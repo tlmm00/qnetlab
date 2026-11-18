@@ -1,0 +1,28 @@
+{
+  "id": "HAB-04",
+  "test": "tests/lab/test_enablers.py::test_up_stage_timings_were_recorded",
+  "criterion": "Crit\u00e9rio: o \u00faltimo `up` deixou `bench/up-*.json` com as etapas pki, deploy, bootstrap, upgrade, configure e verify.",
+  "started": "2026-11-16T18:50:36Z",
+  "results": {},
+  "outcome": "skipped",
+  "finished": "2026-11-16T18:50:36Z",
+  "files": {},
+  "environment": {
+    "qnetlab": "0.1.0",
+    "python": "3.14.9",
+    "kernel": "7.2.15-arch1-1",
+    "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+    "cpus": 8,
+    "mem_total_mb": 15725,
+    "docker": "29.9.3",
+    "git_commit": "80b0ad64d696cd118dd621177df56e27750b1357",
+    "utc": "2026-11-16T18:50:36Z",
+    "topology_sha256": "82c41c0228c9d79f477866112c762fac9620017f96f55ba754388f70592be49a",
+    "lab": "qkd-ring4",
+    "ring_size": 4,
+    "chrs": 8,
+    "links": 36,
+    "router_version_pinned": "7.22.1",
+    "gns3": "2.2.56.1"
+  }
+}

@@ -21,6 +21,9 @@ src/qnetlab/
 ├── config/           models.py (dataclasses imutáveis + validate) · loader.py (YAML/JSON, ${VAR}, schema)
 ├── addressing.py     build_plan(): Iface/Link/ChrPlan/KmePlan/NodePlan/SitePlan/TunnelPlan/AddressPlan
 ├── workspace.py      build/<lab>/… e state.json
+├── faults.py         injeção de falhas em enlaces e nós (GNS3) e registro dos eventos
+├── capture.py        captura de pacotes nos enlaces e resumo de .pcap
+├── bench.py          cronômetro de etapas, amostrador de recursos, regra de saturação
 ├── rendering.py      Jinja2 estrito
 ├── errors.py         QNetLabError e derivadas
 ├── infra/            gns3_client.py · deployer.py · console.py (telnet/RouterOS)
@@ -69,14 +72,21 @@ $ python -m pytest -q tests/test_docs.py       # documentação vs código
 | `test_configurator.py` | ordem de upload/importação, limpeza de arquivos, atualização (host/device), verificação por CHR | `FakeRos`, runner Docker falso |
 | `test_telemetry.py` | agente do NODE, carga, coleta, consolidação, pacote e mascaramento | `docker exec` falso |
 | `test_e2e_local.py` | **2 KMEs reais** (o `main.py` vendorizado) + mTLS + sync KMA + agente + gráficos, em loopback | processos locais (exige `flask`) |
+| `test_faults.py` | índice de enlaces (por nó/iface/tipo; reconstrução a partir do GNS3), faixas dos filtros, queda/religação, ações de nó, `restore()`, marcadores nos NODEs, IDs de enlace no `state.json` | cliente GNS3 falso |
+| `test_capture.py` | ciclo `start`/`stop` com *thread* de fluxo (arquivo completo só após o `stop`, erros de conexão, fluxo que não termina), resumo de `.pcap` sintético (ESP, IKE, VLAN, endianness, truncado, inválido), busca de bytes | cliente GNS3 falso, `.pcap` gerado no teste |
+| `test_bench.py` | cronômetro, leitores de `/proc` e `docker stats`, taxas de CPU entre amostras, percentis, regra de saturação | `/proc` falso em `tmp_path` |
+| `test_gns3_client_links.py` | `Gns3Client`: `PUT` de enlace (com repetição usando `nodes` se o GNS3 exigir), ações de nó e endpoints de captura | `requests` simulado |
+| `test_lab_experiments.py` | `Lab.up` cronometrado, `Lab.links()`, CLI `fault`/`capture`/`bench` | cliente GNS3 falso |
+| `tests/lab/` | **laboratório real** (opt-in por `QNETLAB_TOPOLOGY`): habilitadores e testes do plano, com evidência JSON | nenhum (GNS3 real) |
 | `test_docs.py` | referência de configuração em dia, links/âncoras, comandos e alvos documentados, caminhos citados | — |
 
-Não coberto por testes automáticos: GNS3 real, `docker build`, entrypoint com `ip`, CHR real
-([13](13-limitations-roadmap.md)). Ao mexer nessas partes, valide manualmente com `make up` e descreva o resultado no PR.
+Não coberto pela suíte padrão: GNS3 real, `docker build`, entrypoint com `ip`, CHR real
+([13](13-limitations-roadmap.md)); parte disso é exercitada pelos testes opt-in de `tests/lab` ([tests/lab/README.md](../tests/lab/README.md)). Ao mexer nessas partes, valide manualmente com `make up` e descreva o resultado no PR.
 
 ### Escrevendo testes
 
 - Reutilize as *fixtures* de `tests/conftest.py` (`ring4_path`, `ring6_path`) e o `tmp_path` para o *workspace*.
+- Para testes de laboratório (`tests/lab`): marque com `@pytest.mark.plan("ID")`, escreva hipótese e critério no docstring **antes** de rodar, use as *fixtures* `lab`, `faults`, `capture` e `evidence`; o `faults` restaura enlaces e nós no *teardown*.
 - Para roteadores, estenda o `FakeRos` de `test_configurator.py` em vez de criar mocks ad hoc.
 - Evite testes que dependam do relógio ou da rede; injete `get=`/`runner=`.
 - Um teste de regressão por bug: o nome deve dizer o que quebrou (ex.: `test_ipsec_commands_match_the_lab_syntax`).

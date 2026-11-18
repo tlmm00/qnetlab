@@ -10,6 +10,7 @@
 | Deployer GNS3 (nós, adaptadores, portas, enlaces, NAT) e `docker exec` | cliente GNS3 e runner Docker falsos | média |
 | Sintaxe RouterOS 7.22.1 (OSPF, IPsec, firewall, logging), importação de certificados, atualização do `.npk` | execução **real** pelo usuário, com correções incrementais (ver [11](11-troubleshooting.md)) | média-alta |
 | `docker build` e *entrypoint* com `ip` reais; verificação final (`verify` com IPsec+QKD) e `run` em GNS3 real | **não coberto por testes automáticos** | a confirmar |
+| Injeção de falhas, captura de pacotes e amostragem de recursos (`fault`, `capture`, `bench`) | testes unitários com GNS3, `/proc` e `docker stats` falsos; payloads conferidos com a documentação da API do GNS3 2.2 | média: **falta executar `tests/lab` contra um GNS3 real** |
 
 O ambiente de desenvolvimento do framework não dispõe de GNS3, Docker daemon nem iproute2; por isso, na primeira execução em um
 ambiente novo use `-v` e espere ajustes finos.
@@ -52,8 +53,19 @@ ambiente novo use `-v` e espere ajustes finos.
 ### Telemetria
 
 - `metrics.jsonl` é acumulativo dentro do contêiner; execuções repetidas misturam eventos no mesmo arquivo.
-- Sem coleta contínua de CPU/memória dos CHRs nem de contadores de interface (apenas logs IPsec e snapshots de estado).
+- Sem coleta contínua de contadores de interface e de CPU/memória **dentro** dos CHRs (apenas logs IPsec e snapshots de estado). O `bench` amostra CPU/RAM de fora (processo `qemu` de cada CHR e `docker stats`) e só no host onde o `qnetlab` roda.
 - Os gráficos exigem `matplotlib`.
+
+### Experimentos (`fault`, `capture`, `bench`)
+
+- Os filtros de enlace são os do GNS3 (atraso, jitter, perda, corrupção, descarte periódico, BPF): **não há limite de banda
+  nem fila**; valem para nós baseados em *ubridge* (CHR/QEMU, Docker, NAT). Cada `fault link` substitui os filtros anteriores.
+- Parar um contêiner (`fault node … stop`) é uma falha de **processo**, não de KME real: o estado em disco do contêiner
+  permanece e o `start` reexecuta o *entrypoint*. Após `restart` de um CHR, o RouterOS leva tempo para voltar (REST pronto ≠ nó `started`).
+- A captura é *pcap* clássico por enlace (Ethernet), baixada pela API **durante** a captura (o GNS3 2.2 só serve o `/pcap` nesse período e o arquivo pode ficar em `/root`), portanto `start` e `stop` precisam estar no mesmo processo: a CLI oferece só `capture run`. O resumo em Python conta ESP/IKE/claro, mas **não decodifica IKE/PPK**
+  (use Wireshark/tshark no `.pcap` para o FID-03). Tráfego capturado pode conter informação de topologia: trate como dado do experimento.
+- `bench` só enxerga o host local; com GNS3 remoto o amostrador não encontra os processos `qemu` e os testes que dependem dele são pulados.
+- O estado de `state.json` ganhou `links`; laboratórios implantados antes têm esses IDs reconstruídos do GNS3 na primeira chamada.
 
 ### Desempenho
 
@@ -77,11 +89,13 @@ ambiente novo use `-v` e espere ajustes finos.
 - [ ] `collect`: abortar cedo (com uma mensagem única) quando o primeiro CHR estiver inacessível, em vez de repetir o *timeout* por roteador.
 - [ ] Teste de sintaxe do `.rsc` contra um CHR 7.22.1 em CI (self-hosted).
 - [ ] Validar `ppk_mode: static` e o comportamento de PPK obrigatório/opcional.
+- [ ] Executar `tests/lab` em um laboratório real e corrigir o que o GNS3 recusar (formato do `bpf`, PUT parcial de enlace).
 
 **Médio prazo**
 - [ ] Transporte seguro na gerência (`www-ssl`, SFTP/SCP) como opção.
 - [ ] Execução de experimentos em lote (varredura de parâmetros) com `Lab` e consolidação comparativa.
-- [ ] Métricas de CPU/memória/contadores de interface dos CHRs e de consumo/nível dos pools de chaves ao longo do tempo.
+- [x] Amostragem de CPU/RAM do host, dos CHRs e dos contêineres (`qnetlab bench`).
+- [ ] Contadores de interface dos CHRs e nível dos pools de chaves ao longo do tempo.
 - [ ] Rotação/renovação de certificados e `--only <nó>` para reconfiguração parcial.
 - [ ] Suporte a GNS3 remoto (execução de comandos nos contêineres via API do GNS3 ou agente).
 

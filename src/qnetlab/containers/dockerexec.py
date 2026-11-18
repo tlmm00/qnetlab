@@ -59,6 +59,16 @@ class DockerExec:
         raise TelemetryError(f"Contêiner do nó {node} não encontrado (projeto {self.project_id}). "
                              "O deploy foi feito neste host/daemon Docker?")
 
+    def state(self, node: str) -> str:
+        """Estado do contêiner do nó no Docker, **inclusive parado** (``docker ps -a``): ``Up 3 minutes``,
+        ``Exited (137) 2 seconds ago``… ou ``inexistente``. Não usa o cache de nomes."""
+        out = self._docker("ps", "-a", "--format", "{{.Names}}|{{.Status}}")
+        for line in out.splitlines():
+            name, _, status = line.partition("|")
+            if re.match(rf"^GNS3\.{re.escape(node)}\.{re.escape(self.project_id)}$", name, re.IGNORECASE):
+                return status.strip()
+        return "inexistente"
+
     # ------------------------------------------------------------------- operações
     def exec(self, node: str, argv: Sequence[str], timeout: int = 60) -> str:
         return self._docker("exec", self.container(node), *argv, timeout=timeout)

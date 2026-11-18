@@ -40,7 +40,7 @@ containers:
   base_image: qnetlab/node:base
   kme_api_port: 8443
   key_size_bits: 256 # o KME do KMS-sim só entrega chaves de 256 bits
-  # kme_source_dir: ~/Codes/KMS-sim/src   # usa o main.py do seu checkout em vez da cópia vendorizada
+  kme_source_dir: ~/Codes/KMS-sim/src # usa o main.py do seu checkout em vez da cópia vendorizada
   # app_source_dir: ~/Codes/DFL           # constrói a imagem dos NODEs a partir do seu código (cliente DFL)
 
 kme: # peer_sync do KMS-sim (seus experimentos: 10 / 120 / 1000)

@@ -1,0 +1,50 @@
+{
+  "stages": [
+    {
+      "stage": "pki",
+      "start_ts": 1794940404.573,
+      "seconds": 0.552,
+      "ok": true
+    },
+    {
+      "stage": "images",
+      "start_ts": 1794940405.124,
+      "seconds": 5.221,
+      "ok": true
+    },
+    {
+      "stage": "deploy",
+      "start_ts": 1794940410.346,
+      "seconds": 27.951,
+      "ok": true
+    },
+    {
+      "stage": "bootstrap",
+      "start_ts": 1794940438.297,
+      "seconds": 33.913,
+      "ok": true
+    },
+    {
+      "stage": "upgrade",
+      "start_ts": 1794940472.21,
+      "seconds": 30.399,
+      "ok": true
+    },
+    {
+      "stage": "configure",
+      "start_ts": 1794940502.609,
+      "seconds": 3.555,
+      "ok": true
+    },
+    {
+      "stage": "verify",
+      "start_ts": 1794940506.164,
+      "seconds": 13.339,
+      "ok": true
+    }
+  ],
+  "total_seconds": 114.93,
+  "elapsed_seconds": 114.93,
+  "lab": "qkd-ring4",
+  "verify_ok": true
+}

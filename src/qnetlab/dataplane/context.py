@@ -106,6 +106,7 @@ def build_router_context(topo: Topology, plan: AddressPlan, ws: Workspace, chr_n
             "node_pool": str(plan.node_pool),
             "admin_user": _safe(topo.router.admin_user, "router.admin_user"),
             "admin_password": _safe(topo.router.admin_password, "router.admin_password"),
+            "neighbor_discovery": topo.router.neighbor_discovery,
         },
         "ospf": {
             "instance": topo.ospf.instance, "area": topo.ospf.area, "area_id": topo.ospf.area_id,

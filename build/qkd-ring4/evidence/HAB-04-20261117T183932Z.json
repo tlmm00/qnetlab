@@ -1,0 +1,73 @@
+{
+  "id": "HAB-04",
+  "test": "tests/lab/test_enablers.py::test_up_stage_timings_were_recorded",
+  "criterion": "Crit\u00e9rio: o \u00faltimo `up` deixou `bench/up-*.json` com as etapas pki, deploy, bootstrap, upgrade, configure e verify.",
+  "started": "2026-11-17T18:39:32Z",
+  "results": {
+    "stages": [
+      {
+        "stage": "pki",
+        "start_ts": 1794940404.573,
+        "seconds": 0.552,
+        "ok": true
+      },
+      {
+        "stage": "images",
+        "start_ts": 1794940405.124,
+        "seconds": 5.221,
+        "ok": true
+      },
+      {
+        "stage": "deploy",
+        "start_ts": 1794940410.346,
+        "seconds": 27.951,
+        "ok": true
+      },
+      {
+        "stage": "bootstrap",
+        "start_ts": 1794940438.297,
+        "seconds": 33.913,
+        "ok": true
+      },
+      {
+        "stage": "upgrade",
+        "start_ts": 1794940472.21,
+        "seconds": 30.399,
+        "ok": true
+      },
+      {
+        "stage": "configure",
+        "start_ts": 1794940502.609,
+        "seconds": 3.555,
+        "ok": true
+      },
+      {
+        "stage": "verify",
+        "start_ts": 1794940506.164,
+        "seconds": 13.339,
+        "ok": true
+      }
+    ]
+  },
+  "outcome": "passed",
+  "finished": "2026-11-17T18:39:32Z",
+  "files": {},
+  "environment": {
+    "qnetlab": "0.1.0",
+    "python": "3.14.10",
+    "kernel": "7.3.4-arch1-2",
+    "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+    "cpus": 8,
+    "mem_total_mb": 15725,
+    "docker": "29.9.3",
+    "git_commit": "80b0ad64d696cd118dd621177df56e27750b1357",
+    "utc": "2026-11-17T18:37:11Z",
+    "topology_sha256": "b6f07e3134e5b77f53cff7643679ff21af44b40cfa78faa0ba2386e614a5ba84",
+    "lab": "qkd-ring4",
+    "ring_size": 4,
+    "chrs": 8,
+    "links": 36,
+    "router_version_pinned": "7.22.1",
+    "gns3": "2.2.56.1"
+  }
+}

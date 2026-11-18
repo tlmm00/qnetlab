@@ -162,6 +162,9 @@
           "type": "number",
           "minimum": 60
         },
+        "neighbor_discovery": {
+          "type": "boolean"
+        },
         "update_method": {
           "enum": [
             "host",

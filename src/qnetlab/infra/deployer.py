@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import logging
 import math
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from ..addressing import AddressPlan, Link
 from ..config.models import Topology
@@ -33,6 +33,7 @@ class TopologyDeployer:
         self.project_id: str = ""
         self._nat_tpl: Optional[Dict[str, Any]] = None
         self.nodes: Dict[str, Dict[str, Any]] = {}
+        self.links: List[Dict[str, Any]] = []
 
     # ------------------------------------------------------------------ layout
     def _positions(self) -> Dict[int, Dict[str, Tuple[int, int]]]:
@@ -96,7 +97,10 @@ class TopologyDeployer:
     def _link(self, l: Link) -> None:
         def ep(node: str, ifname: str) -> Dict[str, Any]:
             return {"node_id": self.nodes[node]["id"], "adapter_number": adapter_of(ifname), "port_number": 0}
-        self.client.create_link(self.project_id, ep(l.a, l.a_if), ep(l.b, l.b_if))
+        res = self.client.create_link(self.project_id, ep(l.a, l.a_if), ep(l.b, l.b_if)) or {}
+        if res.get("link_id"):                       # necessário para injeção de falhas e captura (qnetlab.faults/capture)
+            self.links.append({"id": res["link_id"], "kind": l.kind,
+                               "a": l.a, "a_if": l.a_if, "b": l.b, "b_if": l.b_if})
 
     # ------------------------------------------------------------------ deploy
     def deploy(self, recreate: bool = False) -> Dict[str, Dict[str, Any]]:
@@ -112,6 +116,7 @@ class TopologyDeployer:
         tpl = c.find_template(self.topo.router.gns3_template)
         project = c.create_project(name)
         self.project_id = project["project_id"]
+        self.links = []
         self.ws.update_state(project_id=self.project_id)
         try:
             self._build(tpl)
@@ -122,7 +127,7 @@ class TopologyDeployer:
         except Exception:
             log.error("Falha durante o deploy; o projeto parcial foi mantido para inspeção: %s", name)
             raise
-        self.ws.update_state(project_id=self.project_id, nodes=self.nodes)
+        self.ws.update_state(project_id=self.project_id, nodes=self.nodes, links=self.links)
         return self.nodes
 
     def _build(self, tpl: Dict[str, Any]) -> None:
@@ -175,6 +180,7 @@ class TopologyDeployer:
         state = self.ws.load_state()
         state.pop("project_id", None)
         state.pop("nodes", None)
+        state.pop("links", None)
         self.ws.save_state(state)
         log.info("Projeto '%s' removido.", self.topo.project_name)
         return True

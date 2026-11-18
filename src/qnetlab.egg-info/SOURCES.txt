@@ -2,8 +2,11 @@ README.md
 pyproject.toml
 src/qnetlab/__init__.py
 src/qnetlab/addressing.py
+src/qnetlab/bench.py
+src/qnetlab/capture.py
 src/qnetlab/cli.py
 src/qnetlab/errors.py
+src/qnetlab/faults.py
 src/qnetlab/lab.py
 src/qnetlab/logging_utils.py
 src/qnetlab/paths.py
@@ -26,6 +29,7 @@ src/qnetlab/containers/kme_config.py
 src/qnetlab/dataplane/__init__.py
 src/qnetlab/dataplane/configurator.py
 src/qnetlab/dataplane/context.py
+src/qnetlab/dataplane/package.py
 src/qnetlab/dataplane/renderer.py
 src/qnetlab/dataplane/routeros.py
 src/qnetlab/infra/__init__.py
@@ -38,11 +42,17 @@ src/qnetlab/telemetry/__init__.py
 src/qnetlab/telemetry/collector.py
 src/qnetlab/telemetry/loadgen.py
 src/qnetlab/telemetry/plot_metrics.py
+tests/test_bench.py
+tests/test_capture.py
 tests/test_config_addressing.py
 tests/test_configurator.py
 tests/test_console.py
 tests/test_deployer.py
+tests/test_docs.py
 tests/test_e2e_local.py
+tests/test_faults.py
+tests/test_gns3_client_links.py
+tests/test_lab_experiments.py
 tests/test_pki.py
 tests/test_render.py
 tests/test_telemetry.py

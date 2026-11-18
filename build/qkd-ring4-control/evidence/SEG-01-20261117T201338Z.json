@@ -1,0 +1,53 @@
+{
+  "id": "SEG-01",
+  "test": "tests/lab/test_enablers.py::test_passive_interception_sees_only_ike_and_esp",
+  "criterion": "Hip\u00f3tese: um espi\u00e3o passivo no enlace do t\u00fanel s\u00f3 v\u00ea IKE (UDP 500/4500) e ESP; nenhum TCP/UDP/ICMP de aplica\u00e7\u00e3o.\nCrit\u00e9rio: em 30 s de captura com ping NODE<->NODE, `esp_packets` > 0 e `cleartext_data_packets` == 0.\nControle positivo: `test_seg01_positive_control` (enlace em `unprotected_links` deve mostrar o ping em claro).",
+  "started": "2026-11-17T20:13:24Z",
+  "results": {
+    "link": "MKT12:ether2 <-> MKT21:ether2",
+    "summary": {
+      "file": "/home/tlmm/Codes/qnetlab/build/qkd-ring4-control/captures/MKT12-MKT21-seg01-20261117T201324Z.pcap",
+      "packets": 46,
+      "bytes": 7356,
+      "duration_s": 9.155,
+      "l3": {
+        "ipv4": 44,
+        "arp": 2
+      },
+      "ip_protocols": {
+        "ospf": 2,
+        "esp": 38,
+        "ike": 4
+      },
+      "esp_packets": 38,
+      "ike_packets": 4,
+      "ospf_packets": 2,
+      "discovery_packets": 0,
+      "cleartext_data_packets": 0,
+      "needle_hits": null
+    }
+  },
+  "outcome": "passed",
+  "finished": "2026-11-17T20:13:38Z",
+  "files": {
+    "/home/tlmm/Codes/qnetlab/build/qkd-ring4-control/captures/MKT12-MKT21-seg01-20261117T201324Z.pcap": "1092770bb52d692f18ba56505f7015e0fa4ad5157a014414cbd6e6f23d5cc4f6"
+  },
+  "environment": {
+    "qnetlab": "0.1.0",
+    "python": "3.14.10",
+    "kernel": "7.3.4-arch1-2",
+    "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+    "cpus": 8,
+    "mem_total_mb": 15725,
+    "docker": "29.9.3",
+    "git_commit": "80b0ad64d696cd118dd621177df56e27750b1357",
+    "utc": "2026-11-17T20:13:16Z",
+    "topology_sha256": "a0a0168af95472ab4634efa2b994a8d9570004edf33e433b08ea477295a881e8",
+    "lab": "qkd-ring4-control",
+    "ring_size": 4,
+    "chrs": 8,
+    "links": 36,
+    "router_version_pinned": "7.22.1",
+    "gns3": "2.2.56.1"
+  }
+}

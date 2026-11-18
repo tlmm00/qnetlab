@@ -1,151 +1,441 @@
 {
+  "links": [
+    {
+      "a": "KME1",
+      "a_if": "eth2",
+      "b": "MKT11",
+      "b_if": "ether1",
+      "id": "e981d7cc-1214-4706-a08a-30d04c3d8ef6",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE1",
+      "a_if": "eth0",
+      "b": "MKT11",
+      "b_if": "ether7",
+      "id": "54819cf0-9cb0-42f9-92c9-1bdec0173227",
+      "kind": "node"
+    },
+    {
+      "a": "KME1",
+      "a_if": "eth3",
+      "b": "MKT12",
+      "b_if": "ether1",
+      "id": "d6ed6309-4948-46c8-8e78-5577fb10cc6c",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE1",
+      "a_if": "eth1",
+      "b": "MKT12",
+      "b_if": "ether7",
+      "id": "9e4df485-a819-401d-b3d3-a77d8e36b0b2",
+      "kind": "node"
+    },
+    {
+      "a": "MKT11",
+      "a_if": "ether3",
+      "b": "MKT12",
+      "b_if": "ether3",
+      "id": "061ce4fd-3362-44c6-ae4b-a1726646cf59",
+      "kind": "sibling"
+    },
+    {
+      "a": "KME2",
+      "a_if": "eth2",
+      "b": "MKT21",
+      "b_if": "ether1",
+      "id": "03f0830b-06fa-42ca-818b-58c91f528a49",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE2",
+      "a_if": "eth0",
+      "b": "MKT21",
+      "b_if": "ether7",
+      "id": "ba7274ff-b948-4729-9e31-52f63ae8df81",
+      "kind": "node"
+    },
+    {
+      "a": "KME2",
+      "a_if": "eth3",
+      "b": "MKT22",
+      "b_if": "ether1",
+      "id": "25adbaa9-c6f5-4779-b58e-9ae051d745e8",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE2",
+      "a_if": "eth1",
+      "b": "MKT22",
+      "b_if": "ether7",
+      "id": "7068bffe-3fb6-4aef-94bd-e57b7ed6cd5a",
+      "kind": "node"
+    },
+    {
+      "a": "MKT21",
+      "a_if": "ether3",
+      "b": "MKT22",
+      "b_if": "ether3",
+      "id": "03e58340-0cb9-4107-a07c-bc77eea59ead",
+      "kind": "sibling"
+    },
+    {
+      "a": "KME3",
+      "a_if": "eth2",
+      "b": "MKT31",
+      "b_if": "ether1",
+      "id": "1ee9e84b-e0c8-4357-8cad-57f7a1003457",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE3",
+      "a_if": "eth0",
+      "b": "MKT31",
+      "b_if": "ether7",
+      "id": "45ac4e9b-b716-4b24-bd05-1016581bbe2d",
+      "kind": "node"
+    },
+    {
+      "a": "KME3",
+      "a_if": "eth3",
+      "b": "MKT32",
+      "b_if": "ether1",
+      "id": "818b0917-41a2-4fde-9ebf-78574d49f288",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE3",
+      "a_if": "eth1",
+      "b": "MKT32",
+      "b_if": "ether7",
+      "id": "18b4dea2-978d-4fe4-ab06-ac49bbdbb108",
+      "kind": "node"
+    },
+    {
+      "a": "MKT31",
+      "a_if": "ether3",
+      "b": "MKT32",
+      "b_if": "ether3",
+      "id": "5e5eee26-62a2-4cd8-9730-31a1af640dc9",
+      "kind": "sibling"
+    },
+    {
+      "a": "KME4",
+      "a_if": "eth2",
+      "b": "MKT41",
+      "b_if": "ether1",
+      "id": "df12a539-5a6e-468a-995b-931ea5e07eb1",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE4",
+      "a_if": "eth0",
+      "b": "MKT41",
+      "b_if": "ether7",
+      "id": "c2e78461-6400-4870-861e-8fd531aedf2c",
+      "kind": "node"
+    },
+    {
+      "a": "KME4",
+      "a_if": "eth3",
+      "b": "MKT42",
+      "b_if": "ether1",
+      "id": "31c50fbb-7e92-492f-a2e3-bf2c8c2c40ac",
+      "kind": "kme-access"
+    },
+    {
+      "a": "NODE4",
+      "a_if": "eth1",
+      "b": "MKT42",
+      "b_if": "ether7",
+      "id": "06ff0960-412c-4a23-9b7a-bcf290ff0110",
+      "kind": "node"
+    },
+    {
+      "a": "MKT41",
+      "a_if": "ether3",
+      "b": "MKT42",
+      "b_if": "ether3",
+      "id": "0da7caa4-c8e2-47ce-a28c-4b2faa463c62",
+      "kind": "sibling"
+    },
+    {
+      "a": "MKT12",
+      "a_if": "ether2",
+      "b": "MKT21",
+      "b_if": "ether2",
+      "id": "15c6bcde-e688-47af-bfea-9d2564118c14",
+      "kind": "ring"
+    },
+    {
+      "a": "KME1",
+      "a_if": "eth0",
+      "b": "KME2",
+      "b_if": "eth1",
+      "id": "2df5f6be-2fb9-4b45-ac7e-e522fb8d3714",
+      "kind": "kma"
+    },
+    {
+      "a": "MKT22",
+      "a_if": "ether2",
+      "b": "MKT31",
+      "b_if": "ether2",
+      "id": "576b15c5-899c-485a-acaf-0c771cdb9f65",
+      "kind": "ring"
+    },
+    {
+      "a": "KME2",
+      "a_if": "eth0",
+      "b": "KME3",
+      "b_if": "eth1",
+      "id": "3a80536a-3f0b-437a-ae48-3b408efee14f",
+      "kind": "kma"
+    },
+    {
+      "a": "MKT32",
+      "a_if": "ether2",
+      "b": "MKT41",
+      "b_if": "ether2",
+      "id": "27cc61d9-dd59-4b19-ac70-cfece1eb9d58",
+      "kind": "ring"
+    },
+    {
+      "a": "KME3",
+      "a_if": "eth0",
+      "b": "KME4",
+      "b_if": "eth1",
+      "id": "6894af17-8314-4b23-9ac3-5a9e04cb53b9",
+      "kind": "kma"
+    },
+    {
+      "a": "MKT42",
+      "a_if": "ether2",
+      "b": "MKT11",
+      "b_if": "ether2",
+      "id": "b0d96746-1713-40c8-a625-c7bc2ac8d4e1",
+      "kind": "ring"
+    },
+    {
+      "a": "KME4",
+      "a_if": "eth0",
+      "b": "KME1",
+      "b_if": "eth1",
+      "id": "7686da81-7258-47d3-90bd-0c28c1d38f3a",
+      "kind": "kma"
+    },
+    {
+      "a": "NAT1",
+      "a_if": "nat0",
+      "b": "MKT11",
+      "b_if": "ether8",
+      "id": "92fd153b-f7b4-4cbb-8924-7394001a3aaf",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT2",
+      "a_if": "nat0",
+      "b": "MKT12",
+      "b_if": "ether8",
+      "id": "4f52f502-0b96-4b24-af3a-9defddc7e0cc",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT3",
+      "a_if": "nat0",
+      "b": "MKT21",
+      "b_if": "ether8",
+      "id": "1b29f5e4-246f-4d87-b747-9ecb4a37e00f",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT4",
+      "a_if": "nat0",
+      "b": "MKT22",
+      "b_if": "ether8",
+      "id": "2506e2d5-8b4c-4086-be7b-c813fcc616e5",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT5",
+      "a_if": "nat0",
+      "b": "MKT31",
+      "b_if": "ether8",
+      "id": "766c989c-df76-490f-9ba8-6c1e72b05bfe",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT6",
+      "a_if": "nat0",
+      "b": "MKT32",
+      "b_if": "ether8",
+      "id": "bd515912-29a0-41d2-8db3-4a008f32480c",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT7",
+      "a_if": "nat0",
+      "b": "MKT41",
+      "b_if": "ether8",
+      "id": "07ac1759-a62a-46a9-a3c0-9cc47a583d6a",
+      "kind": "nat"
+    },
+    {
+      "a": "NAT8",
+      "a_if": "nat0",
+      "b": "MKT42",
+      "b_if": "ether8",
+      "id": "5946459c-5688-4a51-80b5-b6a257a50f8a",
+      "kind": "nat"
+    }
+  ],
   "nodes": {
     "KME1": {
-      "console": 5036,
+      "console": 5006,
       "console_host": "0.0.0.0",
-      "id": "d08c4928-9d64-440b-8e30-45a3cc3b2cc5",
+      "id": "d45acef3-6fc2-49bd-9472-4bef5912bd0a",
       "type": "docker"
     },
     "KME2": {
-      "console": 5046,
+      "console": 5016,
       "console_host": "0.0.0.0",
-      "id": "496180fe-fe5b-49d3-9bdc-7adf802ff38b",
+      "id": "bc0efc70-b974-4740-9317-0faac0c7b630",
       "type": "docker"
     },
     "KME3": {
-      "console": 5056,
+      "console": 5026,
       "console_host": "0.0.0.0",
-      "id": "ae0b595c-c451-47c5-8a26-43aaa4430421",
+      "id": "19c322dc-9d34-4181-a6f6-9c54dd8d056a",
       "type": "docker"
     },
     "KME4": {
-      "console": 5066,
+      "console": 5036,
       "console_host": "0.0.0.0",
-      "id": "a72d6285-0d44-4dfb-8a2e-7dced60bf6bb",
+      "id": "0d476458-cd47-483a-9adb-9414921066a6",
       "type": "docker"
     },
     "MKT11": {
-      "console": 5030,
+      "console": 5000,
       "console_host": "0.0.0.0",
-      "id": "5145919d-9764-49dc-a570-ab00a08ac2e7",
+      "id": "8f3bbc70-1c65-4131-8052-ede9a3b58931",
       "type": "qemu"
     },
     "MKT12": {
-      "console": 5033,
+      "console": 5003,
       "console_host": "0.0.0.0",
-      "id": "2410d474-ea29-41c6-aca6-22b953d951dd",
+      "id": "62d176c8-1d02-4c08-812b-2bfbd97dda66",
       "type": "qemu"
     },
     "MKT21": {
-      "console": 5040,
+      "console": 5010,
       "console_host": "0.0.0.0",
-      "id": "1ce24226-6761-4658-93c3-fe760edd7bf5",
+      "id": "2005d228-0fb5-4d56-97ba-6d0c5215c02a",
       "type": "qemu"
     },
     "MKT22": {
-      "console": 5043,
+      "console": 5013,
       "console_host": "0.0.0.0",
-      "id": "6885e8d8-6339-4b84-a4d0-4d98ac03ea6c",
+      "id": "20391410-83f1-4553-a823-fde808a65ca1",
       "type": "qemu"
     },
     "MKT31": {
-      "console": 5050,
+      "console": 5020,
       "console_host": "0.0.0.0",
-      "id": "5a22a5e6-ea2a-4893-983f-feccad8dd77b",
+      "id": "d9204597-87bd-4075-b664-6ccea6d127b8",
       "type": "qemu"
     },
     "MKT32": {
-      "console": 5053,
+      "console": 5023,
       "console_host": "0.0.0.0",
-      "id": "dd715498-ef96-4fc5-8664-9ee8ea52c7bc",
+      "id": "04a543c7-d3b7-4e94-be43-4b0164ade14f",
       "type": "qemu"
     },
     "MKT41": {
-      "console": 5060,
+      "console": 5030,
       "console_host": "0.0.0.0",
-      "id": "4641171e-664e-4ad3-beba-a0a5e574b9eb",
+      "id": "71b4dc88-574f-4b9c-87c5-339ebe0dfb59",
       "type": "qemu"
     },
     "MKT42": {
-      "console": 5063,
+      "console": 5033,
       "console_host": "0.0.0.0",
-      "id": "dbd6e5fd-d4f1-4c9f-8af9-49531f76933c",
+      "id": "c774294a-dc1b-48ed-911e-c7bd2744bbbe",
       "type": "qemu"
     },
     "NAT1": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "e48fda1f-4050-40a0-ba84-57fb50a45184",
+      "id": "536a74a8-43e3-49d8-a14a-9efcb2e9679f",
       "type": "nat"
     },
     "NAT2": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "1b96bdf5-e26a-4592-b78b-d289b91b244a",
+      "id": "bfb57f27-93ee-413d-86b6-e32a0b424b80",
       "type": "nat"
     },
     "NAT3": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "81179fbe-bd96-4f52-bdd0-973971d87bdc",
+      "id": "f3a3f636-6c1f-46a7-958a-294e4f354ec7",
       "type": "nat"
     },
     "NAT4": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "347d22e1-326c-41fe-8951-971caf65a776",
+      "id": "70af8e78-6cc9-4954-8fdc-597bf89d220e",
       "type": "nat"
     },
     "NAT5": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "54fdb01e-56f9-4890-ac4b-064102722b00",
+      "id": "20e914bf-bb7d-4c8a-a9cd-ae349d047aa5",
       "type": "nat"
     },
     "NAT6": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "820ec3f4-d74e-4146-8013-c1c9101a8653",
+      "id": "7a623d99-adb0-4aa4-a53a-67e86ad6cbf9",
       "type": "nat"
     },
     "NAT7": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "2e0cf650-2407-428d-bf63-0e830b86d7f5",
+      "id": "1186a6ed-9039-4219-b53c-ff6da7480e20",
       "type": "nat"
     },
     "NAT8": {
       "console": null,
       "console_host": "0.0.0.0",
-      "id": "87357937-612d-4ef0-ba9e-018b7d0ead08",
+      "id": "30048b14-d116-4b63-87e6-71b618ae4ea2",
       "type": "nat"
     },
     "NODE1": {
-      "console": 5038,
+      "console": 5008,
       "console_host": "0.0.0.0",
-      "id": "f417d7e7-651e-450b-90b4-fa2ae5a4c7da",
+      "id": "1460e74d-88a6-4f9e-8ccb-61b31ee2a9c9",
       "type": "docker"
     },
     "NODE2": {
-      "console": 5048,
+      "console": 5018,
       "console_host": "0.0.0.0",
-      "id": "aaecf359-5db0-41c8-a77a-b7be871f3816",
+      "id": "7d02c7ae-4564-48a8-8c33-5c2da3121878",
       "type": "docker"
     },
     "NODE3": {
-      "console": 5058,
+      "console": 5028,
       "console_host": "0.0.0.0",
-      "id": "e96740fd-1f6e-41c1-999a-78b1732b8f20",
+      "id": "bdbd314f-26ff-4e31-ad4d-04fd7f6ff729",
       "type": "docker"
     },
     "NODE4": {
-      "console": 5068,
+      "console": 5038,
       "console_host": "0.0.0.0",
-      "id": "b5f4f741-5fd7-48a1-9487-b553eee2b34f",
+      "id": "9f8f41a2-2db6-4c76-8f43-8ab6b98a9ecd",
       "type": "docker"
     }
   },
-  "project_id": "1bdcb7e6-4a49-4ad8-906c-3c8856a43bb7",
+  "project_id": "6e5960c0-8337-445f-b012-3cd8ecb87f24",
   "secrets": {
     "ike_psk:MKT12-MKT21": "d24970946de6103b28af457affd4a85207a05c17fc65948d0edf6287608005ed",
     "ike_psk:MKT22-MKT31": "c151c6f3aee8e5a207f847083af10a9229047ea1690f43b6ad2f6eb4098e55ac",

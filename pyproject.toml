@@ -28,3 +28,8 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+markers = [
+  "lab: exige um laboratório no ar (defina QNETLAB_TOPOLOGY; veja tests/lab/README.md)",
+  "disruptive: derruba enlaces/nós (o teardown restaura)",
+  "plan(id): ID do teste em docs/14-validation-test-plan.md",
+]

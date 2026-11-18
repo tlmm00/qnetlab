@@ -1,0 +1,28 @@
+{
+  "id": "SEG-01",
+  "test": "tests/lab/test_enablers.py::test_seg01_positive_control",
+  "criterion": "Controle positivo do SEG-01: em um enlace do anel SEM t\u00fanel (`ipsec.unprotected_links`), o ping aparece em claro\n(ICMP > 0 e nenhum ESP). Pula se a topologia n\u00e3o tiver enlace desprotegido.",
+  "started": "2026-11-17T18:12:01Z",
+  "results": {},
+  "outcome": "skipped",
+  "finished": "2026-11-17T18:12:01Z",
+  "files": {},
+  "environment": {
+    "qnetlab": "0.1.0",
+    "python": "3.14.10",
+    "kernel": "7.3.4-arch1-2",
+    "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+    "cpus": 8,
+    "mem_total_mb": 15725,
+    "docker": "29.9.3",
+    "git_commit": "80b0ad64d696cd118dd621177df56e27750b1357",
+    "utc": "2026-11-17T18:09:23Z",
+    "topology_sha256": "b6f07e3134e5b77f53cff7643679ff21af44b40cfa78faa0ba2386e614a5ba84",
+    "lab": "qkd-ring4",
+    "ring_size": 4,
+    "chrs": 8,
+    "links": 36,
+    "router_version_pinned": "7.22.1",
+    "gns3": "2.2.56.1"
+  }
+}

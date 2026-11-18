@@ -114,6 +114,7 @@ src/qnetlab/
   containers/    [2] ImageBuilder, env dos nós, kme_config, DockerExec (docker exec/cp), compose (só KMEs)
   dataplane/     [3] contexto, RouterConfigRenderer, RouterOsClient (REST+FTP), DataPlaneConfigurator
   telemetry/     [4] LoadRunner, TelemetryCollector, plot_metrics
+  faults.py capture.py bench.py   experimentos: falhas em enlaces/nós, captura de pacotes, custo (CPU/RAM/tempo)
   lab.py / cli.py  fachada e CLI
 templates/mikrotik/   00_base 10_ospf 20_pki 30_ipsec 40_firewall 50_logging (+ bootstrap por console)
 templates/docker/     Dockerfile.node.j2, docker-compose.yml.j2, kme_config.yaml.j2

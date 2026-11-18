@@ -69,6 +69,7 @@ Roteadores MikroTik CHR: template, credenciais, versão do RouterOS e papel de c
 | `update_version` | str | `""` | Fixa a versão exata (ex.: `7.22.1`); o resultado é verificado. Vazio = `min_version`. Não pode ser menor que `min_version`. |
 | `update_dns` | str | `""` | DNS usado só durante a atualização `device` (vazio = gateway do NAT). |
 | `update_timeout` | float | `900.0` | Tempo máximo (s) de download/envio + reinício por roteador. |
+| `neighbor_discovery` | bool | `false` | Liga a descoberta de vizinhos (MNDP/LLDP/CDP). Desligada por padrão: ela anuncia, em claro e em todas as interfaces (inclusive a do túnel), a identidade e a versão do RouterOS (achado do SEG-01). |
 | `if_kme` | str | `"ether1"` | Interface do CHR voltada ao KME do site. |
 | `if_ring` | str | `"ether2"` | Interface voltada ao CHR do site vizinho (carrega o túnel IPsec/QKD). |
 | `if_sibling` | str | `"ether3"` | Interface voltada ao outro CHR do mesmo site. |

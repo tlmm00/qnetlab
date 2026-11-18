@@ -1,0 +1,78 @@
+{"ts": 1794855849.257, "iso": "2026-11-16T16:04:09-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9a5e7adf-6256-4609-990d-263decf4bd71", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794855850.091, "iso": "2026-11-16T16:04:10-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9a5e7adf-6256-4609-990d-263decf4bd71", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794855850.586, "iso": "2026-11-16T16:04:10-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9a5e7adf-6256-4609-990d-263decf4bd71"}}
+{"ts": 1794857326.167, "iso": "2026-11-16T16:28:46-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794857326.842, "iso": "2026-11-16T16:28:46-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794857327.308, "iso": "2026-11-16T16:28:47-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794857675.3, "iso": "2026-11-16T16:34:35-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794857675.964, "iso": "2026-11-16T16:34:35-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794857676.418, "iso": "2026-11-16T16:34:36-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794858051.934, "iso": "2026-11-16T16:40:51-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794858052.577, "iso": "2026-11-16T16:40:52-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794858053.017, "iso": "2026-11-16T16:40:53-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794858425.976, "iso": "2026-11-16T16:47:05-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794858426.648, "iso": "2026-11-16T16:47:06-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794858427.097, "iso": "2026-11-16T16:47:07-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794858629.22, "iso": "2026-11-16T16:50:29-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794858629.893, "iso": "2026-11-16T16:50:29-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794858630.346, "iso": "2026-11-16T16:50:30-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794858862.707, "iso": "2026-11-16T16:54:22-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794858863.366, "iso": "2026-11-16T16:54:23-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794858863.805, "iso": "2026-11-16T16:54:23-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794858947.412, "iso": "2026-11-16T16:55:47-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794858948.054, "iso": "2026-11-16T16:55:48-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794858960.505, "iso": "2026-11-16T16:56:00-0300", "action": "node-stop", "target": "KME1", "params": {"node": "152eb921-6b73-4317-9086-f49c9308572a"}}
+{"ts": 1794859082.346, "iso": "2026-11-16T16:58:02-0300", "action": "node-start", "target": "KME1", "params": {"node": "152eb921-6b73-4317-9086-f49c9308572a"}}
+{"ts": 1794859126.285, "iso": "2026-11-16T16:58:46-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794859126.957, "iso": "2026-11-16T16:58:46-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9694a530-4b4a-44f2-ab9d-81fb15970bf7"}}
+{"ts": 1794859130.372, "iso": "2026-11-16T16:58:50-0300", "action": "node-stop", "target": "KME1", "params": {"node": "152eb921-6b73-4317-9086-f49c9308572a"}}
+{"ts": 1794859251.967, "iso": "2026-11-16T17:00:51-0300", "action": "node-start", "target": "KME1", "params": {"node": "152eb921-6b73-4317-9086-f49c9308572a"}}
+{"ts": 1794859538.001, "iso": "2026-11-16T17:05:38-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "34de1a9a-1f1a-410c-a285-0d3b1b5a7079"}}
+{"ts": 1794859538.678, "iso": "2026-11-16T17:05:38-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "34de1a9a-1f1a-410c-a285-0d3b1b5a7079"}}
+{"ts": 1794859551.144, "iso": "2026-11-16T17:05:51-0300", "action": "node-stop", "target": "KME1", "params": {"node": "7f3ee931-5678-41a7-8747-63e06c1632ba"}}
+{"ts": 1794859672.206, "iso": "2026-11-16T17:07:52-0300", "action": "node-start", "target": "KME1", "params": {"node": "7f3ee931-5678-41a7-8747-63e06c1632ba"}}
+{"ts": 1794860060.691, "iso": "2026-11-16T17:14:20-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "7f8fcb44-3115-4c6b-bff7-5e61fcbad89a"}}
+{"ts": 1794860064.35, "iso": "2026-11-16T17:14:24-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "7f8fcb44-3115-4c6b-bff7-5e61fcbad89a"}}
+{"ts": 1794860076.789, "iso": "2026-11-16T17:14:36-0300", "action": "node-stop", "target": "KME1", "params": {"node": "11c43e2d-6340-4fde-99de-835c56d3148e"}}
+{"ts": 1794860197.69, "iso": "2026-11-16T17:16:37-0300", "action": "node-start", "target": "KME1", "params": {"node": "11c43e2d-6340-4fde-99de-835c56d3148e"}}
+{"ts": 1794937115.671, "iso": "2026-11-17T14:38:35-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "224875cc-34c3-4985-a432-14f4faec6a5c"}}
+{"ts": 1794937116.779, "iso": "2026-11-17T14:38:36-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "224875cc-34c3-4985-a432-14f4faec6a5c"}}
+{"ts": 1794937129.234, "iso": "2026-11-17T14:38:49-0300", "action": "node-stop", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794937250.271, "iso": "2026-11-17T14:40:50-0300", "action": "node-start", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794937513.027, "iso": "2026-11-17T14:45:13-0300", "action": "node-stop", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794937529.063, "iso": "2026-11-17T14:45:29-0300", "action": "node-start", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794937593.323, "iso": "2026-11-17T14:46:33-0300", "action": "node-start", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794937693.329, "iso": "2026-11-17T14:48:13-0300", "action": "node-start", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794938964.224, "iso": "2026-11-17T15:09:24-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "224875cc-34c3-4985-a432-14f4faec6a5c", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794938965.27, "iso": "2026-11-17T15:09:25-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "224875cc-34c3-4985-a432-14f4faec6a5c", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794938965.925, "iso": "2026-11-17T15:09:25-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "224875cc-34c3-4985-a432-14f4faec6a5c"}}
+{"ts": 1794938966.581, "iso": "2026-11-17T15:09:26-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "224875cc-34c3-4985-a432-14f4faec6a5c"}}
+{"ts": 1794938967.638, "iso": "2026-11-17T15:09:27-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "224875cc-34c3-4985-a432-14f4faec6a5c"}}
+{"ts": 1794938980.244, "iso": "2026-11-17T15:09:40-0300", "action": "node-stop", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794939101.653, "iso": "2026-11-17T15:11:41-0300", "action": "node-start", "target": "KME1", "params": {"node": "1bba495c-c823-4028-b7a9-821d5ff5fc43"}}
+{"ts": 1794940555.597, "iso": "2026-11-17T15:35:55-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794940556.443, "iso": "2026-11-17T15:35:56-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794940556.963, "iso": "2026-11-17T15:35:56-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9"}}
+{"ts": 1794940631.614, "iso": "2026-11-17T15:37:11-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1794940632.381, "iso": "2026-11-17T15:37:12-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1794940632.846, "iso": "2026-11-17T15:37:12-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9"}}
+{"ts": 1794940633.411, "iso": "2026-11-17T15:37:13-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9"}}
+{"ts": 1794940637.385, "iso": "2026-11-17T15:37:17-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "9984f9fd-5097-408f-9a79-0a531f8fc6d9"}}
+{"ts": 1794940649.879, "iso": "2026-11-17T15:37:29-0300", "action": "node-stop", "target": "KME1", "params": {"node": "bfd967df-da98-4c23-ac38-cb77e3c666b5"}}
+{"ts": 1794940771.975, "iso": "2026-11-17T15:39:31-0300", "action": "node-start", "target": "KME1", "params": {"node": "bfd967df-da98-4c23-ac38-cb77e3c666b5"}}
+{"ts": 1794942996.414, "iso": "2026-11-17T16:16:36-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "c1d7ea06-4a17-4a36-bc4f-00f897347b94"}}
+{"ts": 1794942997.153, "iso": "2026-11-17T16:16:37-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "c1d7ea06-4a17-4a36-bc4f-00f897347b94"}}
+{"ts": 1794943009.789, "iso": "2026-11-17T16:16:49-0300", "action": "node-stop", "target": "KME1", "params": {"node": "939595d7-7ea2-48f8-928e-c1190e40bdde"}}
+{"ts": 1794943131.821, "iso": "2026-11-17T16:18:51-0300", "action": "node-start", "target": "KME1", "params": {"node": "939595d7-7ea2-48f8-928e-c1190e40bdde"}}
+{"ts": 1794943265.26, "iso": "2026-11-17T16:21:05-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "c1d7ea06-4a17-4a36-bc4f-00f897347b94"}}
+{"ts": 1794943265.92, "iso": "2026-11-17T16:21:05-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "c1d7ea06-4a17-4a36-bc4f-00f897347b94"}}
+{"ts": 1794943278.395, "iso": "2026-11-17T16:21:18-0300", "action": "node-stop", "target": "KME1", "params": {"node": "939595d7-7ea2-48f8-928e-c1190e40bdde"}}
+{"ts": 1794943399.639, "iso": "2026-11-17T16:23:19-0300", "action": "node-start", "target": "KME1", "params": {"node": "939595d7-7ea2-48f8-928e-c1190e40bdde"}}
+{"ts": 1794943493.518, "iso": "2026-11-17T16:24:53-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "c1d7ea06-4a17-4a36-bc4f-00f897347b94"}}
+{"ts": 1794943494.346, "iso": "2026-11-17T16:24:54-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "c1d7ea06-4a17-4a36-bc4f-00f897347b94"}}
+{"ts": 1794943507.075, "iso": "2026-11-17T16:25:07-0300", "action": "node-stop", "target": "KME1", "params": {"node": "939595d7-7ea2-48f8-928e-c1190e40bdde"}}
+{"ts": 1794943628.085, "iso": "2026-11-17T16:27:08-0300", "action": "node-start", "target": "KME1", "params": {"node": "939595d7-7ea2-48f8-928e-c1190e40bdde"}}
+{"ts": 1794944866.32, "iso": "2026-11-17T16:47:46-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "207942bf-a5f6-4451-b51f-95ef03bd9355"}}
+{"ts": 1794944870.012, "iso": "2026-11-17T16:47:50-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "207942bf-a5f6-4451-b51f-95ef03bd9355"}}
+{"ts": 1794944882.499, "iso": "2026-11-17T16:48:02-0300", "action": "node-stop", "target": "KME1", "params": {"node": "f06b1e3e-94ea-456f-b2e5-f97aed3c50e8"}}
+{"ts": 1794944888.949, "iso": "2026-11-17T16:48:08-0300", "action": "node-start", "target": "KME1", "params": {"node": "f06b1e3e-94ea-456f-b2e5-f97aed3c50e8"}}

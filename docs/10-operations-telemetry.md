@@ -159,3 +159,30 @@ $ make up TOPO=topologies/ring6.yaml && make run TOPO=topologies/ring6.yaml
 - Não reutilize `build/` entre versões incompatíveis do framework; `make clean` + `make up` recria tudo.
 - Use `-v` ao coletar evidências de uma falha.
 - Aguarde `verify` com `_ok: true` **antes** de `run`; sem túnel de pé, as medidas de "protegido" não têm significado.
+
+## 8. Experimentos controlados: falhas, captura e custo
+
+Para estudar o comportamento da rede sob falhas e medir o custo da emulação, use `fault`, `capture` e `bench`
+([06 §2.1](06-cli-reference.md#21-experimentos-fault-capture-bench)). Roteiro típico (falha do KME, REDE-02 do
+[plano de validação](14-validation-test-plan.md)):
+
+```console
+$ make up && qnetlab bench sample --duration 30 --label baseline -t topologies/ring4.yaml   # estado estável
+$ qnetlab capture run MKT12 MKT21 --duration 180 --label kme-fail -t topologies/ring4.yaml &   # opcional
+$ sleep 20; qnetlab fault node KME1 stop  -t topologies/ring4.yaml                         # T0: KME1 cai
+$ sleep 120; qnetlab fault node KME1 start -t topologies/ring4.yaml                        # T1: volta
+$ wait                                                                                     # termina a captura
+$ make run                                                                                 # coleta tudo
+```
+
+- Os instantes T0/T1 ficam em `logs/fault-events.jsonl` **e** no `metrics.jsonl` dos NODEs (evento `type: "fault"`), na mesma
+  linha do tempo das sondas: dá para ler perda e RTT antes, durante e depois da falha.
+- Filtros de enlace (`fault link`) valem para os dois sentidos da passagem pelo enlace: um atraso de 30 ms em um enlace
+  aparece como ~60 ms no RTT de um caminho que o atravessa. O GNS3 aplica atraso/perda/corrupção por pacote no *ubridge*;
+  não modela largura de banda nem fila.
+- `bench` mede **o host onde o `qnetlab` roda** (`/proc` e `docker stats`): só vale com o servidor GNS3 local. Uma medição
+  com CPU do host acima de 80 % (p95) é marcada `saturation.valid: false` e **não deve ser usada** para concluir sobre
+  desempenho. Cada relatório registra o ambiente (CPU, RAM, kernel, versões, hash do YAML).
+- `bench up` / `qnetlab up` gravam `bench/up-<UTC>.json` com os segundos de `pki`, `images`, `deploy`, `bootstrap`,
+  `upgrade`, `configure` e `verify`.
+- `tests/lab` automatiza esses experimentos e grava a evidência em `build/<lab>/evidence/` ([tests/lab/README.md](../tests/lab/README.md)).
