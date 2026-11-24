@@ -1,0 +1,30 @@
+{
+  "id": "HAB-02",
+  "test": "tests/lab/test_enablers.py::test_stop_and_start_kme_container",
+  "criterion": "Crit\u00e9rio: ap\u00f3s `stop` o cont\u00eainer do KME1 some do Docker (exec falha); ap\u00f3s `start` volta a responder.",
+  "started": "2026-11-23T20:09:21Z",
+  "results": {
+    "node": "KME1"
+  },
+  "outcome": "passed",
+  "finished": "2026-11-23T20:09:29Z",
+  "files": {},
+  "environment": {
+    "qnetlab": "0.1.0",
+    "python": "3.14.10",
+    "kernel": "7.3.4-arch1-2",
+    "cpu_model": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+    "cpus": 8,
+    "mem_total_mb": 15725,
+    "docker": "29.9.3",
+    "git_commit": "2ad6306e1338731426eeb0f86223898b7f2694a2",
+    "utc": "2026-11-23T20:09:21Z",
+    "topology_sha256": "b6f07e3134e5b77f53cff7643679ff21af44b40cfa78faa0ba2386e614a5ba84",
+    "lab": "qkd-ring4",
+    "ring_size": 4,
+    "chrs": 8,
+    "links": 36,
+    "router_version_pinned": "7.22.1",
+    "gns3": "2.2.56.1"
+  }
+}

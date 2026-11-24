@@ -2,12 +2,12 @@
   "kme_id": "kme-sim-2",
   "pools": {
     "kme-sim-1": {
-      "synchronized": 102,
-      "used": 11
+      "synchronized": 97,
+      "used": 14
     },
     "kme-sim-3": {
       "synchronized": 100,
-      "used": 12
+      "used": 15
     }
   }
 }
