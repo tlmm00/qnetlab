@@ -12,11 +12,24 @@ from qnetlab.workspace import Workspace
 
 
 class FakeRos:
+    """RouterOS falso. Com ``FakeRos.plan`` definido, responde como um CHR saudável daquele plano (peer com PPK,
+    SA nos dois sentidos, key qkd com chaves recebidas). ``FakeRos.overrides[nome][método]`` troca uma resposta."""
     instances = {}
+    plan = None
+    overrides = {}
 
     def __init__(self, name):
         self.name, self.uploads, self.scripts, self.imported = name, {}, [], []
         FakeRos.instances[name] = self
+
+    def _ov(self, method, default):
+        return FakeRos.overrides.get(self.name, {}).get(method, default)
+
+    def _tunnel(self):
+        t = FakeRos.plan.tunnel_of(self.name) if FakeRos.plan else None
+        if t is None:
+            return None, None, None
+        return t, str(t.local_addr(self.name)), str(t.remote_addr(self.name))
 
     def wait_ready(self, t=0): pass
     def require_version(self, m): return "7.22.1"
@@ -30,17 +43,39 @@ class FakeRos:
     def import_rsc(self, n): self.imported.append(n)
     def install_pki(self, certs): self.pki = [c['name'] for c in certs]
     def execute(self, s, timeout=0): self.scripts.append(s); return ""
-    def ospf_neighbors(self): return [{"state": "Full"}, {"state": "Full"}]
-    def ipsec_active_peers(self): return [{"state": "established"}]
-    def ipsec_installed_sa(self): return [{"spi": "0x1"}]
-    def qkd_status(self): return {"state": "ok"}
+    def ospf_neighbors(self):
+        return self._ov("ospf_neighbors", [{"state": "Full"}, {"state": "Full"}])
+
+    def ipsec_active_peers(self):
+        t, local, remote = self._tunnel()
+        default = ([{"remote-address": remote, "local-address": local, "state": "established", "ppk": "true"}]
+                   if t is not None and t.protected else [])
+        return self._ov("ipsec_active_peers", default)
+
+    def ipsec_installed_sa(self):
+        t, local, remote = self._tunnel()
+        default = ([{"src-address": local, "dst-address": remote, "spi": "0x1"},
+                    {"src-address": remote, "dst-address": local, "spi": "0x2"}] if t is not None else [])
+        return self._ov("ipsec_installed_sa", default)
+
+    def qkd_status(self):
+        t, _l, _r = self._tunnel()
+        plan = FakeRos.plan
+        default = {}
+        if t is not None:
+            me = plan.chr(self.name)
+            default = {"enabled": "true", "peer-sae-id": plan.chr(t.peer_of(self.name)).sae,
+                       "kme-id": plan.sites[me.site].kme.kme_id, "total-keys-received": "15"}
+        return self._ov("qkd_status", default)
 
 
 @pytest.fixture()
 def cfg(tmp_path, ring4_path, monkeypatch):
     FakeRos.instances.clear()
+    FakeRos.overrides = {}
     topo = load_topology(ring4_path)
     plan = build_plan(topo)
+    FakeRos.plan = plan
     ws = Workspace(tmp_path, topo.name).ensure()
     ca = CertificateAuthority(ws.pki_dir, topo.pki)
     ca.issue_all(entities_from_plan(topo, plan))
@@ -72,10 +107,47 @@ def test_configure_uploads_own_cert_ca_and_script_then_removes_script(cfg):
 def test_verify_ok_and_triggers_ike_from_node_container(cfg):
     dp, plan, pings = cfg
     rep = dp.verify(timeout=5)
-    assert rep["_ok"] and len(rep) == 2 * len(plan.sites) + 2
+    assert rep["_ok"] and len(rep) == 2 * len(plan.sites) + 3                 # CHRs + _ok, _not_ready, _summary
     pk = [c for c in pings if "ping" in c]
     assert len(pk) == len(plan.tunnels) and all("exec" in c and c[2].startswith("GNS3.NODE") for c in pk)
     assert rep["MKT11"]["ospf_expected"] == 2 and rep["MKT11"]["ipsec_expected"] == 1
+    assert rep["MKT11"]["ok"] and rep["MKT11"]["reasons"] == []
+    assert rep["MKT11"]["checks"]["ppk"] and rep["MKT11"]["checks"]["qkd_keys"]
+    assert rep["_summary"] == {"routers": 2 * len(plan.sites), "ok": 2 * len(plan.sites), "ppk_mode": "qkd",
+                               "failed": {}}
+
+
+@pytest.mark.parametrize("method, value, reason", [
+    ("ipsec_active_peers", [{"remote-address": "10.0.1.6", "state": "established", "ppk": "false"}], "SEM PPK"),
+    ("qkd_status", {"enabled": "true", "peer-sae-id": "sae-chr21", "kme-id": "kme-sim-1",
+                    "total-keys-received": "0"}, "total-keys-received=0"),
+])
+def test_verify_fails_when_tunnel_does_not_use_qkd(cfg, monkeypatch, method, value, reason):
+    """Túnel estabelecido e com SA, mas sem PPK (ou sem chaves do KME): antes passava, agora reprova só esse CHR."""
+    dp, plan, _ = cfg
+    monkeypatch.setattr("qnetlab.dataplane.configurator.time.sleep", lambda s: None)
+    t = plan.tunnel_of("MKT12")
+    assert str(t.remote_addr("MKT12")) == "10.0.1.6"                       # premissa do caso parametrizado
+    FakeRos.overrides = {"MKT12": {method: value}}
+    rep = dp.verify(timeout=0.2)
+    assert not rep["_ok"] and rep["_not_ready"] == ["MKT12"]
+    assert rep["MKT12"]["ok"] is False and any(reason in r for r in rep["MKT12"]["reasons"])
+    assert rep["MKT12"]["ipsec_installed_sa"] == 2                          # o critério antigo aprovaria
+    assert list(rep["_summary"]["failed"]) == ["MKT12"] and rep["_summary"]["ok"] == 2 * len(plan.sites) - 1
+
+
+def test_verify_reports_rest_errors_as_reasons(cfg, monkeypatch):
+    from qnetlab.errors import RouterOsError
+    dp, plan, _ = cfg
+    monkeypatch.setattr("qnetlab.dataplane.configurator.time.sleep", lambda s: None)
+
+    def boom():
+        raise RouterOsError("192.168.122.10: falha REST")
+
+    FakeRos("MKT11").ospf_neighbors = boom
+    rep = dp.verify(timeout=0.2)
+    assert rep["_not_ready"] == ["MKT11"] and "error" in rep["MKT11"]
+    assert rep["_summary"]["failed"]["MKT11"][0].startswith("REST indisponível")
 
 
 def test_routeros_client_pki_uses_rest_and_waits_for_files(monkeypatch):

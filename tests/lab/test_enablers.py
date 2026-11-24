@@ -32,14 +32,16 @@ def _require_established(lab, chr_name: str) -> None:
 
 @pytest.mark.plan("FID-00")
 def test_baseline_verify_is_ok(lab, evidence):
-    """Critério: `verify` devolve `_ok: true` (OSPF full e túneis IPsec instalados em todos os CHRs) em ≤ 120 s."""
+    """Critério: `verify` devolve `_ok: true` em ≤ 120 s — OSPF full e, em cada túnel protegido, peer estabelecido
+    **com PPK** (`ppk=true`), SA nos dois sentidos e `/ip ipsec key qkd` com chaves recebidas do KME (ADR-14)."""
     rep = lab.verify(timeout=120)
     evidence.record("verify", rep)
     routers = {n: r for n, r in rep.items() if isinstance(r, dict) and not n.startswith("_")}
+    failed = {n: r.get("checks", {}) for n, r in routers.items() if not r.get("ok", True)}
     errors = {n: r["error"] for n, r in routers.items() if "error" in r}
-    no_keys = sorted(n for n, r in routers.items()
-                     if isinstance(r.get("qkd"), dict) and str(r["qkd"].get("total-keys-received", "0")) == "0")
-    no_sa = sorted(n for n, r in routers.items() if r.get("ipsec_installed_sa", 1) == 0 and r.get("ipsec_expected"))
+    no_keys = sorted(n for n, c in failed.items() if c.get("qkd_keys") is False)
+    no_ppk = sorted(n for n, c in failed.items() if c.get("ppk") is False)
+    no_sa = sorted(n for n, c in failed.items() if False in (c.get("sa_out"), c.get("sa_in")))
     hints = []
     if errors:
         n, e = next(iter(errors.items()))
@@ -47,9 +49,12 @@ def test_baseline_verify_is_ok(lab, evidence):
     if no_keys:
         hints.append(f"{len(no_keys)} CHR(s) com total-keys-received=0: o KME não entrega chaves "
                      "(contêiner KME parado? confira 'docker ps -a --filter name=GNS3.KME' e 'docker logs')")
+    if no_ppk:
+        hints.append(f"túnel estabelecido SEM PPK em {no_ppk}: confira 'ppk=qkd' no profile e logs/MKT*-ipsec.log")
     if no_sa and not no_keys:
-        hints.append(f"sem SA IPsec em {no_sa} apesar de haver chaves: veja logs/MKT*-ipsec.log")
-    assert rep["_ok"], f"CHRs não prontos: {rep['_not_ready']}. " + "; ".join(hints)
+        hints.append(f"sem SA IPsec (em algum sentido) em {no_sa} apesar de haver chaves: veja logs/MKT*-ipsec.log")
+    assert rep["_ok"], (f"CHRs não prontos: {rep['_not_ready']}. " + "; ".join(hints)
+                        + f" | motivos: {rep.get('_summary', {}).get('failed')}")
 
 
 @pytest.mark.plan("HAB-01")

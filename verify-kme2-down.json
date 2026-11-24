@@ -1,0 +1,258 @@
+{
+  "MKT11": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.1:8443",
+      "cache-size": "10",
+      "cache-state": "10",
+      "certificate": "sae-chr11",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-1",
+      "peer-sae-id": "sae-chr42",
+      "total-keys-received": "21"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "MKT12": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.5:8443",
+      "cache-size": "10",
+      "cache-state": "10",
+      "certificate": "sae-chr12",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-1",
+      "peer-sae-id": "sae-chr21",
+      "total-keys-received": "23"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "MKT21": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.9:8443",
+      "cache-size": "10",
+      "cache-state": "8",
+      "certificate": "sae-chr21",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-2",
+      "peer-sae-id": "sae-chr12",
+      "total-keys-received": "18"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "MKT22": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.13:8443",
+      "cache-size": "10",
+      "cache-state": "9",
+      "certificate": "sae-chr22",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-2",
+      "peer-sae-id": "sae-chr31",
+      "total-keys-received": "19"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "MKT31": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.17:8443",
+      "cache-size": "10",
+      "cache-state": "10",
+      "certificate": "sae-chr31",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-3",
+      "peer-sae-id": "sae-chr22",
+      "total-keys-received": "29"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "MKT32": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.21:8443",
+      "cache-size": "10",
+      "cache-state": "10",
+      "certificate": "sae-chr32",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-3",
+      "peer-sae-id": "sae-chr41",
+      "total-keys-received": "21"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "MKT41": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.25:8443",
+      "cache-size": "10",
+      "cache-state": "10",
+      "certificate": "sae-chr41",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-4",
+      "peer-sae-id": "sae-chr32",
+      "total-keys-received": "21"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "MKT42": {
+    "ospf_full": 2,
+    "ospf_expected": 2,
+    "ipsec_active_peers": 1,
+    "ipsec_installed_sa": 2,
+    "ipsec_expected": 1,
+    "qkd": {
+      "address": "10.0.0.29:8443",
+      "cache-size": "10",
+      "cache-state": "10",
+      "certificate": "sae-chr42",
+      "enabled": "true",
+      "key-size": "256",
+      "kme-id": "kme-sim-4",
+      "peer-sae-id": "sae-chr11",
+      "total-keys-received": "21"
+    },
+    "ok": true,
+    "checks": {
+      "ospf": true,
+      "ipsec_peer": true,
+      "ppk": true,
+      "sa_out": true,
+      "sa_in": true,
+      "qkd_enabled": true,
+      "qkd_peer_sae": true,
+      "qkd_kme": true,
+      "qkd_keys": true
+    },
+    "reasons": []
+  },
+  "_ok": true,
+  "_not_ready": [],
+  "_summary": {
+    "routers": 8,
+    "ok": 8,
+    "ppk_mode": "qkd",
+    "failed": {}
+  }
+}

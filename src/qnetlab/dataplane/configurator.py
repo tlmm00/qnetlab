@@ -17,6 +17,7 @@ from .context import router_files
 from .package import fetch_package, latest_version
 from .renderer import RouterConfigRenderer
 from .routeros import RouterOsClient
+from .verify import RouterExpectation, evaluate, expectation_for
 
 log = logging.getLogger(__name__)
 
@@ -181,33 +182,52 @@ class DataPlaneConfigurator:
             except QNetLabError as exc:
                 log.debug("ping de disparo %s -> %s falhou: %s", t.a, dst, exc)
 
+    def _snapshot(self, client: RouterOsClient, exp: RouterExpectation) -> Dict[str, Any]:
+        """Estado do CHR no formato de ``logs/MKT*-state.json`` (o mesmo que :func:`evaluate` recebe)."""
+        protected = exp.protected
+        return {
+            "ospf_neighbors": client.ospf_neighbors(),
+            "ipsec_active_peers": client.ipsec_active_peers(),          # também no grupo de controle (não pode haver peer)
+            "ipsec_installed_sa": client.ipsec_installed_sa() if protected else [],
+            "qkd": client.qkd_status() if protected and exp.ppk_mode == "qkd" else None,
+        }
+
     def verify(self, timeout: float = 240.0) -> Dict[str, Any]:
+        """Espera cada CHR atender aos critérios de :mod:`qnetlab.dataplane.verify` (OSPF, túnel **com PPK/QKD**,
+        SA nos dois sentidos, grupo de controle sem IPsec). CHRs aprovados saem da espera; o relatório traz, por CHR,
+        os contadores de sempre e ``ok``/``checks``/``reasons`` da última avaliação."""
         deadline = time.time() + timeout
         report: Dict[str, Any] = {}
-        pending = set(self._names())
+        expect = {n: expectation_for(self.topo, self.plan, n) for n in self._names()}
+        pending = set(expect)
         while pending and time.time() < deadline:
             self._trigger_tunnels()
             for name in sorted(pending):
-                client = self._client(name)
+                exp = expect[name]
                 try:
-                    full = [n for n in client.ospf_neighbors() if str(n.get("state", "")).lower() == "full"]
-                    want_ospf = 2                                   # ring + sibling
-                    t = self.plan.tunnel_of(name)
-                    want_ipsec = 1 if (t and t.protected) else 0
-                    peers = client.ipsec_active_peers() if want_ipsec else []
-                    sas = client.ipsec_installed_sa() if want_ipsec else []
-                    report[name] = {
-                        "ospf_full": len(full), "ospf_expected": want_ospf,
-                        "ipsec_active_peers": len(peers), "ipsec_installed_sa": len(sas),
-                        "ipsec_expected": want_ipsec,
-                        "qkd": client.qkd_status() if self.topo.ipsec.ppk_mode == "qkd" and want_ipsec else None,
-                    }
-                    if len(full) >= want_ospf and len(peers) >= want_ipsec and (not want_ipsec or sas):
-                        pending.discard(name)
+                    snap = self._snapshot(self._client(name), exp)
                 except RouterOsError as exc:
-                    report[name] = {"error": str(exc)}
+                    report[name] = {"ok": False, "error": str(exc), "reasons": [f"REST indisponível: {exc}"]}
+                    continue
+                verdict = evaluate(exp, snap)
+                full = [n for n in snap["ospf_neighbors"] or [] if str(n.get("state", "")).lower() == "full"]
+                report[name] = {
+                    "ospf_full": len(full), "ospf_expected": exp.ospf_expected,
+                    "ipsec_active_peers": len(snap["ipsec_active_peers"] or []),
+                    "ipsec_installed_sa": len(snap["ipsec_installed_sa"] or []),
+                    "ipsec_expected": int(exp.protected),
+                    "qkd": snap["qkd"],
+                    "ok": verdict.ok, "checks": verdict.checks, "reasons": verdict.reasons,
+                }
+                if verdict.ok:
+                    pending.discard(name)
             if pending:
                 time.sleep(5)
         report["_ok"] = not pending
         report["_not_ready"] = sorted(pending)
+        report["_summary"] = {
+            "routers": len(expect), "ok": len(expect) - len(pending),
+            "ppk_mode": self.topo.ipsec.ppk_mode,
+            "failed": {n: report.get(n, {}).get("reasons", ["sem avaliação"]) for n in sorted(pending)},
+        }
         return report

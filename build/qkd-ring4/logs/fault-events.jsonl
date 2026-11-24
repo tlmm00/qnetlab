@@ -86,3 +86,12 @@
 {"ts": 1795464549.421, "iso": "2026-11-23T17:09:09-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "de576656-13c3-4236-b096-4b28bea66370"}}
 {"ts": 1795464561.909, "iso": "2026-11-23T17:09:21-0300", "action": "node-stop", "target": "KME1", "params": {"node": "b25966b6-c5cc-4818-a131-d2478cf0fca4"}}
 {"ts": 1795464568.252, "iso": "2026-11-23T17:09:28-0300", "action": "node-start", "target": "KME1", "params": {"node": "b25966b6-c5cc-4818-a131-d2478cf0fca4"}}
+{"ts": 1795547411.41, "iso": "2026-11-24T16:10:11-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "482cc055-d997-40f5-bd31-64f3207b6d5e", "filters": {"delay": [20, 2], "packet_loss": [1], "corrupt": [1]}}}
+{"ts": 1795547412.244, "iso": "2026-11-24T16:10:12-0300", "action": "link-filters", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "482cc055-d997-40f5-bd31-64f3207b6d5e", "filters": {"bpf": ["ip proto 1"]}}}
+{"ts": 1795547412.693, "iso": "2026-11-24T16:10:12-0300", "action": "link-clear", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "482cc055-d997-40f5-bd31-64f3207b6d5e"}}
+{"ts": 1795547550.855, "iso": "2026-11-24T16:12:30-0300", "action": "link-down", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "482cc055-d997-40f5-bd31-64f3207b6d5e"}}
+{"ts": 1795547551.671, "iso": "2026-11-24T16:12:31-0300", "action": "link-up", "target": "MKT12:ether2 <-> MKT21:ether2", "params": {"link": "482cc055-d997-40f5-bd31-64f3207b6d5e"}}
+{"ts": 1795547564.143, "iso": "2026-11-24T16:12:44-0300", "action": "node-stop", "target": "KME1", "params": {"node": "59581cfd-8e0e-4782-918e-2d98d241554e"}}
+{"ts": 1795547569.986, "iso": "2026-11-24T16:12:49-0300", "action": "node-start", "target": "KME1", "params": {"node": "59581cfd-8e0e-4782-918e-2d98d241554e"}}
+{"ts": 1795547600.886, "iso": "2026-11-24T16:13:20-0300", "action": "node-stop", "target": "KME2", "params": {"node": "16cb3ce4-5a88-40fd-b199-7d4d8d817f98"}}
+{"ts": 1795547815.67, "iso": "2026-11-24T16:16:55-0300", "action": "node-start", "target": "KME2", "params": {"node": "16cb3ce4-5a88-40fd-b199-7d4d8d817f98"}}

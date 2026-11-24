@@ -5,4 +5,4 @@
 /ip address add address=192.168.122.60/24 interface=ether8 comment=mgmt-bootstrap
 /ip service set www disabled=no address=192.168.122.0/24
 /ip service set ftp disabled=no address=192.168.122.0/24
-/user set [find where name="admin"] password="qnetlab-lab"
+/user set [find where name="admin"] password="123"
