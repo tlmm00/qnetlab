@@ -1,0 +1,54 @@
+# --- Artefatos gerados pelo QNetLab -------------------------------------------
+# build/<lab>/ contém chaves privadas (pki/, docker/*/certs/), segredos (state.json:
+# PSKs, seeds KMA, PPKs), logs com material de chave QKD/ESP e pacotes .npk do RouterOS.
+# NUNCA versionar.
+build/
+# diretórios de trabalho alternativos (qnetlab -w <dir>)
+work/
+*.npk
+output.tar.gz
+
+# Segredos e material criptográfico em qualquer lugar do repositório
+*.key.pem
+*.key
+*.p12
+*.pfx
+state.json
+.state-*
+.env
+.env.*
+
+# Capturas e evidências de experimentos (podem conter topologia/tráfego)
+*.pcap
+*.pcapng
+
+# --- Python -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+.eggs/
+.venv/
+venv/
+.python-version
+
+# Testes, cobertura e ferramentas
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# --- Editores / SO ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# --- Temporários --------------------------------------------------------------
+_to_delete/
+.claude_tmp/
